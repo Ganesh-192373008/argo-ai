@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Privacy Policy"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Hero Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingVertical="16dp">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@android:drawable/ic_lock_lock"
+                    app:tint="@color/primary_green"
+                    android:background="@drawable/circle_icon_bg_green"
+                    android:backgroundTint="#E8F5E9"
+                    android:padding="16dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="We Protect Your Privacy"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Your trust is our priority"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Last Updated: April 25, 2026\nVersion: 2.1.0"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Highlights -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E8F5E9"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✓ Privacy Highlights"
+                        android:textColor="#2E7D32"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#2E7D32" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="We never sell your personal data" android:textColor="#2E7D32" android:textSize="14sp"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#2E7D32" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your crop images are encrypted and secure" android:textColor="#2E7D32" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#2E7D32" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You have full control over your information" android:textColor="#2E7D32" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#2E7D32" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GDPR &amp; CCPA compliant" android:textColor="#2E7D32" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#2E7D32" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data can be deleted anytime from settings" android:textColor="#2E7D32" android:textSize="14sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Content Sections -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data Protection" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp" android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Your data is encrypted using industry-standard AES-256 encryption. All crop images and personal information are stored securely and protected against unauthorized access." android:textColor="@color/text_secondary" android:textSize="14sp" android:lineSpacingExtra="4dp" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Information We Collect" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp" android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="We collect crop images for disease detection, chat conversations for AI training, and basic usage data to improve our services. Your location data is used only for local weather and market prices." android:textColor="@color/text_secondary" android:textSize="14sp" android:lineSpacingExtra="4dp" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data Storage" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp" android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="All data is stored on secure cloud servers with regular backups. Disease scan images are automatically deleted after 90 days unless you choose to save them permanently." android:textColor="@color/text_secondary" android:textSize="14sp" android:lineSpacingExtra="4dp" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Rights" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp" android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="You have complete control over your data. You can view, download, or delete all your information at any time from the settings menu. We will never sell your personal data to third parties." android:textColor="@color/text_secondary" android:textSize="14sp" android:lineSpacingExtra="4dp" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Third-Party Services" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp" android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="We use Google Cloud for AI processing and Firebase for authentication. These services comply with GDPR and international privacy standards. No data is shared without your explicit consent." android:textColor="@color/text_secondary" android:textSize="14sp" android:lineSpacingExtra="4dp" android:layout_marginBottom="24dp"/>
+
+            <!-- Contact Box -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#FFF3E0" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📧 Contact Us" android:textColor="#E65100" android:textStyle="bold" android:textSize="16sp" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Have questions about your privacy? We're here to help." android:textColor="#E65100" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Email:" android:textColor="#E65100" android:textStyle="bold" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="privacy@agroassist.com" android:textColor="#E65100" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Website:" android:textColor="#E65100" android:textStyle="bold" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="www.agroassist.com/privacy" android:textColor="#E65100" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Support:" android:textColor="#E65100" android:textStyle="bold" android:textSize="14sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="support@agroassist.com" android:textColor="#E65100" android:textSize="14sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Buttons -->
+            <Button
+                android:id="@+id/btnDownloadPdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Download Full Policy (PDF)"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_green"
+                android:backgroundTint="@color/app_background"
+                app:strokeColor="@color/primary_green"
+                app:strokeWidth="1dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            <Button
+                android:id="@+id/btnRequestData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Request My Data Export"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary_green"
+                style="@style/Widget.MaterialComponents.Button"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

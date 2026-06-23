@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಅಗ್ರೋಅಸಿಸ್ಟ್ ಎಐ</string>
+    <string name="farmer_since">2015 ರಿಂದ ರೈತ</string>
+    <string name="mobile_number">ಮೊಬೈಲ್ ಸಂಖ್ಯೆ</string>
+    <string name="location">ಸ್ಥಳ</string>
+    <string name="primary_crops">ಮುಖ್ಯ ಬೆಳೆಗಳು</string>
+    <string name="edit_profile">ಪ್ರೊಫೈಲ್ ತಿದ್ದಿ</string>
+    <string name="achievements">ಸಾಧನೆಗಳು</string>
+    <string name="settings">ಸೆಟ್ಟಿಂಗ್ಗಳು</string>
+    <string name="language">ಭಾಷೆ</string>
+    <string name="help_support">ಸಹಾಯ ಮತ್ತು ಬೆಂಬಲ</string>
+    <string name="logout">ಲಾಗ್ ಔಟ್</string>
+    <string name="home">ಮುಖಪುಟ</string>
+    <string name="detection">ರೋಗ ಪತ್ತೆ</string>
+    <string name="assistant">ಸಹಾಯಕ</string>
+    <string name="profile">ಪ್ರೊಫೈಲ್</string>
+    <string name="community">ಸಮುದಾಯ</string>
+    
+    <!-- Community Screen -->
+    <string name="farmer_community">ರೈತ ಸಮುದಾಯ</string>
+    <string name="connect_with_farmers">ರೈತರೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಿ</string>
+    <string name="active_farmers">👨‍🌾 2,450+ ಸಕ್ರಿಯ ರೈತರು</string>
+    <string name="my_posts">ನನ್ನ ಪೋಸ್ಟ್‌ಗಳು 📝</string>
+    <string name="replies_box">ಪ್ರತಿಕ್ರಿಯೆ ಪೆಟ್ಟಿಗೆ 💬</string>
+    <string name="post_action">+ ಪೋಸ್ಟ್</string>
+</resources>

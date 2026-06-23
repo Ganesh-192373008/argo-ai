@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Crop Rotation"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4-Year Rotation Plan"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Maximize soil health and productivity"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <!-- Year 1: Legumes -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#EFEBE9" android:gravity="center" android:text="🫘" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Year 1 • Legumes" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recommended Crops" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Beans • Peas • Lentils • Chickpea" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Benefits" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Fixes nitrogen in soil\n• Improves soil structure\n• Breaks pest cycles" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp" android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Year 2: Leafy Greens -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#E8F5E9" android:gravity="center" android:text="🥬" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Year 2 • Leafy Greens" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recommended Crops" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spinach • Lettuce • Cabbage • Kale" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Benefits" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Utilizes nitrogen from legumes\n• Light feeders\n• Quick growing" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp" android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Year 3: Fruiting Plants -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#FFEBEE" android:gravity="center" android:text="🍅" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Year 3 • Fruiting Plants" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recommended Crops" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tomato • Pepper • Eggplant • Cucumber" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Benefits" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Heavy feeders benefit from rich soil\n• Different pest profile\n• High value crops" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp" android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Year 4: Root Vegetables -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#FFF3E0" android:gravity="center" android:text="🥕" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Year 4 • Root Vegetables" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recommended Crops" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Carrot • Potato • Radish • Onion" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Benefits" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Breaks up compacted soil\n• Deep root systems\n• Utilizes deep nutrients" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp" android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Why Crop Rotation Works -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="#E1F5FE"
+                android:padding="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Why Crop Rotation Works"
+                    android:textColor="#0288D1"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                    
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Improves Soil Fertility" android:textColor="#0277BD" android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Different crops use and replenish different nutrients, maintaining soil health naturally." android:textColor="#01579B" android:textSize="13sp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reduces Pest Buildup" android:textColor="#0277BD" android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Breaking pest life cycles by rotating crops prevents pest populations from establishing." android:textColor="#01579B" android:textSize="13sp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Prevents Soil-borne Diseases" android:textColor="#0277BD" android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Different crops are susceptible to different diseases, reducing pathogen accumulation." android:textColor="#01579B" android:textSize="13sp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Increases Overall Yield" android:textColor="#0277BD" android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Healthier soil and fewer pests lead to better crop performance and higher yields." android:textColor="#01579B" android:textSize="13sp"/>
+            </LinearLayout>
+
+            <!-- Implementation Tips -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="#FFF3E0"
+                android:padding="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋 Implementation Tips"
+                    android:textColor="#F57C00"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="• Start your rotation plan at the beginning of the growing season\n• Keep detailed records of what was planted where\n• Adjust the plan based on your specific crops and soil conditions\n• Consider adding cover crops between main seasons\n• Monitor soil health improvements over time"
+                    android:textColor="#E65100"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

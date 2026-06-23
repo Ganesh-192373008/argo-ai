@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="achievements">অর্জনসমূহ</string>
+    <string name="active_farmers">👨‍🌾 2,450+ সক্রিয় কৃষক</string>
+    <string name="app_name">এগ্রোঅ্যাসিস্ট এআই</string>
+    <string name="assistant">সহকারী</string>
+    <string name="community">সমাজ</string>
+    <string name="connect_with_farmers">কৃষকদের সাথে যুক্ত হন</string>
+    <string name="detection">রোগ নির্ণয়</string>
+    <string name="edit_profile">প্রোফাইল সম্পাদনা</string>
+    <string name="farmer_community">কৃষক সমাজ</string>
+    <string name="farmer_since">2015 থেকে কৃষক</string>
+    <string name="help_support">সাহায্য ও সহযোগিতা</string>
+    <string name="home">হোম</string>
+    <string name="language">ভাষা</string>
+    <string name="location">স্থান</string>
+    <string name="logout">লগ আউট</string>
+    <string name="mobile_number">মোবাইল নম্বর</string>
+    <string name="my_posts">আমার পোস্ট 📝</string>
+    <string name="post_action">+ পোস্ট</string>
+    <string name="primary_crops">প্রধান ফসল</string>
+    <string name="profile">প্রোফাইল</string>
+    <string name="replies_box">উত্তর বক্স 💬</string>
+    <string name="settings">সেটিংস</string>
+</resources>

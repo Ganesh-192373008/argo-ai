@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Row: Emoji, Name, Delete -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/cropEmoji"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#FFF3E0"
+                android:gravity="center"
+                android:text="🥔"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/cropName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Potato"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/cropCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Root Vegetable"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnDeleteCrop"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/circle_icon_bg_green"
+                android:backgroundTint="#FFEBEE"
+                android:padding="6dp"
+                android:src="@android:drawable/ic_menu_delete"
+                app:tint="#D32F2F"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginVertical="12dp" />
+
+        <!-- Planted Date Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Planted Date"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/plantedDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6/19/2026"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Planted Month Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:weightSum="12">
+            <TextView android:id="@+id/pJan" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="J" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pFeb" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="F" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pMar" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="M" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pApr" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="A" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pMay" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="M" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pJun" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="J" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pJul" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="J" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pAug" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="A" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pSep" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="S" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pOct" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="O" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pNov" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="N" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/pDec" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="D" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginVertical="12dp" />
+
+        <!-- Expected Harvest Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Expected Harvest"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/harvestDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9/2/2026"
+                android:textColor="#F57C00"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Harvest Month Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:weightSum="12">
+            <TextView android:id="@+id/hJan" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="J" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hFeb" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="F" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hMar" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="M" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hApr" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="A" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hMay" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="M" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hJun" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="J" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hJul" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="J" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hAug" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="A" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hSep" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="S" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hOct" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="O" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hNov" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="N" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/hDec" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="D" android:gravity="center" android:textSize="11sp" android:paddingVertical="2dp" android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

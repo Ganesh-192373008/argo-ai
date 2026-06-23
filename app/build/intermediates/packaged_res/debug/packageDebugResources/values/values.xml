@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_gold">#FFD600</color>
+    <color name="accent_mint">#00BFA5</color>
+    <color name="app_background">#F8F9FA</color>
+    <color name="card_bg_green">#F1F8E9</color>
+    <color name="glass_card_bg">#C2E5D3</color>
+    <color name="premium_bg_end">#C8E6C9</color>
+    <color name="premium_bg_start">#E8F5E9</color>
+    <color name="primary_green">#2E7D32</color>
+    <color name="shadow_color">#1A2E7D32</color>
+    <color name="text_dark">#102E1B</color>
+    <color name="text_primary">#1D2125</color>
+    <color name="text_secondary">#6E7781</color>
+    <color name="white">#FFFFFF</color>
+    <string name="achievements">Achievements</string>
+    <string name="active_farmers">👨‍🌾 2,450+ Active Farmers</string>
+    <string name="app_name">AgroAssist AI</string>
+    <string name="assistant">Assistant</string>
+    <string name="community">Community</string>
+    <string name="connect_with_farmers">Connect with farmers</string>
+    <string name="detection">Detection</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="farmer_community">Farmer Community</string>
+    <string name="farmer_since">Farmer since 2015</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="home">Home</string>
+    <string name="language">Language</string>
+    <string name="location">Location</string>
+    <string name="logout">Logout</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="my_posts">My Posts 📝</string>
+    <string name="post_action">+ Post</string>
+    <string name="primary_crops">Primary Crops</string>
+    <string name="profile">Profile</string>
+    <string name="replies_box">Replies Box 💬</string>
+    <string name="settings">Settings</string>
+    <style name="Theme.AgroAssist" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

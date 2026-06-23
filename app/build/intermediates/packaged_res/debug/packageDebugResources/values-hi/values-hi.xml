@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="achievements">उपलब्धियां</string>
+    <string name="active_farmers">👨‍🌾 2,450+ सक्रिय किसान</string>
+    <string name="app_name">एग्रोअसिस्ट एआई</string>
+    <string name="assistant">सहायक</string>
+    <string name="community">समुदाय</string>
+    <string name="connect_with_farmers">किसानों से जुड़ें</string>
+    <string name="detection">बीमारी पहचान</string>
+    <string name="edit_profile">प्रोफ़ाइल संपादित करें</string>
+    <string name="farmer_community">किसान समुदाय</string>
+    <string name="farmer_since">2015 से किसान</string>
+    <string name="help_support">सहायता और समर्थन</string>
+    <string name="home">होम</string>
+    <string name="language">भाषा</string>
+    <string name="location">स्थान</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="mobile_number">मोबाइल नंबर</string>
+    <string name="my_posts">मेरी पोस्ट 📝</string>
+    <string name="post_action">+ पोस्ट</string>
+    <string name="primary_crops">प्रमुख फसलें</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="replies_box">जवाब बॉक्स 💬</string>
+    <string name="settings">सेटिंग्स</string>
+</resources>

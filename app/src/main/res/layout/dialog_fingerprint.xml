@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_card_white"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biometric Authentication"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Please place your finger on the sensor to log in"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:gravity="center" />
+
+    <!-- Fingerprint Icon Area -->
+    <LinearLayout
+        android:id="@+id/layoutFingerprint"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_icon_bg_green"
+        android:backgroundTint="#E8F5E9"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_fingerprint"
+            app:tint="@color/primary_green" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Tap icon to simulate authentication"
+        android:textColor="@color/primary_green"
+        android:textSize="11sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#ECEFF1"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="#37474F" />
+
+</LinearLayout>

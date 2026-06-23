@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="achievements">சாதனைகள்</string>
+    <string name="active_farmers">👨‍🌾 2,450+ செயலில் உள்ள விவசாயிகள்</string>
+    <string name="app_name">அக்ரோஅசிஸ்ட் ஏஐ</string>
+    <string name="assistant">உதவியாளர்</string>
+    <string name="community">சமூகம்</string>
+    <string name="connect_with_farmers">விவசாயிகளுடன் இணையுங்கள்</string>
+    <string name="detection">கண்டறிதல்</string>
+    <string name="edit_profile">சுயவிவரத்தைத் திருத்து</string>
+    <string name="farmer_community">விவசாயி சமூகம்</string>
+    <string name="farmer_since">2015 முதல் விவசாயி</string>
+    <string name="help_support">உதவி &amp; ஆதரவு</string>
+    <string name="home">முகப்பு</string>
+    <string name="language">மொழி</string>
+    <string name="location">இருப்பிடம்</string>
+    <string name="logout">வெளியேறு</string>
+    <string name="mobile_number">அலைபேசி எண்</string>
+    <string name="my_posts">எனது பதிவுகள் 📝</string>
+    <string name="post_action">+ பதிவு</string>
+    <string name="primary_crops">முதன்மை பயிர்கள்</string>
+    <string name="profile">சுயவிவரம்</string>
+    <string name="replies_box">பதில் பெட்டி 💬</string>
+    <string name="settings">அமைப்புகள்</string>
+</resources>

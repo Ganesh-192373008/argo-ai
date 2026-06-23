@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">అగ్రోఅసిస్ట్ ఏఐ</string>
+    <string name="farmer_since">2015 నుండి రైతు</string>
+    <string name="mobile_number">మొబైల్ సంఖ్య</string>
+    <string name="location">స్థానము</string>
+    <string name="primary_crops">ప్రధాన పంటలు</string>
+    <string name="edit_profile">ప్రొఫైల్ సవరించండి</string>
+    <string name="achievements">విజయాలు</string>
+    <string name="settings">సెట్టింగులు</string>
+    <string name="language">భాష</string>
+    <string name="help_support">సహాయం &amp; మద్దతు</string>
+    <string name="logout">లాగ్అవుట్</string>
+    <string name="home">హోమ్</string>
+    <string name="detection">గుర్తింపు</string>
+    <string name="assistant">సహాయకుడు</string>
+    <string name="profile">ప్రొఫైల్</string>
+    <string name="community">సంఘం</string>
+    
+    <!-- Community Screen -->
+    <string name="farmer_community">రైతు సంఘం</string>
+    <string name="connect_with_farmers">రైతులతో కనెక్ట్ అవ్వండి</string>
+    <string name="active_farmers">👨‍🌾 2,450+ క్రియాశీల రైతులు</string>
+    <string name="my_posts">నా పోస్ట్‌లు 📝</string>
+    <string name="replies_box">సమాధానాల బాక్స్ 💬</string>
+    <string name="post_action">+ పోస్ట్</string>
+</resources>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Planting Times"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seasonal Planting Guide"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Optimize timing for maximum yield"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <!-- Spring -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#E8F5E9" android:gravity="center" android:text="🌱" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spring" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="March - May • 15-25°C" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recommended Crops" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tomato • Pepper • Eggplant • Cucumber • Beans • Squash • Watermelon • Okra" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Growing Conditions" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Soil temperature should be above 15°C\n• Risk of frost should be minimal\n• Good for heat-loving crops\n• Prepare soil with compost" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp" android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Summer -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#FFF3E0" android:gravity="center" android:text="☀️" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Summer" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="June - August • 25-35°C" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recommended Crops" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rice • Cotton • Maize • Okra • Cucumber • Pumpkin • Bitter Gourd • Ridge Gourd" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Growing Conditions" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Monsoon season ideal for rice\n• Ensure good drainage\n• High humidity crops thrive\n• Monitor for fungal diseases" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp" android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Fall -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#FBE9E7" android:gravity="center" android:text="🍂" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fall" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="September - November • 15-25°C" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recommended Crops" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wheat • Peas • Cabbage • Cauliflower • Broccoli • Carrot • Radish • Mustard" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Growing Conditions" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Cooling temperatures ideal\n• Good for leafy vegetables\n• Prepare for winter crops\n• Less pest pressure" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp" android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Winter -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#E3F2FD" android:gravity="center" android:text="❄️" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Winter" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="December - February • 10-20°C" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recommended Crops" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Carrot • Radish • Spinach • Garlic • Onion • Peas • Lettuce • Beetroot" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Growing Conditions" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Cool season crops thrive\n• Protect from severe frost\n• Slower growth but sweeter taste\n• Requires less frequent watering" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginTop="2dp" android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Pro Planting Tips -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="#FFF8E1"
+                android:padding="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Pro Planting Tips"
+                    android:textColor="#F57F17"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                    
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1. Follow moon phases for optimal germination\n2. Check local frost dates before planting\n3. Start seeds indoors for early transplanting\n4. Harden off seedlings before transplanting\n5. Water immediately after planting\n6. Use row covers for temperature protection" android:textColor="#F57F17" android:textSize="14sp" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+
+            <!-- Moon Phase Planting -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="#EDE7F6"
+                android:padding="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌙 Moon Phase Planting"
+                    android:textColor="#512DA8"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="New Moon to Full Moon: Plant above-ground crops (leafy vegetables, fruits)\n\nFull Moon to New Moon: Plant below-ground crops (roots, bulbs)"
+                    android:textColor="#4527A0"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="2dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Following lunar cycles can improve germination rates and crop vitality."
+                    android:textColor="#311B92"
+                    android:textSize="12sp"
+                    android:textStyle="italic"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

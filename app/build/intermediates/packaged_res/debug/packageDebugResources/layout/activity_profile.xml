@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <!-- Header / Top Section -->
+    <LinearLayout
+        android:id="@+id/headerArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_green"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Circular CardView Frame for cropping profile photo -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#81C784"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false">
+            
+            <ImageView
+                android:id="@+id/ivProfilePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:scaleType="centerCrop"
+                android:padding="16dp"
+                app:tint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Rajesh Kumar"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/farmer_since"
+            android:textColor="#C8E6C9"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintTop_toBottomOf="@id/headerArea">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Profile Details Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_call" app:tint="@color/primary_green"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobile_number" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvProfileMobile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+91 98765 43210" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginHorizontal="16dp"/>
+
+                    <!-- Email Address Section -->
+                    <LinearLayout android:id="@+id/layoutProfileEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:gravity="center_vertical" android:visibility="gone">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_dialog_email" app:tint="@color/primary_green"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Address" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvProfileEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="farmer@agroassist.com" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:id="@+id/dividerProfileEmail" android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginHorizontal="16dp" android:visibility="gone"/>
+
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_mylocation" app:tint="@color/primary_green"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvProfileLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Maharashtra, India" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginHorizontal="16dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_gallery" app:tint="@color/primary_green"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/primary_crops" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvProfileCrops" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tomato, Rice, Wheat" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Edit Profile Button -->
+            <Button
+                android:id="@+id/btnEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="@string/edit_profile"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_green"
+                android:backgroundTint="@color/app_background"
+                app:strokeColor="@color/primary_green"
+                app:strokeWidth="1dp"
+                app:icon="@android:drawable/ic_menu_edit"
+                app:iconTint="@color/primary_green"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            <!-- Menu Options -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp">
+
+                    <LinearLayout android:id="@+id/navAchievements" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="14dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/star_on" app:tint="@color/text_secondary"/>
+                        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/achievements" android:textColor="@color/text_primary" android:textSize="16sp" android:layout_marginStart="16dp"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@android:drawable/ic_media_next" app:tint="@color/text_secondary"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginHorizontal="16dp"/>
+
+                    <LinearLayout android:id="@+id/navSettings" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="14dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_preferences" app:tint="@color/text_secondary"/>
+                        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/settings" android:textColor="@color/text_primary" android:textSize="16sp" android:layout_marginStart="16dp"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@android:drawable/ic_media_next" app:tint="@color/text_secondary"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginHorizontal="16dp"/>
+
+                    <LinearLayout android:id="@+id/navLanguage" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="14dp" android:gravity="center_vertical" android:background="?android:attr/selectableItemBackground" android:clickable="true" android:focusable="true">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_sort_alphabetically" app:tint="@color/text_secondary"/>
+                        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/language" android:textColor="@color/text_primary" android:textSize="16sp" android:layout_marginStart="16dp"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@android:drawable/ic_media_next" app:tint="@color/text_secondary"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginHorizontal="16dp"/>
+
+                    <LinearLayout android:id="@+id/navHelpSupport" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="14dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_help" app:tint="@color/text_secondary"/>
+                        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/help_support" android:textColor="@color/text_primary" android:textSize="16sp" android:layout_marginStart="16dp"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@android:drawable/ic_media_next" app:tint="@color/text_secondary"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginHorizontal="16dp"/>
+
+                    <LinearLayout android:id="@+id/navLogout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="14dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_close_clear_cancel" app:tint="#D32F2F"/>
+                        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/logout" android:textColor="#D32F2F" android:textSize="16sp" android:layout_marginStart="16dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Version -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AgroAssist AI v1.0.0"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/white"
+        android:elevation="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_home" app:tint="@color/text_secondary" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home" android:textColor="@color/text_secondary" android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navDetection" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_detect_disease" app:tint="@color/text_secondary" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/detection" android:textColor="@color/text_secondary" android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navAssistant" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_assistant_bot" app:tint="@color/text_secondary" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/assistant" android:textColor="@color/text_secondary" android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navProfile" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_profile" app:tint="@color/primary_green" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile" android:textColor="@color/primary_green" android:textSize="12sp" android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

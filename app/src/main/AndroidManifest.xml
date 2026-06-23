@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_logo"
+        android:label="AgroAssist AI"
+        android:roundIcon="@drawable/ic_app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AgroAssist">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".OtpVerificationActivity" />
+        <activity android:name=".EmailLoginActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".CheckEmailActivity" />
+        <activity android:name=".CreateNewPasswordActivity" />
+        <activity android:name=".PasswordSuccessActivity" />
+        <activity android:name=".ProfileSetupActivity" />
+        <activity android:name=".LocationSetupActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".DetectionActivity" />
+        <activity android:name=".CommunityActivity" />
+        <activity android:name=".CreatePostActivity" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".ImageReviewActivity" />
+        <activity android:name=".AnalysisActivity" />
+        <activity android:name=".ResultsActivity" />
+        <activity android:name=".ReportActivity" />
+        <activity android:name=".WhatsAppShareActivity" />
+        <activity android:name=".FacebookShareActivity" />
+        <activity android:name=".TwitterShareActivity" />
+        <activity android:name=".TelegramShareActivity" />
+        <activity android:name=".InstagramShareActivity" />
+        <activity android:name=".EmailShareActivity" />
+        <activity android:name=".RecommendedProductsActivity" />
+        <activity android:name=".ProductDetailsActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".NearbyShopsActivity" />
+        <activity android:name=".ShopMapActivity" />
+        <activity android:name=".WeatherDashboardActivity" />
+        <activity android:name=".SeasonPlanningActivity" />
+        <activity android:name=".CropCalendarActivity" />
+        <activity android:name=".AddCropActivity" />
+        <activity android:name=".CropAddedSuccessActivity" />
+        <activity android:name=".CustomPlanGeneratorActivity" />
+        <activity android:name=".FarmingPlanResultActivity" />
+        <activity android:name=".CropRotationActivity" />
+        <activity android:name=".PlantingTimesActivity" />
+        <activity android:name=".WaterManagementActivity" />
+        <activity android:name=".CreateScheduleActivity" />
+        <activity android:name=".FertilizerScheduleActivity" />
+        <activity android:name=".AddFertilizerScheduleActivity" />
+        <activity android:name=".DiseasePreventionActivity" />
+        <activity android:name=".MarketPricesActivity" />
+        <activity android:name=".CropPriceDetailsActivity" />
+        <activity android:name=".VoiceListeningActivity" />
+        <activity android:name=".VoiceAssistantActivity" />
+        <activity android:name=".ChatAssistantActivity" />
+        <activity android:name=".MonthlyReportActivity" />
+        <activity android:name=".DetectionHistoryActivity" />
+        <activity android:name=".AnalyticsReportsActivity" />
+        <activity android:name=".WeeklyReportActivity" />
+        <activity android:name=".DailyReportActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".HelpSupportActivity" />
+        <activity android:name=".PrivacyPolicyActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".AchievementsActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".DataUsageActivity" />
+        <activity android:name=".GovSchemesActivity" />
+        <activity android:name=".SchemeDetailsActivity" />
+        <activity android:name=".MarketLocationActivity" />
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".MyPostsActivity" />
+        <activity android:name=".MyCommentsActivity" />
+        
+        <receiver android:name=".WateringAlarmReceiver" android:exported="false" />
+        <receiver android:name=".FertilizerAlarmReceiver" android:exported="false" />
+        <receiver android:name=".GovSchemesAlarmReceiver" android:exported="false" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.agroassist"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <permission
+        android:name="com.example.agroassist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.agroassist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@drawable/ic_app_logo"
+        android:label="AgroAssist AI"
+        android:roundIcon="@drawable/ic_app_logo"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.AgroAssist" >
+        <activity
+            android:name="com.example.agroassist.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.agroassist.LoginActivity" />
+        <activity android:name="com.example.agroassist.OtpVerificationActivity" />
+        <activity android:name="com.example.agroassist.EmailLoginActivity" />
+        <activity android:name="com.example.agroassist.ForgotPasswordActivity" />
+        <activity android:name="com.example.agroassist.CheckEmailActivity" />
+        <activity android:name="com.example.agroassist.CreateNewPasswordActivity" />
+        <activity android:name="com.example.agroassist.PasswordSuccessActivity" />
+        <activity android:name="com.example.agroassist.ProfileSetupActivity" />
+        <activity android:name="com.example.agroassist.LocationSetupActivity" />
+        <activity android:name="com.example.agroassist.DashboardActivity" />
+        <activity android:name="com.example.agroassist.NotificationsActivity" />
+        <activity android:name="com.example.agroassist.DetectionActivity" />
+        <activity android:name="com.example.agroassist.CommunityActivity" />
+        <activity android:name="com.example.agroassist.CreatePostActivity" />
+        <activity android:name="com.example.agroassist.CameraActivity" />
+        <activity android:name="com.example.agroassist.ImageReviewActivity" />
+        <activity android:name="com.example.agroassist.AnalysisActivity" />
+        <activity android:name="com.example.agroassist.ResultsActivity" />
+        <activity android:name="com.example.agroassist.ReportActivity" />
+        <activity android:name="com.example.agroassist.WhatsAppShareActivity" />
+        <activity android:name="com.example.agroassist.FacebookShareActivity" />
+        <activity android:name="com.example.agroassist.TwitterShareActivity" />
+        <activity android:name="com.example.agroassist.TelegramShareActivity" />
+        <activity android:name="com.example.agroassist.InstagramShareActivity" />
+        <activity android:name="com.example.agroassist.EmailShareActivity" />
+        <activity android:name="com.example.agroassist.RecommendedProductsActivity" />
+        <activity android:name="com.example.agroassist.ProductDetailsActivity" />
+        <activity android:name="com.example.agroassist.CartActivity" />
+        <activity android:name="com.example.agroassist.NearbyShopsActivity" />
+        <activity android:name="com.example.agroassist.ShopMapActivity" />
+        <activity android:name="com.example.agroassist.WeatherDashboardActivity" />
+        <activity android:name="com.example.agroassist.SeasonPlanningActivity" />
+        <activity android:name="com.example.agroassist.CropCalendarActivity" />
+        <activity android:name="com.example.agroassist.AddCropActivity" />
+        <activity android:name="com.example.agroassist.CropAddedSuccessActivity" />
+        <activity android:name="com.example.agroassist.CustomPlanGeneratorActivity" />
+        <activity android:name="com.example.agroassist.FarmingPlanResultActivity" />
+        <activity android:name="com.example.agroassist.CropRotationActivity" />
+        <activity android:name="com.example.agroassist.PlantingTimesActivity" />
+        <activity android:name="com.example.agroassist.WaterManagementActivity" />
+        <activity android:name="com.example.agroassist.CreateScheduleActivity" />
+        <activity android:name="com.example.agroassist.FertilizerScheduleActivity" />
+        <activity android:name="com.example.agroassist.AddFertilizerScheduleActivity" />
+        <activity android:name="com.example.agroassist.DiseasePreventionActivity" />
+        <activity android:name="com.example.agroassist.MarketPricesActivity" />
+        <activity android:name="com.example.agroassist.CropPriceDetailsActivity" />
+        <activity android:name="com.example.agroassist.VoiceListeningActivity" />
+        <activity android:name="com.example.agroassist.VoiceAssistantActivity" />
+        <activity android:name="com.example.agroassist.ChatAssistantActivity" />
+        <activity android:name="com.example.agroassist.MonthlyReportActivity" />
+        <activity android:name="com.example.agroassist.DetectionHistoryActivity" />
+        <activity android:name="com.example.agroassist.AnalyticsReportsActivity" />
+        <activity android:name="com.example.agroassist.WeeklyReportActivity" />
+        <activity android:name="com.example.agroassist.DailyReportActivity" />
+        <activity android:name="com.example.agroassist.ProfileActivity" />
+        <activity android:name="com.example.agroassist.HelpSupportActivity" />
+        <activity android:name="com.example.agroassist.PrivacyPolicyActivity" />
+        <activity android:name="com.example.agroassist.EditProfileActivity" />
+        <activity android:name="com.example.agroassist.AchievementsActivity" />
+        <activity android:name="com.example.agroassist.SettingsActivity" />
+        <activity android:name="com.example.agroassist.DataUsageActivity" />
+        <activity android:name="com.example.agroassist.GovSchemesActivity" />
+        <activity android:name="com.example.agroassist.SchemeDetailsActivity" />
+        <activity android:name="com.example.agroassist.MarketLocationActivity" />
+        <activity android:name="com.example.agroassist.CommentsActivity" />
+        <activity android:name="com.example.agroassist.MyPostsActivity" />
+        <activity android:name="com.example.agroassist.MyCommentsActivity" />
+
+        <receiver
+            android:name="com.example.agroassist.WateringAlarmReceiver"
+            android:exported="false" />
+        <receiver
+            android:name="com.example.agroassist.FertilizerAlarmReceiver"
+            android:exported="false" />
+        <receiver
+            android:name="com.example.agroassist.GovSchemesAlarmReceiver"
+            android:exported="false" />
+
+        <!--
+        Service for holding metadata. Cannot be instantiated.
+        Metadata will be merged from other manifests.
+        -->
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+        </service>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.agroassist.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:visibleToInstantApps="true" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <activity
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="genericidp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="recaptcha" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.example.agroassist.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

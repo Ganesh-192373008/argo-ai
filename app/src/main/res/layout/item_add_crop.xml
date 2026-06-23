@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cropCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Crop Emoji -->
+        <TextView
+            android:id="@+id/cropEmoji"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#FFF3E0"
+            android:gravity="center"
+            android:text="🥔"
+            android:textSize="24sp" />
+
+        <!-- Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/cropName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Potato"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/cropCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Root Vegetable"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Tags -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <!-- Difficulty Tag -->
+                <TextView
+                    android:id="@+id/tagDifficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Easy"
+                    android:textColor="#2E7D32"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="#E8F5E9"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:layout_marginEnd="6dp" />
+
+                <!-- Season Tag -->
+                <TextView
+                    android:id="@+id/tagSeason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rabi"
+                    android:textColor="#7B1FA2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="#F3E5F5"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Add button -->
+        <ImageView
+            android:id="@+id/btnAddCrop"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/circle_icon_bg_green"
+            android:backgroundTint="@color/primary_green"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_input_add"
+            app:tint="@color/white"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Disease Prevention"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proactive Crop Protection"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Essential strategies to stop diseases before they start"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <!-- Sanitation Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#E1F5FE" android:gravity="center" android:text="🛡️" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sanitation &amp; Hygiene" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Clean and disinfect pruning tools between cuts.\n• Immediately remove and burn or deeply bury infected plant debris.\n• Wash hands after handling diseased plants to avoid spreading pathogens." android:textColor="@color/text_secondary" android:textSize="14sp" android:layout_marginTop="12dp" android:lineSpacingExtra="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Spacing Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#F3E5F5" android:gravity="center" android:text="📏" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Proper Plant Spacing" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Avoid overcrowding. Adequate spacing promotes excellent air circulation.\n• Rapid drying of leaves after rain significantly reduces fungal infections.\n• Proper spacing allows sunlight to penetrate the canopy, keeping crops dry." android:textColor="@color/text_secondary" android:textSize="14sp" android:layout_marginTop="12dp" android:lineSpacingExtra="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Resistant Varieties Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#E8F5E9" android:gravity="center" android:text="🧬" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Resistant Varieties" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Always select seeds and transplants labeled as 'disease-resistant'.\n• Choose local or hybrid varieties known to withstand regional blights.\n• This is the most cost-effective long-term prevention strategy." android:textColor="@color/text_secondary" android:textSize="14sp" android:layout_marginTop="12dp" android:lineSpacingExtra="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Watering Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="#FFF3E0" android:gravity="center" android:text="💧" android:textSize="20sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Watering Practices" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Apply water directly to the base of the plant using drip irrigation.\n• Never water late in the evening if leaves won't dry before nightfall.\n• Fungal spores travel through splashing water, so avoid overhead sprinklers." android:textColor="@color/text_secondary" android:textSize="14sp" android:layout_marginTop="12dp" android:lineSpacingExtra="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Early Monitoring Tips -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:background="#FFEBEE"
+                android:padding="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔍 The Golden Rule: Early Detection"
+                    android:textColor="#C62828"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Walk your fields at least twice a week. Check the undersides of lower leaves where diseases often start. Catching a problem early means you can treat it before it wipes out the crop!"
+                    android:textColor="#B71C1C"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

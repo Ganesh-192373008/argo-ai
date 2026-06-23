@@ -1,0 +1,790 @@
+[
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_mic.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_mic.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_crop_added_success.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_crop_added_success.xml"
+    },
+    {
+        "merged": "com.example.agroassist.app-debug-42:/drawable_ic_brand_amazon.xml.flat",
+        "source": "com.example.agroassist.app-main-44:/drawable/ic_brand_amazon.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_create_new_password.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_create_new_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_location.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_back.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_shopping_bag.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_shopping_bag.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_pill_orange.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_pill_orange.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_scheme_details.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_scheme_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_chat_create_image.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_chat_create_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_weekly_report.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_weekly_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_pill_light_orange.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_pill_light_orange.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_gradient_preview.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_gradient_preview.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_item_recommended_product.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\item_recommended_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_camera_capture_btn.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_camera_capture_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_gov_schemes.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_gov_schemes.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_email_login.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_email_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_outline_telegram.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_outline_telegram.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_card_light_blue.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_card_light_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_camera_corners.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_camera_corners.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_brand_facebook.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_brand_facebook.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_markets.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_markets.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_notifications.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_assistant_bot.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_assistant_bot.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_outline_home.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_outline_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_share.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_icon_bg.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\icon_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_urea_fertilizer.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\urea_fertilizer.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_outline_email.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_outline_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_disease_prevention.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_disease_prevention.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_dialog_chat_attachments.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\dialog_chat_attachments.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_help_support.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_help_support.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_profile.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_gov_schemes.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_gov_schemes.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_tip_of_day.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_tip_of_day.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_dashboard.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_chat_files.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_chat_files.xml"
+    },
+    {
+        "merged": "com.example.agroassist.app-debug-42:/drawable_ic_brand_google.xml.flat",
+        "source": "com.example.agroassist.app-main-44:/drawable/ic_brand_google.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_instagram_share.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_instagram_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_privacy_policy.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_privacy_policy.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_outline_twitter.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_outline_twitter.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_item_comment.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\item_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_weather_dashboard.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_weather_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_brand_instagram.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_brand_instagram.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_requirements_box_bg.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\requirements_box_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_card_dark_green.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_card_dark_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_gray.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_chat_camera.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_chat_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_product_details.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_product_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_header_curved.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_header_curved.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_analysis.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_analysis.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_bubble_user.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_bubble_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_item_community_post.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\item_community_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_otp_verification.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_otp_verification.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_telegram_share.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_telegram_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_my_comments.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_my_comments.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_tomato_seeds.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\tomato_seeds.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_detection_history.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_detection_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_feature_assistant.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_feature_assistant.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_market_prices.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_market_prices.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_add_crop.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_add_crop.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_flip.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_flip.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_item_add_crop.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\item_add_crop.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_logo_bg.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\logo_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_comments.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_comments.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_item_comment_received.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\item_comment_received.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_check_circle.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_check_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_send.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_send.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_brand_whatsapp.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_brand_whatsapp.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_planting_times.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_planting_times.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_results.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_results.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_brand_email.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_brand_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_npk_fertilizer.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\npk_fertilizer.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_fertilizer_schedule.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_fertilizer_schedule.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_pill_green.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_pill_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_outline_facebook.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_outline_facebook.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_twitter_share.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_twitter_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_image_review.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_image_review.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_hero_card.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_hero_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_location_gps_btn.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_location_gps_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_circular_progress.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\circular_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_edit_text_bg_active.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\edit_text_bg_active.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_card_outline_green.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_card_outline_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_feature_market.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_feature_market.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_password_success.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_password_success.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_green.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_chat_photos.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_chat_photos.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_crop_pill_bg_selected.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\crop_pill_bg_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_my_posts.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_my_posts.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_success_check.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_success_check.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_whatsapp_share.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_whatsapp_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_cart.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_neem_oil.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\neem_oil.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_camera_pill.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_camera_pill.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_daily_report.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_daily_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_detect_disease.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_detect_disease.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_create_schedule.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_create_schedule.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_chat_thinking.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_chat_thinking.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_create_post.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_create_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_dialog_create_post.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\dialog_create_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_crop_calendar.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_crop_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_calendar.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_pill_dark.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_pill_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_icon_rounded.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_icon_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_crop_price_details.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_crop_price_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_brand_telegram.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_brand_telegram.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_retry.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_retry.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_voice_listening.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_voice_listening.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_dialog_fingerprint.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\dialog_fingerprint.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_app_logo.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_app_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_email_share.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_email_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_flash.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_flash.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_profile_setup.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_profile_setup.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_gradient_danger.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_gradient_danger.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_feature_detect.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_feature_detect.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_brand_twitter.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_brand_twitter.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_nearby_shops.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_nearby_shops.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_result_header_gradient.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_result_header_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_data_usage.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_data_usage.xml"
+    },
+    {
+        "merged": "com.example.agroassist.app-debug-42:/drawable_ic_brand_flipkart.xml.flat",
+        "source": "com.example.agroassist.app-main-44:/drawable/ic_brand_flipkart.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_farming_plan_result.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_farming_plan_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_add_fertilizer_schedule.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_add_fertilizer_schedule.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_gradient_healthy.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_gradient_healthy.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_card_white.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_card_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_otp_box_bg.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\otp_box_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_take_photo_btn.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_take_photo_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_facebook_share.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_facebook_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_crop_pill_bg.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\crop_pill_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_outline_whatsapp.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_outline_whatsapp.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_voice_assistant.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_voice_assistant.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_metalaxyl.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\metalaxyl.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_download.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_download.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_circle_icon_bg_green.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\circle_icon_bg_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_location_setup.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_location_setup.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_chat_input.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_chat_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_premium_card.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_premium_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_fingerprint.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_fingerprint.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_detection.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_detection.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_imidacloprid.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\imidacloprid.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_premium_gradient.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_premium_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_camera.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_monthly_report.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_monthly_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_season_planning.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_season_planning.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_community.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_community.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_recommended_products.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_recommended_products.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_gradient_warning.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_gradient_warning.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_pill_red.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_pill_red.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_dialog_share.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\dialog_share.xml"
+    },
+    {
+        "merged": "com.example.agroassist.app-debug-42:/layout_dialog_checkout_chooser.xml.flat",
+        "source": "com.example.agroassist.app-main-44:/layout/dialog_checkout_chooser.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_community.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_community.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_circle_outline_white.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_circle_outline_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_water_management.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_water_management.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_dialog_comments.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\dialog_comments.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_photo.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_achievements.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_achievements.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_chlorothalonil.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\chlorothalonil.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_outline_instagram.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_outline_instagram.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_item_fertilizer_schedule.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\item_fertilizer_schedule.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_camera_viewfinder.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_camera_viewfinder.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_check_email.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_check_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_edit_profile.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_edit_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_circle_icon_bg.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\circle_icon_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_crop_rotation.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_crop_rotation.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_shop_map.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_shop_map.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_item_tracked_crop.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\item_tracked_crop.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_item_market_price.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\item_market_price.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_mancozeb.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\mancozeb.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_chat_assistant.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_chat_assistant.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_btn_red.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_btn_red.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_farmer_crops_bg.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\farmer_crops_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_market_location.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_market_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_dap_fertilizer.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\dap_fertilizer.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_farmer_header.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_farmer_header.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_copper_oxychloride.png.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\copper_oxychloride.png"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_report.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_empty_circle.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_empty_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_analytics_reports.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_analytics_reports.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_brain.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_brain.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_card_bg.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\card_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_forgot_password.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_forgot_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_history.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_edit_text_bg.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\edit_text_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_custom_plan_generator.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_custom_plan_generator.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_attachment.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_attachment.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_button_outline_bg.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\button_outline_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_activity_market_prices.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\activity_market_prices.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_upload_btn.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_upload_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_leaf.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_leaf.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_ic_soundwave.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\ic_soundwave.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\layout_item_notification.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\layout\\item_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-debug-42:\\drawable_bg_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.9\\com.example.agroassist.app-main-44:\\drawable\\bg_bottom_sheet.xml"
+    }
+]

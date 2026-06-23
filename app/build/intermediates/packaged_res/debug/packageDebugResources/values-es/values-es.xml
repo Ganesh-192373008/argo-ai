@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="achievements">Logros</string>
+    <string name="active_farmers">👨‍🌾 2.450+ agricultores activos</string>
+    <string name="app_name">AgroAssist AI</string>
+    <string name="assistant">Asistente</string>
+    <string name="community">Comunidad</string>
+    <string name="connect_with_farmers">Conéctate con agricultores</string>
+    <string name="detection">Detección</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="farmer_community">Comunidad de agricultores</string>
+    <string name="farmer_since">Agricultor desde 2015</string>
+    <string name="help_support">Ayuda y soporte</string>
+    <string name="home">Inicio</string>
+    <string name="language">Idioma</string>
+    <string name="location">Ubicación</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="mobile_number">Número de móvil</string>
+    <string name="my_posts">Mis publicaciones 📝</string>
+    <string name="post_action">+ Publicar</string>
+    <string name="primary_crops">Cultivos principales</string>
+    <string name="profile">Perfil</string>
+    <string name="replies_box">Buzón de respuestas 💬</string>
+    <string name="settings">Ajustes</string>
+</resources>
