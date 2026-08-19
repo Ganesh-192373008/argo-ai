@@ -1,18 +1,21 @@
 {
   "name": "agroassist-e2e-automation",
   "version": "1.0.0",
-  "description": "Complete E2E QA Automation Testing Framework for AgroAssist AI",
+  "description": "Separate Web and Mobile Appium Automation Testing Framework for AgroAssist AI",
   "main": "backend/src/server.js",
   "scripts": {
     "start": "node backend/src/server.js",
-    "test": "python run_all_tests.py"
+    "test": "python run_all_tests.py",
+    "test:web": "python run_web_tests.py",
+    "test:appium": "python run_appium_tests.py"
   },
   "keywords": [
     "testing",
     "selenium",
     "pytest",
     "appium",
-    "e2e",
+    "mobile",
+    "web",
     "qa-automation"
   ],
   "author": "AgroAssist QA Team",

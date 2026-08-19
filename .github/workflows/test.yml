@@ -8,7 +8,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-automation:
+  # =========================================================================
+  # JOB 1: DEDICATED WEB AUTOMATION TESTING (Selenium + Pytest + Web API)
+  # =========================================================================
+  web-test-automation:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,8 +22,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
-        cache: 'npm'
-        cache-dependency-path: 'backend/package-lock.json'
 
     - name: Set up Python 3.12
       uses: actions/setup-python@v5
@@ -58,7 +59,7 @@ jobs:
         echo "Application failed to start within timeout"
         exit 1
 
-    - name: Execute Full E2E Test Suite (325 Test Cases)
+    - name: Execute Dedicated Web Test Suite
       env:
         BASE_URL: ${{ secrets.TEST_BASE_URL || 'http://localhost:3000' }}
         API_BASE_URL: ${{ secrets.API_BASE_URL || 'http://localhost:3000/api' }}
@@ -66,28 +67,46 @@ jobs:
         TEST_PASSWORD: ${{ secrets.TEST_PASSWORD || 'password123' }}
         HEADLESS: 'true'
       run: |
-        python run_all_tests.py
+        npm run test:web
 
-    - name: Upload Excel Test Results Artifact
+    - name: Upload Web Test Excel Results Artifact
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: test-results-excel
-        path: reports/test_results.xlsx
+        name: web-test-results-excel
+        path: reports/test_results_web.xlsx
         if-no-files-found: error
 
-    - name: Upload HTML Test Report Artifact
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: test-results-html
-        path: reports/html/
-        if-no-files-found: ignore
+  # =========================================================================
+  # JOB 2: DEDICATED APPIUM & MOBILE APP AUTOMATION TESTING
+  # =========================================================================
+  appium-mobile-automation:
+    runs-on: ubuntu-latest
 
-    - name: Upload Screenshots Artifact
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install Python & Appium Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Execute Dedicated Appium & Mobile Test Suite
+      env:
+        HEADLESS: 'true'
+      run: |
+        npm run test:appium
+
+    - name: Upload Appium Mobile Test Excel Results Artifact
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: test-screenshots
-        path: reports/screenshots/
-        if-no-files-found: ignore
+        name: appium-test-results-excel
+        path: reports/test_results_appium.xlsx
+        if-no-files-found: error
