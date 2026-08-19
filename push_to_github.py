@@ -43,7 +43,7 @@ def auto_setup_and_commit():
     subprocess.run([git_bin, "commit", "-m", "Add complete E2E QA Automation Testing Framework (325 test cases + reports + CI workflow)"], cwd=repo_dir)
 
     print("\n===================================================")
-    print(" ✅ Git repository successfully initialized & committed locally!")
+    print(" [SUCCESS] Git repository successfully initialized & committed locally!")
     print("===================================================")
     return True
 
