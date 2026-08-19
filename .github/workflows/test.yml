@@ -110,3 +110,58 @@ jobs:
         name: appium-test-results-excel
         path: reports/test_results_appium.xlsx
         if-no-files-found: error
+
+  # =========================================================================
+  # JOB 3: DEDICATED API LOAD & PERFORMANCE BENCHMARK TESTING
+  # =========================================================================
+  api-load-performance-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Install Backend Node Dependencies
+      run: |
+        cd backend
+        npm install
+        cd ..
+
+    - name: Start Backend Application Server
+      run: |
+        cd backend
+        node src/server.js &
+        cd ..
+
+    - name: Wait for Application Health Check (HTTP 200)
+      run: |
+        echo "Waiting for AgroAssist backend application to become ready..."
+        for i in {1..30}; do
+          if curl -s http://localhost:3000/api/health | grep -q '"status":"OK"'; then
+            echo "Application is online and healthy!"
+            exit 0
+          fi
+          echo "Waiting for server (attempt $i/30)..."
+          sleep 1
+        done
+        echo "Application failed to start within timeout"
+        exit 1
+
+    - name: Execute Dedicated API Load Performance Benchmark
+      run: |
+        npm run test:load
