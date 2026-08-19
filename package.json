@@ -1,0 +1,20 @@
+{
+  "name": "agroassist-e2e-automation",
+  "version": "1.0.0",
+  "description": "Complete E2E QA Automation Testing Framework for AgroAssist AI",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "test": "python run_all_tests.py"
+  },
+  "keywords": [
+    "testing",
+    "selenium",
+    "pytest",
+    "appium",
+    "e2e",
+    "qa-automation"
+  ],
+  "author": "AgroAssist QA Team",
+  "license": "ISC"
+}

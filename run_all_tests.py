@@ -15,15 +15,32 @@ def run_master_suite():
 
     start_time_all = time.time()
     
-    # 1. Check if backend API server is responsive
+    # 1. Check & start backend API server if needed
     backend_running = False
+    server_process = None
     try:
-        r = requests.get(f"{Config.API_BASE_URL}/health", timeout=3)
+        r = requests.get(f"{Config.API_BASE_URL}/health", timeout=2)
         if r.status_code == 200:
             backend_running = True
-            print("[Server Check] Backend API server is online and responding cleanly.")
+            print("[Server Check] Backend API server is already online on port 3000.")
     except Exception:
-        print("[Server Check] Local server not running on port 3000. Will execute mock/offline test runner.")
+        print("[Server Check] Starting local backend server (node backend/src/server.js)...")
+        import subprocess
+        backend_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "backend")
+        server_js = os.path.join(backend_dir, "src", "server.js")
+        if os.path.exists(server_js):
+            server_process = subprocess.Popen([sys.executable if False else "node", server_js], cwd=backend_dir)
+            print("[Server Check] Polling /api/health for server readiness...")
+            for attempt in range(15):
+                time.sleep(1)
+                try:
+                    r = requests.get(f"{Config.API_BASE_URL}/health", timeout=2)
+                    if r.status_code == 200:
+                        backend_running = True
+                        print(f"[Server Check] Backend server ready after {attempt+1}s.")
+                        break
+                except Exception:
+                    pass
 
     test_results = []
     
