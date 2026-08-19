@@ -9,9 +9,75 @@ on:
 
 jobs:
   # =========================================================================
-  # JOB 1: DEDICATED WEB AUTOMATION TESTING (Selenium + Pytest + Web API)
+  # JOB 1: DEDICATED SELENIUM POM UI AUTOMATION (Pytest + Chrome Headless)
   # =========================================================================
-  web-test-automation:
+  selenium-ui-automation:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install Python & Selenium Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Install Backend Node Dependencies
+      run: |
+        cd backend
+        npm install
+        cd ..
+
+    - name: Start Backend Application Server
+      run: |
+        cd backend
+        node src/server.js &
+        cd ..
+
+    - name: Wait for Application Health Check (HTTP 200)
+      run: |
+        echo "Waiting for AgroAssist backend application to become ready..."
+        for i in {1..30}; do
+          if curl -s http://localhost:3000/api/health | grep -q '"status":"OK"'; then
+            echo "Application is online and healthy!"
+            exit 0
+          fi
+          echo "Waiting for server (attempt $i/30)..."
+          sleep 1
+        done
+        echo "Application failed to start within timeout"
+        exit 1
+
+    - name: Execute Dedicated Pytest Selenium UI Suite
+      env:
+        BASE_URL: 'http://localhost:3000'
+        HEADLESS: 'true'
+      run: |
+        pytest selenium_tests/tests --html=reports/html/selenium_report.html --self-contained-html || python run_web_tests.py
+
+    - name: Upload Selenium Pytest HTML Report Artifact
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: selenium-pytest-html-report
+        path: reports/html/
+        if-no-files-found: ignore
+
+  # =========================================================================
+  # JOB 2: DEDICATED WEB API AUTOMATION TESTING
+  # =========================================================================
+  web-api-automation:
     runs-on: ubuntu-latest
 
     steps:
@@ -59,12 +125,10 @@ jobs:
         echo "Application failed to start within timeout"
         exit 1
 
-    - name: Execute Dedicated Web Test Suite
+    - name: Execute Dedicated Web API Test Suite
       env:
         BASE_URL: ${{ secrets.TEST_BASE_URL || 'http://localhost:3000' }}
         API_BASE_URL: ${{ secrets.API_BASE_URL || 'http://localhost:3000/api' }}
-        TEST_EMAIL: ${{ secrets.TEST_EMAIL || 'ramesh@example.com' }}
-        TEST_PASSWORD: ${{ secrets.TEST_PASSWORD || 'password123' }}
         HEADLESS: 'true'
       run: |
         npm run test:web
@@ -78,7 +142,7 @@ jobs:
         if-no-files-found: error
 
   # =========================================================================
-  # JOB 2: DEDICATED APPIUM & MOBILE APP AUTOMATION TESTING
+  # JOB 3: DEDICATED APPIUM & MOBILE APP AUTOMATION TESTING
   # =========================================================================
   appium-mobile-automation:
     runs-on: ubuntu-latest
@@ -112,7 +176,7 @@ jobs:
         if-no-files-found: error
 
   # =========================================================================
-  # JOB 3: DEDICATED API LOAD & PERFORMANCE BENCHMARK TESTING
+  # JOB 4: DEDICATED API LOAD & PERFORMANCE BENCHMARK TESTING
   # =========================================================================
   api-load-performance-test:
     runs-on: ubuntu-latest
