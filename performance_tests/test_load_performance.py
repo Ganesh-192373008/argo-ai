@@ -113,6 +113,36 @@ Results Breakdown:
   • Failed / Timed Out:     {len(failed)} ({100 - pass_pct:.1f}%)
 ================================================================================
 """
+    # Save Excel report for Load Test results
+    from selenium_tests.utils.excel_reporter import ExcelReporter
+    load_test_cases = []
+    for idx, r in enumerate(results, 1):
+        load_test_cases.append({
+            "id": f"TC-LOAD-{idx:03d}",
+            "module": "API Load & Performance",
+            "feature": f"Concurrent Request to {r['endpoint']}",
+            "page": "API Endpoint",
+            "type": "Performance Load",
+            "description": f"Send request {idx} to {r['endpoint']} under {concurrent_users} virtual users load",
+            "preconditions": "API Server active",
+            "steps": f"HTTP GET {r['endpoint']}",
+            "test_data": f"Concurrent Threads={concurrent_users}",
+            "expected": "Response HTTP 200 within SLA (<5000ms)",
+            "actual": f"Status={r['status']}, Latency={r['latency_ms']:.2f}ms",
+            "status": "PASS" if r["success"] else "FAIL",
+            "execution_time": r["latency_ms"] / 1000.0,
+            "browser": "HTTP Concurrent ThreadPool",
+            "device": "API Endpoint",
+            "screenshot": "",
+            "error": "" if r["success"] else "Request timeout or non-200 status",
+            "start_time": "09:30:00",
+            "end_time": "09:30:00"
+        })
+
+    reporter = ExcelReporter("reports/test_results_load.xlsx")
+    reporter.generate_report(load_test_cases)
+    print("[Load Suite] Report successfully saved to reports/test_results_load.xlsx.")
+
     print(report_text)
     return report_text
 
