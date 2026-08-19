@@ -59,20 +59,20 @@ jobs:
         echo "Application failed to start within timeout"
         exit 1
 
-    - name: Execute Dedicated Pytest Selenium UI Suite
+    - name: Execute Dedicated Selenium POM Test Suite
       env:
         BASE_URL: 'http://localhost:3000'
         HEADLESS: 'true'
       run: |
-        pytest selenium_tests/tests --html=reports/html/selenium_report.html --self-contained-html || python run_web_tests.py
+        npm run test:selenium
 
-    - name: Upload Selenium Pytest HTML Report Artifact
+    - name: Upload Selenium Test Excel Results Artifact
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: selenium-pytest-html-report
-        path: reports/html/
-        if-no-files-found: ignore
+        name: selenium-test-results-excel
+        path: reports/test_results_selenium.xlsx
+        if-no-files-found: error
 
   # =========================================================================
   # JOB 2: DEDICATED WEB API AUTOMATION TESTING
