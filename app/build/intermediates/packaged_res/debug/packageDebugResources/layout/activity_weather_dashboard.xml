@@ -54,13 +54,34 @@
                 android:textColor="@color/text_primary"
                 android:textSize="22sp"
                 android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Maharashtra, India"
-                android:textColor="@color/text_secondary"
-                android:textSize="14sp" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/tvLocationName"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Maharashtra, India"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btnChangeLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change 📍"
+                    android:textColor="@color/primary_green"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:background="#E8F5E9"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp" />
+            </LinearLayout>
 
             <!-- Forecast Card -->
             <androidx.cardview.widget.CardView
@@ -76,113 +97,113 @@
                     android:orientation="vertical"
                     android:padding="16dp">
                     
-                    <!-- Monday -->
+                    <!-- Day 1 -->
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="☀️" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvDay1Emoji" android:layout_width="32dp" android:layout_height="wrap_content" android:text="☀️" android:textSize="24sp"/>
                         <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="8dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 21 • Sunny" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvDay1Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay1DateCond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aug 10 • Sunny" android:textColor="@color/text_secondary" android:textSize="12sp"/>
                         </LinearLayout>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 0%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
+                        <TextView android:id="@+id/tvDay1Rain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 0%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                            <TextView android:id="@+id/tvDay1High" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay1Low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
                         </LinearLayout>
                     </LinearLayout>
                     
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginVertical="12dp"/>
 
-                    <!-- Tuesday -->
+                    <!-- Day 2 -->
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🌤️" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvDay2Emoji" android:layout_width="32dp" android:layout_height="wrap_content" android:text="🌤️" android:textSize="24sp"/>
                         <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="8dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tuesday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 22 • Partly Cloudy" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvDay2Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tomorrow" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay2DateCond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aug 11 • Partly Cloudy" android:textColor="@color/text_secondary" android:textSize="12sp"/>
                         </LinearLayout>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 10%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
+                        <TextView android:id="@+id/tvDay2Rain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 10%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="29°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="23°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                            <TextView android:id="@+id/tvDay2High" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="29°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay2Low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="23°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
                         </LinearLayout>
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginVertical="12dp"/>
 
-                    <!-- Wednesday -->
+                    <!-- Day 3 -->
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="⛅" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvDay3Emoji" android:layout_width="32dp" android:layout_height="wrap_content" android:text="⛅" android:textSize="24sp"/>
                         <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="8dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wednesday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 23 • Cloudy" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvDay3Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wednesday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay3DateCond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aug 12 • Cloudy" android:textColor="@color/text_secondary" android:textSize="12sp"/>
                         </LinearLayout>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 20%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
+                        <TextView android:id="@+id/tvDay3Rain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 20%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="27°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                            <TextView android:id="@+id/tvDay3High" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="27°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay3Low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
                         </LinearLayout>
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginVertical="12dp"/>
 
-                    <!-- Thursday -->
+                    <!-- Day 4 -->
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🌧️" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvDay4Emoji" android:layout_width="32dp" android:layout_height="wrap_content" android:text="🌧️" android:textSize="24sp"/>
                         <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="8dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thursday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 24 • Light Rain" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvDay4Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thursday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay4DateCond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aug 13 • Light Rain" android:textColor="@color/text_secondary" android:textSize="12sp"/>
                         </LinearLayout>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 60%" android:textColor="#1976D2" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
+                        <TextView android:id="@+id/tvDay4Rain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 60%" android:textColor="#1976D2" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="26°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                            <TextView android:id="@+id/tvDay4High" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="26°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay4Low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
                         </LinearLayout>
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginVertical="12dp"/>
 
-                    <!-- Friday -->
+                    <!-- Day 5 -->
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🌧️" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvDay5Emoji" android:layout_width="32dp" android:layout_height="wrap_content" android:text="🌧️" android:textSize="24sp"/>
                         <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="8dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Friday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 25 • Rain" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvDay5Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Friday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay5DateCond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aug 14 • Rain" android:textColor="@color/text_secondary" android:textSize="12sp"/>
                         </LinearLayout>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 80%" android:textColor="#0D47A1" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
+                        <TextView android:id="@+id/tvDay5Rain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 80%" android:textColor="#0D47A1" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="19°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                            <TextView android:id="@+id/tvDay5High" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay5Low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="19°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
                         </LinearLayout>
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginVertical="12dp"/>
 
-                    <!-- Saturday -->
+                    <!-- Day 6 -->
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="⛅" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvDay6Emoji" android:layout_width="32dp" android:layout_height="wrap_content" android:text="⛅" android:textSize="24sp"/>
                         <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="8dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Saturday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 26 • Cloudy" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvDay6Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Saturday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay6DateCond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aug 15 • Cloudy" android:textColor="@color/text_secondary" android:textSize="12sp"/>
                         </LinearLayout>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 30%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
+                        <TextView android:id="@+id/tvDay6Rain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 30%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="27°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                            <TextView android:id="@+id/tvDay6High" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="27°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay6Low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
                         </LinearLayout>
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginVertical="12dp"/>
 
-                    <!-- Sunday -->
+                    <!-- Day 7 -->
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🌤️" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvDay7Emoji" android:layout_width="32dp" android:layout_height="wrap_content" android:text="🌤️" android:textSize="24sp"/>
                         <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="8dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sunday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 27 • Partly Cloudy" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tvDay7Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sunday" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay7DateCond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aug 16 • Partly Cloudy" android:textColor="@color/text_secondary" android:textSize="12sp"/>
                         </LinearLayout>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 15%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
+                        <TextView android:id="@+id/tvDay7Rain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 15%" android:textColor="#2196F3" android:textSize="14sp" android:textStyle="bold" android:layout_marginEnd="16dp"/>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="28°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                            <TextView android:id="@+id/tvDay7High" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="28°" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:id="@+id/tvDay7Low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22°" android:textColor="@color/text_secondary" android:textSize="14sp"/>
                         </LinearLayout>
                     </LinearLayout>
 
@@ -206,6 +227,7 @@
                     android:textStyle="bold"
                     android:textSize="16sp"/>
                 <TextView
+                    android:id="@+id/tvFarmingRecommendation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"

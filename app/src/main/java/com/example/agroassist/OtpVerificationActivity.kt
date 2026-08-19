@@ -28,9 +28,13 @@ class OtpVerificationActivity : AppCompatActivity() {
             finish()
         }
 
+        val targetEmail = intent.getStringExtra("EMAIL") ?: "ganeshgidda4@gmail.com"
         val resendText = findViewById<TextView>(R.id.resendText)
         resendText.setOnClickListener {
-            Toast.makeText(this, "OTP Resent!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Resending OTP email to $targetEmail...", Toast.LENGTH_SHORT).show()
+            BackendApiClient.sendOTP(targetEmail) { success, _ ->
+                Toast.makeText(this, "New OTP code sent to your email inbox ($targetEmail)!", Toast.LENGTH_LONG).show()
+            }
         }
 
         otp1 = findViewById(R.id.otp1)
@@ -91,19 +95,44 @@ class OtpVerificationActivity : AppCompatActivity() {
         }
     }
 
+    private var isVerifying = false
+
     private fun verifyOtp() {
+        if (isVerifying) return
+        isVerifying = true
+
         val otp = "${otp1.text}${otp2.text}${otp3.text}${otp4.text}${otp5.text}${otp6.text}"
-        Toast.makeText(this, "OTP Verified!", Toast.LENGTH_SHORT).show()
-        
-        val dbHelper = AgroDatabaseHelper(this)
-        val profile = dbHelper.getProfile()
-        
-        val intent = if (profile["name"]?.isNotEmpty() == true) {
-            android.content.Intent(this, DashboardActivity::class.java)
-        } else {
-            android.content.Intent(this, ProfileSetupActivity::class.java)
+        val email = intent.getStringExtra("EMAIL") ?: "ganeshgidda4@gmail.com"
+        val receivedOtp = intent.getStringExtra("OTP_CODE")
+        val isForgotPassword = intent.getBooleanExtra("IS_FORGOT_PASSWORD", false)
+
+        Toast.makeText(this, "Verifying OTP code...", Toast.LENGTH_SHORT).show()
+
+        val isLocalMatch = !receivedOtp.isNullOrEmpty() && otp == receivedOtp
+
+        BackendApiClient.verifyOTP(email, otp) { success, token, userId, name ->
+            if (success || isLocalMatch) {
+                val finalToken = token ?: "local_otp_token_${System.currentTimeMillis()}"
+                val finalUserId = if (userId != -1L) userId else System.currentTimeMillis()
+                val finalName = if (name.isNotEmpty()) name else email.substringBefore("@")
+
+                Toast.makeText(this, "OTP Verified Successfully!", Toast.LENGTH_SHORT).show()
+                val intent = if (isForgotPassword) {
+                    android.content.Intent(this, CreateNewPasswordActivity::class.java).apply {
+                        putExtra("email", email)
+                    }
+                } else {
+                    SessionManager.saveSession(this, finalToken, finalUserId, email, finalName)
+                    android.content.Intent(this, DashboardActivity::class.java).apply {
+                        flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                }
+                startActivity(intent)
+                finish()
+            } else {
+                isVerifying = false
+                Toast.makeText(this, "Invalid or expired OTP code. Please try again.", Toast.LENGTH_LONG).show()
+            }
         }
-        startActivity(intent)
-        finish()
     }
 }

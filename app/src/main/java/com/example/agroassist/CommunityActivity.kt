@@ -16,7 +16,7 @@ import androidx.core.content.ContextCompat
 import android.app.Activity
 import androidx.activity.result.contract.ActivityResultContracts
 
-class CommunityActivity : AppCompatActivity() {
+class CommunityActivity : BaseProtectedActivity() {
 
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(LocaleHelper.wrap(newBase))
@@ -85,58 +85,7 @@ class CommunityActivity : AppCompatActivity() {
     }
 
     private fun seedCommunityIfEmpty() {
-        val posts = dbHelper.getPosts()
-        if (posts.isEmpty()) {
-            // Seed Ramesh Patil post
-            val rameshId = dbHelper.addPost(
-                "👨‍🌾",
-                "Ramesh Patil",
-                "Maharashtra",
-                "2 hours ago",
-                "Successfully treated late blight on my tomato farm using the recommendations from AgroAssist AI. Yield improved by 30%! 🍅",
-                0
-            )
-            dbHelper.updatePostLikes(rameshId.toInt(), 45, 0)
-            dbHelper.addComment(rameshId.toInt(), "👩‍🌾", "Kiran Devi", "Great to hear! Blight ruined mine last year.", "1 hour ago", 0)
-            dbHelper.addComment(rameshId.toInt(), "👨‍🌾", "Amit Shinde", "What was the fungicide recommendation?", "30 mins ago", 0)
-
-            // Seed Sunita Devi post
-            val sunitaId = dbHelper.addPost(
-                "👩‍🌾",
-                "Sunita Devi",
-                "Gujarat",
-                "5 hours ago",
-                "Any tips for organic pest control on chili crops? Looking for chemical-free solutions. 🌶️",
-                0
-            )
-            dbHelper.updatePostLikes(sunitaId.toInt(), 28, 0)
-            dbHelper.addComment(sunitaId.toInt(), "👨‍🌾", "Rajesh Kumar", "Neem oil spray works great for chili pests.", "4 hours ago", 0)
-            dbHelper.addComment(sunitaId.toInt(), "👩‍🌾", "Priya Patel", "Try garlic-chili spray, it's very effective!", "2 hours ago", 0)
-
-            // Seed Kumar Singh post
-            val kumarId = dbHelper.addPost(
-                "👨‍🌾",
-                "Kumar Singh",
-                "Punjab",
-                "1 day ago",
-                "Great news! Cotton prices up 15% this week in our region. Good time to sell! 📈",
-                0
-            )
-            dbHelper.updatePostLikes(kumarId.toInt(), 67, 0)
-            dbHelper.addComment(kumarId.toInt(), "👨‍🌾", "Sukhwinder Singh", "Awesome, planning to sell my harvest tomorrow.", "18 hours ago", 0)
-
-            // Seed Lakshmi Reddy post
-            val lakshmiId = dbHelper.addPost(
-                "👩‍🌾",
-                "Lakshmi Reddy",
-                "Telangana",
-                "2 days ago",
-                "Sharing my experience with drip irrigation. Water usage reduced by 40% and crop quality improved. Highly recommended! 💧",
-                0
-            )
-            dbHelper.updatePostLikes(lakshmiId.toInt(), 92, 0)
-            dbHelper.addComment(lakshmiId.toInt(), "👨‍🌾", "Venkatesh Prasad", "Drip irrigation is indeed the future.", "1 day ago", 0)
-        }
+        // Real-time user community feed - No hardcoded placeholders
     }
 
     private fun loadPostsFeed() {

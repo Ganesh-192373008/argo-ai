@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 
-class DetectionActivity : AppCompatActivity() {
+class DetectionActivity : BaseProtectedActivity() {
 
     // Register Activity Result Launcher for opening the gallery
     private val pickImage = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->

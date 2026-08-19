@@ -25,7 +25,7 @@ import java.util.Locale
 import androidx.activity.result.contract.ActivityResultContracts
 import android.graphics.Bitmap
 
-class ChatAssistantActivity : AppCompatActivity() {
+class ChatAssistantActivity : BaseProtectedActivity() {
 
     private lateinit var chatContainer: LinearLayout
     private lateinit var chatScrollView: ScrollView
@@ -227,12 +227,6 @@ class ChatAssistantActivity : AppCompatActivity() {
             showAttachmentPopup(it)
         }
 
-        // Set click listeners for the settings gear button
-        val btnSettings = findViewById<ImageView>(R.id.btnSettings)
-        btnSettings?.setOnClickListener {
-            showApiSettingsDialog()
-        }
-
         // Set click listeners for the microphone icons
         val btnHeaderMic = findViewById<ImageView>(R.id.btnHeaderMic)
         val btnInputMic = findViewById<ImageView>(R.id.btnInputMic)
@@ -307,6 +301,9 @@ class ChatAssistantActivity : AppCompatActivity() {
                 addUserMessage(query)
                 chatInput.text.clear()
                 
+                // Track achievement score for AI Questions
+                AchievementTracker.incrementAIQuestions(this)
+
                 // Show typing indicator
                 showTypingIndicator()
                 
@@ -347,15 +344,18 @@ class ChatAssistantActivity : AppCompatActivity() {
                                             "Answer the user's question accurately using this context when relevant."
 
                         val aiResponse = try {
-                            GeminiClient.generateResponse(query, systemContext)
+                            GroqClient.generateResponse(query, systemContext)
                         } catch (e: Exception) {
                             try {
-                                OpenAIClient.generateResponse(query, systemContext)
-                            } catch (ex: Exception) {
-                                // Show toast to inform user why it failed
-                                val errorMsg = e.localizedMessage ?: "Invalid Key"
-                                Toast.makeText(this@ChatAssistantActivity, "API Key Failed: $errorMsg. Using offline fallback.", Toast.LENGTH_LONG).show()
-                                getAIResponseLocal(query, location, crops, recentDisease)
+                                GeminiClient.generateResponse(query, systemContext)
+                            } catch (e2: Exception) {
+                                try {
+                                    OpenAIClient.generateResponse(query, systemContext)
+                                } catch (ex: Exception) {
+                                    val errorMsg = e.localizedMessage ?: "API Error"
+                                    Toast.makeText(this@ChatAssistantActivity, "API Error: $errorMsg. Using local AI engine.", Toast.LENGTH_LONG).show()
+                                    getAIResponseLocal(query, location, crops, recentDisease)
+                                }
                             }
                         }
                         

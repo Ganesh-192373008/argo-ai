@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.agroassist.app-mergeDebugResources-40:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "outputFile": "com.example.agroassist.app-mergeDebugResources-41:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\dell\\.gradle\\caches\\8.9\\transforms\\071c108dfce8e32b0647ba17490274da\\transformed\\material-1.11.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",

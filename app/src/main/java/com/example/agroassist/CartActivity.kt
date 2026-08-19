@@ -10,7 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class CartActivity : AppCompatActivity() {
+class CartActivity : BaseProtectedActivity() {
 
     private var quantity = 1
     private var productName = "Copper Oxychloride 50% WP"

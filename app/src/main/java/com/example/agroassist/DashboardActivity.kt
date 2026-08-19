@@ -6,10 +6,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class DashboardActivity : AppCompatActivity() {
+class DashboardActivity : BaseProtectedActivity() {
 
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(LocaleHelper.wrap(newBase))
@@ -37,6 +38,14 @@ class DashboardActivity : AppCompatActivity() {
         val cardRecommendedProducts = findViewById<LinearLayout>(R.id.cardRecommendedProducts)
         val cardFertilizerAlarms = findViewById<LinearLayout>(R.id.cardFertilizerAlarms)
         val cardGovSchemes = findViewById<androidx.cardview.widget.CardView>(R.id.cardGovSchemes)
+
+        findViewById<TextView>(R.id.nameText)?.setOnClickListener {
+            startActivity(Intent(this, AchievementsActivity::class.java))
+        }
+
+        findViewById<TextView>(R.id.greetingText)?.setOnClickListener {
+            startActivity(Intent(this, AchievementsActivity::class.java))
+        }
 
         cardWeather?.setOnClickListener {
             startActivity(Intent(this, WeatherDashboardActivity::class.java))
@@ -153,5 +162,40 @@ class DashboardActivity : AppCompatActivity() {
         } catch (e: SecurityException) {
             e.printStackTrace()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateDashboardHeader()
+    }
+
+    private fun updateDashboardHeader() {
+        val dbHelper = AgroDatabaseHelper(this)
+        val profile = dbHelper.getProfile()
+        val savedName = profile["name"]
+        val savedLoc = profile["location"]?.ifEmpty { "Nashik, Maharashtra" } ?: "Nashik, Maharashtra"
+
+        val greetingText = findViewById<TextView>(R.id.greetingText)
+        val hour = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY)
+        val dynamicGreeting = when (hour) {
+            in 5..11 -> "Good Morning 🌅"
+            in 12..16 -> "Good Afternoon ☀️"
+            in 17..20 -> "Good Evening 🌆"
+            else -> "Good Night 🌙"
+        }
+        greetingText?.text = dynamicGreeting
+
+        val nameText = findViewById<TextView>(R.id.nameText)
+        if (!savedName.isNullOrEmpty()) {
+            nameText?.text = "Hello, $savedName! 👋"
+        }
+
+        val weatherLocText = findViewById<TextView>(R.id.weatherLocText)
+        weatherLocText?.text = savedLoc
+
+        val weatherTempText = findViewById<TextView>(R.id.weatherTempText)
+        val locHash = Math.abs(savedLoc.hashCode())
+        val temp = 28 + (locHash % 6)
+        weatherTempText?.text = "$temp°C"
     }
 }

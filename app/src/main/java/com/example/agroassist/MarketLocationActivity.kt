@@ -10,28 +10,20 @@ import android.location.LocationListener
 import android.location.LocationManager
 import android.net.Uri
 import android.os.Bundle
-import android.preference.PreferenceManager
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
-import org.osmdroid.config.Configuration
-import org.osmdroid.tileprovider.tilesource.TileSourceFactory
-import org.osmdroid.util.GeoPoint
-import org.osmdroid.views.MapView
-import org.osmdroid.views.overlay.Marker
 import java.util.Locale
 
 class MarketLocationActivity : AppCompatActivity() {
 
-    private lateinit var mapView: MapView
-    private var userLocationMarker: Marker? = null
-    private var market1Marker: Marker? = null
-    private var market2Marker: Marker? = null
     private var userLocationName = "Nashik"
 
     // Register location permission request
@@ -43,75 +35,35 @@ class MarketLocationActivity : AppCompatActivity() {
         if (fineGranted || coarseGranted) {
             enableGPSLocation()
         } else {
-            Toast.makeText(this, "Location permission denied. Center map on default (Nashik).", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Location permission denied. Defaulting to Nashik.", Toast.LENGTH_LONG).show()
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
-        // Setup osmdroid configuration
-        val ctx = applicationContext
-        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx))
-
         setContentView(R.layout.activity_market_location)
 
         val backButton = findViewById<ImageView>(R.id.backButton)
         backButton.setOnClickListener { finish() }
 
-        // Initialize Map
-        mapView = findViewById(R.id.mapView)
-        mapView.setTileSource(TileSourceFactory.MAPNIK)
-        mapView.setMultiTouchControls(true)
-
-        val mapController = mapView.controller
-        mapController.setZoom(12.0)
-        
-        // Base center point: Nashik, Maharashtra
-        var centerPoint = GeoPoint(19.9975, 73.7898)
-
-        // Read saved location from database
         val dbHelper = AgroDatabaseHelper(this)
         val profile = dbHelper.getProfile()
         val savedLoc = profile["location"]
         if (!savedLoc.isNullOrEmpty()) {
             userLocationName = savedLoc
-            try {
-                val geocoder = Geocoder(this, Locale.getDefault())
-                val addresses = geocoder.getFromLocationName(savedLoc, 1)
-                if (!addresses.isNullOrEmpty()) {
-                    val address = addresses[0]
-                    centerPoint = GeoPoint(address.latitude, address.longitude)
-                }
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
         }
-        
-        mapController.setCenter(centerPoint)
 
-        // Add User Location Marker
-        userLocationMarker = Marker(mapView)
-        userLocationMarker?.position = centerPoint
-        userLocationMarker?.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        userLocationMarker?.title = "Your Location ($userLocationName)"
-        mapView.overlays.add(userLocationMarker)
+        // Initialize Embedded Google Maps WebView
+        val googleMapView = findViewById<WebView>(R.id.googleMapView)
+        googleMapView?.settings?.apply {
+            javaScriptEnabled = true
+            domStorageEnabled = true
+            loadWithOverviewMode = true
+            useWideViewPort = true
+        }
+        googleMapView?.webViewClient = WebViewClient()
 
-        // Add Market 1
-        market1Marker = Marker(mapView)
-        market1Marker?.position = GeoPoint(centerPoint.latitude + 0.0075, centerPoint.longitude + 0.0152)
-        market1Marker?.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        market1Marker?.title = "$userLocationName Mandi A"
-        market1Marker?.snippet = "2.5 km - Best Price"
-        mapView.overlays.add(market1Marker)
-
-        // Add Market 2
-        market2Marker = Marker(mapView)
-        market2Marker?.position = GeoPoint(centerPoint.latitude + 0.0250, centerPoint.longitude - 0.0200)
-        market2Marker?.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        market2Marker?.title = "$userLocationName District Mandi B"
-        market2Marker?.snippet = "5.8 km"
-        mapView.overlays.add(market2Marker)
+        renderGoogleMapIframe(googleMapView, "agricultural mandi market near $userLocationName")
 
         // Request real GPS location
         checkAndRequestLocation()
@@ -124,14 +76,12 @@ class MarketLocationActivity : AppCompatActivity() {
 
         val cardMarket1 = findViewById<CardView>(R.id.cardMarket1)
         cardMarket1?.setOnClickListener {
-            val marketName = market1Marker?.title ?: "Local Market A"
-            openInGoogleMaps(marketName)
+            openInGoogleMaps("$userLocationName Mandi A")
         }
 
         val cardMarket2 = findViewById<CardView>(R.id.cardMarket2)
         cardMarket2?.setOnClickListener {
-            val marketName = market2Marker?.title ?: "District Mandi B"
-            openInGoogleMaps(marketName)
+            openInGoogleMaps("$userLocationName District Mandi B")
         }
 
         // Setup crop comparison simulated spinner
@@ -208,8 +158,8 @@ class MarketLocationActivity : AppCompatActivity() {
         tvM1Price: TextView?, tvM1Change: TextView?, tvM1High: TextView?, tvM1Low: TextView?,
         tvM2Price: TextView?, tvM2Change: TextView?, tvM2High: TextView?, tvM2Low: TextView?
     ) {
-        val name1 = market1Marker?.title ?: "$userLocationName Mandi A"
-        val name2 = market2Marker?.title ?: "$userLocationName District Mandi B"
+        val name1 = "$userLocationName Mandi A"
+        val name2 = "$userLocationName District Mandi B"
         when (crop) {
             "Tomato" -> {
                 tvBestTitle?.text = "$name1 (Rs. 22/kg)"
@@ -311,15 +261,18 @@ class MarketLocationActivity : AppCompatActivity() {
     }
 
     private fun openInGoogleMaps(query: String) {
-        val intentUri = Uri.parse("geo:0,0?q=" + Uri.encode(query))
-        val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
-        mapIntent.setPackage("com.google.android.apps.maps")
-        if (mapIntent.resolveActivity(packageManager) != null) {
+        try {
+            val intentUri = Uri.parse("geo:0,0?q=" + Uri.encode(query))
+            val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
             startActivity(mapIntent)
-        } else {
-            // Fallback: Open in web browser
-            val webUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=" + Uri.encode(query))
-            startActivity(Intent(Intent.ACTION_VIEW, webUri))
+        } catch (e: Exception) {
+            try {
+                val webUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=" + Uri.encode(query))
+                startActivity(Intent(Intent.ACTION_VIEW, webUri))
+            } catch (ex: Exception) {
+                Toast.makeText(this, "Could not open Google Maps", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -359,7 +312,6 @@ class MarketLocationActivity : AppCompatActivity() {
                 override fun onProviderDisabled(provider: String) {}
             }
 
-            // Register listener for both GPS and Network providers
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
                 ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
             ) {
@@ -395,9 +347,6 @@ class MarketLocationActivity : AppCompatActivity() {
     }
 
     private fun updateLocationAndMarkets(latitude: Double, longitude: Double) {
-        val userPoint = GeoPoint(latitude, longitude)
-        userLocationMarker?.position = userPoint
-        
         try {
             val geocoder = Geocoder(this, Locale.getDefault())
             val addresses = geocoder.getFromLocation(latitude, longitude, 1)
@@ -422,33 +371,43 @@ class MarketLocationActivity : AppCompatActivity() {
             e.printStackTrace()
         }
 
-        userLocationMarker?.title = "Your Location ($userLocationName)"
-        userLocationMarker?.snippet = "Lat: $latitude, Lng: $longitude"
-
-        // Update Market Markers relative to user
-        market1Marker?.position = GeoPoint(latitude + 0.0075, longitude + 0.0152)
-        market1Marker?.title = "$userLocationName Mandi A"
-        market1Marker?.snippet = "2.5 km - Best Price"
-
-        market2Marker?.position = GeoPoint(latitude + 0.0250, longitude - 0.0200)
-        market2Marker?.title = "$userLocationName District Mandi B"
-        market2Marker?.snippet = "5.8 km"
-
-        mapView.controller.animateTo(userPoint)
-        mapView.invalidate()
+        // Update Google Maps Embed URL with real GPS coordinates
+        val googleMapView = findViewById<WebView>(R.id.googleMapView)
+        renderGoogleMapIframe(googleMapView, "$latitude,$longitude")
         
-        // Instantly refresh titles in UI to represent local market name
-        findViewById<TextView>(R.id.tvMarket1Title)?.text = market1Marker?.title
-        findViewById<TextView>(R.id.tvMarket2Title)?.text = market2Marker?.title
+        // Refresh local market labels
+        findViewById<TextView>(R.id.tvMarket1Title)?.text = "$userLocationName Mandi A"
+        findViewById<TextView>(R.id.tvMarket2Title)?.text = "$userLocationName District Mandi B"
+    }
+
+    private fun renderGoogleMapIframe(webView: WebView?, query: String) {
+        val iframeHtml = """
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+                <style>
+                    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #e8e8e8; }
+                    iframe { width: 100%; height: 100%; border: 0; }
+                </style>
+            </head>
+            <body>
+                <iframe 
+                    src="https://maps.google.com/maps?q=${Uri.encode(query)}&t=m&z=13&output=embed" 
+                    allowfullscreen>
+                </iframe>
+            </body>
+            </html>
+        """.trimIndent()
+
+        webView?.loadDataWithBaseURL("https://maps.google.com", iframeHtml, "text/html", "utf-8", null)
     }
 
     override fun onResume() {
         super.onResume()
-        mapView.onResume()
     }
 
     override fun onPause() {
         super.onPause()
-        mapView.onPause()
     }
 }

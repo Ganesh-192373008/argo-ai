@@ -23,14 +23,40 @@ class ResultsActivity : AppCompatActivity() {
             val textRiskLevel = findViewById<android.widget.TextView>(R.id.textRiskLevel)
 
             val imagePath = intent.getStringExtra("image_path")
+            val liveJsonStr = intent.getStringExtra("live_result_json")
 
-            // Retrieve preferred crop from database profile
-            val dbHelper = AgroDatabaseHelper(this)
-            val profile = dbHelper.getProfile()
-            val preferredCrop = profile["crops"]
+            if (!liveJsonStr.isNullOrEmpty()) {
+                val json = org.json.JSONObject(liveJsonStr)
+                val crop = json.optString("crop", "Tomato")
+                val disease = json.optString("disease", "Early Blight")
+                val scientificName = json.optString("scientificName", "Alternaria solani")
+                val severity = json.optInt("severity", 65)
+                val confidence = json.optString("confidence", "95.4%")
+                val riskLevel = json.optString("riskLevel", "High")
+                val symptoms = json.optString("symptoms", "")
+                val causes = json.optString("causes", "")
+                val treatment = json.optString("treatment", "")
 
-            // Classify dynamically
-            diseaseInfo = PlantVillageClassifier.classifyImage(imagePath, preferredCrop)
+                diseaseInfo = PlantVillageClassifier.DiseaseInfo(
+                    crop = crop,
+                    disease = disease,
+                    scientificName = scientificName,
+                    severity = severity,
+                    confidence = confidence,
+                    riskLevel = riskLevel,
+                    symptoms = symptoms,
+                    causes = causes,
+                    treatment = treatment
+                )
+            } else {
+                // Retrieve preferred crop from database profile
+                val dbHelper = AgroDatabaseHelper(this)
+                val profile = dbHelper.getProfile()
+                val preferredCrop = profile["crops"]
+
+                // Classify dynamically
+                diseaseInfo = PlantVillageClassifier.classifyImage(imagePath, preferredCrop)
+            }
 
             // Update UI
             textDiseaseName?.text = "${diseaseInfo.crop} - ${diseaseInfo.disease}"
@@ -67,8 +93,18 @@ class ResultsActivity : AppCompatActivity() {
                 }
             }
 
-            // Save scan result to local Database history
+            // Save scan result to local Database history & SQL Prisma ORM backend
+            val dbHelper = AgroDatabaseHelper(this)
             dbHelper.addHistory(imagePath ?: "", diseaseInfo.crop, diseaseInfo.disease, diseaseInfo.confidence)
+            BackendApiClient.addDetectionHistory(
+                cropName = diseaseInfo.crop,
+                disease = diseaseInfo.disease,
+                confidence = diseaseInfo.confidence,
+                timestamp = java.text.SimpleDateFormat("MMMM dd, yyyy hh:mm a", java.util.Locale.getDefault()).format(java.util.Date())
+            ) {}
+
+            // Update achievement score
+            AchievementTracker.onDiseaseScanCompleted(this)
 
             val btnViewReport = findViewById<Button>(R.id.btnViewReport)
             btnViewReport?.setOnClickListener {

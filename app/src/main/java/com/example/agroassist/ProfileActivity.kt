@@ -13,7 +13,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
-class ProfileActivity : AppCompatActivity() {
+class ProfileActivity : BaseProtectedActivity() {
 
     private lateinit var ivProfilePhoto: ImageView
 
@@ -148,10 +148,11 @@ class ProfileActivity : AppCompatActivity() {
 
         val navLogout = findViewById<LinearLayout>(R.id.navLogout)
         navLogout?.setOnClickListener {
-            AgroDatabaseHelper(this).saveProfile("", "", "")
-            
-            val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            SessionManager.clearSession(this)
+            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LoginActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
             startActivity(intent)
             finish()
         }

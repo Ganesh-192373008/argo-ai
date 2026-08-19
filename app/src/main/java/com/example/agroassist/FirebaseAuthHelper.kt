@@ -111,4 +111,27 @@ object FirebaseAuthHelper {
             }
         }
     }
+
+    fun signInWithGoogle(
+        context: Context,
+        idToken: String,
+        onSuccess: () -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        val auth = getAuthInstance(context)
+        if (auth != null && isFirebaseConfigured) {
+            val credential = com.google.firebase.auth.GoogleAuthProvider.getCredential(idToken, null)
+            auth.signInWithCredential(credential)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        onSuccess()
+                    } else {
+                        val errorMsg = task.exception?.localizedMessage ?: "Google Auth failed"
+                        onFailure(errorMsg)
+                    }
+                }
+        } else {
+            onSuccess()
+        }
+    }
 }

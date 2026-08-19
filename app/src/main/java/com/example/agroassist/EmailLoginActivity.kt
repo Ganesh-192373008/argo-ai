@@ -25,56 +25,79 @@ class EmailLoginActivity : AppCompatActivity() {
     private var isPasswordVisible = false
     private lateinit var googleSignInClient: GoogleSignInClient
 
+    private lateinit var fallbackGoogleSignInClient: GoogleSignInClient
+
+    private val fallbackGoogleLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+        try {
+            val account = task.getResult(ApiException::class.java)
+            val email = account?.email ?: return@registerForActivityResult
+            val name = account.displayName ?: email.substringBefore("@")
+
+            Toast.makeText(this, "Authenticating Google Account...", Toast.LENGTH_SHORT).show()
+
+            account.photoUrl?.let { url ->
+                downloadAndSaveGooglePhoto(this, url.toString())
+            }
+
+            BackendApiClient.googleLogin(this, email, name) { success, message, token, userId ->
+                if (success && token != null) {
+                    SessionManager.saveSession(this, token, userId, email, name)
+                    Toast.makeText(this, "Welcome $name!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, DashboardActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this, "Authentication failed: $message", Toast.LENGTH_LONG).show()
+                }
+            }
+        } catch (e: ApiException) {
+            Log.w("GoogleSignIn", "fallbackSignInResult:failed code=" + e.statusCode)
+            Toast.makeText(this, "Google Sign-In failed (Code ${e.statusCode}). Please check your Google account.", Toast.LENGTH_LONG).show()
+        }
+    }
+
     private val googleSignInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
         try {
             val account = task.getResult(ApiException::class.java)
-            Toast.makeText(this, "Signed in as ${account?.email}", Toast.LENGTH_LONG).show()
-            
-            // Save profile details to database
-            val email = account?.email ?: "farmer@agroassist.com"
-            val name = account?.displayName ?: email.substringBefore("@")
-            val dbHelper = AgroDatabaseHelper(this)
-            dbHelper.saveProfile(name, "25", "Tomato, Wheat")
-            
-            // Save email to SharedPreferences
-            val prefs = getSharedPreferences("AgroAssistSettings", android.content.Context.MODE_PRIVATE)
-            prefs.edit().putString("email_address", email).apply()
+            val email = account?.email ?: return@registerForActivityResult
+            val name = account.displayName ?: email.substringBefore("@")
 
-            // Download Google photo if available
-            account?.photoUrl?.let { url ->
+            Toast.makeText(this, "Authenticating Google Account...", Toast.LENGTH_SHORT).show()
+
+            account.photoUrl?.let { url ->
                 downloadAndSaveGooglePhoto(this, url.toString())
             }
-            
-            // Navigate to Dashboard or ProfileSetup
-            val profile = dbHelper.getProfile()
-            val intent = if (profile["name"]?.isNotEmpty() == true) {
-                Intent(this, DashboardActivity::class.java)
-            } else {
-                Intent(this, ProfileSetupActivity::class.java)
+
+            BackendApiClient.googleLogin(this, email, name) { success, message, token, userId ->
+                if (success && token != null) {
+                    SessionManager.saveSession(this, token, userId, email, name)
+                    Toast.makeText(this, "Welcome $name!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, DashboardActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this, "Authentication failed: $message", Toast.LENGTH_LONG).show()
+                }
             }
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
         } catch (e: ApiException) {
             Log.w("GoogleSignIn", "signInResult:failed code=" + e.statusCode)
-            Toast.makeText(this, "Running in Offline Mode (Google Auth Fallback)", Toast.LENGTH_SHORT).show()
-            
-            // Save profile details to database
-            val email = "google.farmer@gmail.com"
-            val name = "Google Farmer"
-            val dbHelper = AgroDatabaseHelper(this)
-            dbHelper.saveProfile(name, "25", "Tomato, Wheat")
-
-            // Save email to SharedPreferences
-            val prefs = getSharedPreferences("AgroAssistSettings", android.content.Context.MODE_PRIVATE)
-            prefs.edit().putString("email_address", email).apply()
-            
-            // Navigate to Dashboard
-            val intent = Intent(this, DashboardActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
+            if (e.statusCode == 10) {
+                // Code 10: Web Client ID missing Android binding in Google Cloud Console.
+                // Fall back to standard Google Sign-In to retrieve account email and authenticate via JWT
+                val fallbackGso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestEmail()
+                    .build()
+                fallbackGoogleSignInClient = GoogleSignIn.getClient(this, fallbackGso)
+                fallbackGoogleLauncher.launch(fallbackGoogleSignInClient.signInIntent)
+            } else {
+                Toast.makeText(this, "Google Sign-In failed (Code ${e.statusCode}). Please try again.", Toast.LENGTH_LONG).show()
+            }
         }
     }
 
@@ -93,13 +116,16 @@ class EmailLoginActivity : AppCompatActivity() {
 
         // Configure Google Sign-In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
         googleButton.setOnClickListener {
-            val signInIntent = googleSignInClient.signInIntent
-            googleSignInLauncher.launch(signInIntent)
+            googleSignInClient.signOut().addOnCompleteListener {
+                val signInIntent = googleSignInClient.signInIntent
+                googleSignInLauncher.launch(signInIntent)
+            }
         }
 
         backButton.setOnClickListener {
@@ -111,53 +137,8 @@ class EmailLoginActivity : AppCompatActivity() {
         }
 
         signUpText.setOnClickListener {
-            // Show a dialog for Email Sign Up
-            val builder = androidx.appcompat.app.AlertDialog.Builder(this)
-            builder.setTitle("Sign Up / Register")
-            
-            val layout = android.widget.LinearLayout(this).apply {
-                orientation = android.widget.LinearLayout.VERTICAL
-                setPadding(50, 40, 50, 40)
-            }
-            
-            val emailRegInput = EditText(this).apply {
-                hint = "Enter Email"
-                inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
-            }
-            val passwordRegInput = EditText(this).apply {
-                hint = "Enter Password (min 6 chars)"
-                inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-            }
-            
-            layout.addView(emailRegInput)
-            layout.addView(passwordRegInput)
-            builder.setView(layout)
-            
-            builder.setPositiveButton("Register") { dialog, _ ->
-                val email = emailRegInput.text.toString().trim()
-                val password = passwordRegInput.text.toString().trim()
-                
-                if (email.isEmpty() || password.length < 6) {
-                    Toast.makeText(this, "Please enter a valid email and 6+ character password.", Toast.LENGTH_SHORT).show()
-                    return@setPositiveButton
-                }
-                
-                Toast.makeText(this, "Creating account...", Toast.LENGTH_SHORT).show()
-                FirebaseAuthHelper.signUp(
-                    this,
-                    email,
-                    password,
-                    onSuccess = {
-                        Toast.makeText(this, "Registration Successful! You can now Sign In.", Toast.LENGTH_LONG).show()
-                        dialog.dismiss()
-                    },
-                    onFailure = { error ->
-                        Toast.makeText(this, "Registration Failed: $error", Toast.LENGTH_LONG).show()
-                    }
-                )
-            }
-            builder.setNegativeButton("Cancel") { dialog, _ -> dialog.dismiss() }
-            builder.show()
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
         }
 
         togglePasswordVisibility.setOnClickListener {
@@ -172,46 +153,46 @@ class EmailLoginActivity : AppCompatActivity() {
             passwordInput.setSelection(passwordInput.text.length)
         }
 
+        // Prefill email if passed from SignUpActivity or SharedPreferences
+        val prefs = getSharedPreferences("AgroAssistSettings", android.content.Context.MODE_PRIVATE)
+        val prefilledEmail = intent.getStringExtra("PREFILL_EMAIL") 
+            ?: prefs.getString("registered_email", "") 
+            ?: prefs.getString("email_address", "")
+        if (!prefilledEmail.isNullOrEmpty()) {
+            emailInput.setText(prefilledEmail)
+            emailInput.setSelection(emailInput.text.length)
+        }
+
         signInButton.isEnabled = true
 
         signInButton.setOnClickListener {
-            var email = emailInput.text.toString().trim()
-            var password = passwordInput.text.toString().trim()
+            val email = emailInput.text.toString().trim()
+            val password = passwordInput.text.toString().trim()
 
             if (email.isEmpty()) {
-                email = "farmer@agroassist.com"
+                Toast.makeText(this, "Please enter your email address", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
             if (password.isEmpty()) {
-                password = "password123"
+                Toast.makeText(this, "Please enter your password", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
-            
-            Toast.makeText(this, "Signing in...", Toast.LENGTH_SHORT).show()
-            FirebaseAuthHelper.signIn(
-                this,
-                email,
-                password,
-                onSuccess = {
-                    Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
-                    
-                    // Save email to SharedPreferences
-                    val prefs = getSharedPreferences("AgroAssistSettings", android.content.Context.MODE_PRIVATE)
-                    prefs.edit().putString("email_address", email).apply()
 
-                    val dbHelper = AgroDatabaseHelper(this)
-                    val profile = dbHelper.getProfile()
-                    val intent = if (profile["name"]?.isNotEmpty() == true) {
-                        Intent(this, DashboardActivity::class.java)
-                    } else {
-                        Intent(this, ProfileSetupActivity::class.java)
+            Toast.makeText(this, "Verifying credentials...", Toast.LENGTH_SHORT).show()
+
+            BackendApiClient.login(this, email, password) { success, message, token, userId, name ->
+                if (success && token != null) {
+                    SessionManager.saveSession(this, token, userId, email, name)
+                    Toast.makeText(this, "Welcome Back! Login Successful.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, DashboardActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     }
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                     finish()
-                },
-                onFailure = { error ->
-                    Toast.makeText(this, "Login Failed: $error", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
                 }
-            )
+            }
         }
     }
 

@@ -48,21 +48,16 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
         sendLinkButton.setOnClickListener {
             val email = emailInput.text.toString().trim()
-            Toast.makeText(this, "Sending reset link...", Toast.LENGTH_SHORT).show()
-            FirebaseAuthHelper.sendPasswordResetEmail(
-                this,
-                email,
-                onSuccess = {
-                    Toast.makeText(this, "Reset link sent! Please check your email inbox.", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, CreateNewPasswordActivity::class.java)
-                    intent.putExtra("email", email)
-                    startActivity(intent)
-                    finish()
-                },
-                onFailure = { error ->
-                    Toast.makeText(this, "Error: $error", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Sending reset email to $email...", Toast.LENGTH_SHORT).show()
+            
+            BackendApiClient.sendPasswordResetLink(email) { success ->
+                Toast.makeText(this, "Password reset instructions sent to $email!", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, CheckEmailActivity::class.java).apply {
+                    putExtra("EXTRA_EMAIL", email)
                 }
-            )
+                startActivity(intent)
+                finish()
+            }
         }
     }
 }

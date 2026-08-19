@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroAssist AI – Smart Crop Disease Detection & Farming Assistant</title>
+  <meta name="description" content="AgroAssist AI uses artificial intelligence to help farmers detect crop diseases instantly, get smart farming advice, track weather, and access real-time market prices." />
+  <meta name="keywords" content="AgroAssist AI, crop disease detection, smart farming, AI agriculture, farming assistant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a class="nav-logo" href="#" id="nav-logo-link">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="url(#logo-grad)"/>
+            <path d="M20 8C20 8 10 14 10 22C10 27.52 14.48 32 20 32C25.52 32 30 27.52 30 22C30 14 20 8 20 8Z" fill="white" opacity="0.9"/>
+            <path d="M20 14L20 28M16 18L20 14L24 18" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#43A047"/>
+                <stop offset="1" stop-color="#1B5E20"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">AgroAssist <span class="logo-ai">AI</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#" class="btn-outline" id="nav-login-btn">Login</a>
+        <a href="#" class="btn-primary" id="nav-signup-btn">Get Started</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ──────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>AI-Powered Agriculture Platform</span>
+        </div>
+
+        <h1 class="hero-title">
+          Grow Smarter with
+          <span class="gradient-text">AgroAssist AI</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Smart Crop Disease Detection &amp; Farming Assistant — detect plant diseases instantly, get expert AI advice, and maximise your harvest with data-driven insights.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Detection Accuracy</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">50K+</span>
+            <span class="stat-label">Farmers Helped</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Crop Diseases</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#" class="btn-hero-primary" id="hero-get-started-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Get Started Free
+          </a>
+          <a href="#how-it-works" class="btn-hero-secondary" id="hero-watch-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 8L16 12L10 16V8Z" fill="currentColor"/>
+            </svg>
+            See How It Works
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="phone-header">
+                <span class="phone-status">9:41</span>
+                <div class="phone-camera"></div>
+              </div>
+              <div class="phone-app">
+                <div class="app-topbar">
+                  <span>🌿 AgroAssist AI</span>
+                  <div class="app-avatar"></div>
+                </div>
+                <div class="scan-area">
+                  <div class="scan-ring"></div>
+                  <div class="scan-line"></div>
+                  <div class="leaf-icon">🍃</div>
+                </div>
+                <div class="scan-label">Tap to scan your crop</div>
+                <div class="result-card">
+                  <div class="result-icon">✅</div>
+                  <div class="result-text">
+                    <strong>Healthy Crop</strong>
+                    <span>No disease detected</span>
+                  </div>
+                  <div class="result-badge">98%</div>
+                </div>
+                <div class="mini-cards">
+                  <div class="mini-card">🌡 28°C</div>
+                  <div class="mini-card">💧 72%</div>
+                  <div class="mini-card">☀️ Clear</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- floating cards -->
+          <div class="float-card float-card-1">
+            <span class="float-icon">🔬</span>
+            <div>
+              <div class="float-title">Disease Alert</div>
+              <div class="float-sub">Blight detected · Field 3</div>
+            </div>
+          </div>
+          <div class="float-card float-card-2">
+            <span class="float-icon">📈</span>
+            <div>
+              <div class="float-title">Market Price</div>
+              <div class="float-sub">Wheat ↑ ₹2,450/qtl</div>
+            </div>
+          </div>
+          <div class="float-card float-card-3">
+            <span class="float-icon">🤖</span>
+            <div>
+              <div class="float-title">AI Tip</div>
+              <div class="float-sub">Water crops at dusk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 50C240 0 480 100 720 50C960 0 1200 100 1440 50V100H0V50Z" fill="#f8faf7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ──────────────────────────────────────────── -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Core Features</span>
+        <h2 class="section-title">Everything a Farmer Needs</h2>
+        <p class="section-sub">Powered by cutting-edge AI, AgroAssist gives you professional-grade tools right in your pocket.</p>
+      </div>
+
+      <div class="features-grid">
+
+        <!-- Disease Detection -->
+        <div class="feature-card feature-card--primary" id="feature-disease">
+          <div class="feature-card-bg"></div>
+          <div class="feature-icon-wrap" style="--icon-color: #2E7D32; --icon-bg: #E8F5E9;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4Z" fill="currentColor" opacity="0.3"/>
+              <path d="M12 6C8.69 6 6 8.69 6 12C6 15.31 8.69 18 12 18C15.31 18 18 15.31 18 12C18 8.69 15.31 6 12 6ZM13 13H11V7H13V13ZM13 17H11V15H13V17Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Disease Detection</h3>
+          <p class="feature-desc">Instantly identify 200+ crop diseases by simply snapping a photo. Get AI-powered diagnosis and treatment recommendations in seconds.</p>
+          <ul class="feature-list">
+            <li>📷 Photo-based scanning</li>
+            <li>⚡ Real-time results</li>
+            <li>💊 Treatment guide</li>
+          </ul>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+
+        <!-- AI Assistant -->
+        <div class="feature-card" id="feature-ai">
+          <div class="feature-icon-wrap" style="--icon-color: #1565C0; --icon-bg: #E3F2FD;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="5" width="18" height="14" rx="3" fill="currentColor" opacity="0.2"/>
+              <path d="M3 8C3 6.34 4.34 5 6 5H18C19.66 5 21 6.34 21 8V9H3V8Z" fill="currentColor"/>
+              <circle cx="8" cy="14" r="1.5" fill="currentColor"/>
+              <circle cx="12" cy="14" r="1.5" fill="currentColor"/>
+              <circle cx="16" cy="14" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">AI Assistant</h3>
+          <p class="feature-desc">Chat with our intelligent farming assistant 24/7. Ask any agriculture question in your local language and get expert answers instantly.</p>
+          <ul class="feature-list">
+            <li>🗣 Multi-language support</li>
+            <li>🧠 Expert knowledge base</li>
+            <li>📅 Personalised advice</li>
+          </ul>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+
+        <!-- Weather Updates -->
+        <div class="feature-card" id="feature-weather">
+          <div class="feature-icon-wrap" style="--icon-color: #E65100; --icon-bg: #FFF3E0;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+              <path d="M6.76 4.84L5.35 3.43L3.93 4.84L5.35 6.26L6.76 4.84ZM4 10.5H2V12.5H4V10.5ZM13 0.55V2.5H11V0.55H13ZM20.07 3.43L18.65 4.84L20.07 6.26L21.49 4.84L20.07 3.43ZM17.24 4.84L15.83 3.43L14.41 4.84L15.83 6.26L17.24 4.84ZM20 10.5V12.5H22V10.5H20ZM12 5.5C9.24 5.5 7 7.74 7 10.5C7 13.26 9.24 15.5 12 15.5C14.76 15.5 17 13.26 17 10.5C17 7.74 14.76 5.5 12 5.5ZM11 22.45V20.5H13V22.45H11ZM3.93 17.16L5.35 18.57L6.76 17.16L5.35 15.74L3.93 17.16ZM18.65 17.16L20.07 18.57L21.49 17.16L20.07 15.74L18.65 17.16Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Weather Updates</h3>
+          <p class="feature-desc">Hyperlocal 7-day weather forecasts tailored for your fields. Plan irrigation, harvesting, and spraying with precision weather intelligence.</p>
+          <ul class="feature-list">
+            <li>🌦 7-day forecast</li>
+            <li>🌧 Rain alerts</li>
+            <li>🌡 Soil temperature</li>
+          </ul>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+
+        <!-- Market Prices -->
+        <div class="feature-card" id="feature-market">
+          <div class="feature-icon-wrap" style="--icon-color: #6A1B9A; --icon-bg: #F3E5F5;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+              <path d="M3.5 18.5L9.5 12.5L13.5 16.5L22 6.92L20.59 5.51L13.5 13.5L9.5 9.5L2 17L3.5 18.5Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Market Prices</h3>
+          <p class="feature-desc">Stay ahead of the market with real-time mandi prices, price trends, and sell alerts. Know the best time and place to sell your produce.</p>
+          <ul class="feature-list">
+            <li>📊 Live mandi rates</li>
+            <li>🔔 Price alerts</li>
+            <li>📉 Trend analysis</li>
+          </ul>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ──────────────────────────────────────── -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="hiw-bg">
+      <div class="hiw-blob hiw-blob-1"></div>
+      <div class="hiw-blob hiw-blob-2"></div>
+    </div>
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Simple Process</span>
+        <h2 class="section-title">How AgroAssist AI Works</h2>
+        <p class="section-sub">Get started in three simple steps — no technical knowledge required.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card" id="step-1">
+          <div class="step-number">01</div>
+          <div class="step-icon">📷</div>
+          <h3 class="step-title">Capture a Photo</h3>
+          <p class="step-desc">Take a clear photo of your affected plant or crop leaf using your smartphone camera.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card" id="step-2">
+          <div class="step-number">02</div>
+          <div class="step-icon">🤖</div>
+          <h3 class="step-title">AI Analyses Instantly</h3>
+          <p class="step-desc">Our advanced AI model analyses the image and detects diseases with 98% accuracy in under 3 seconds.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card" id="step-3">
+          <div class="step-number">03</div>
+          <div class="step-icon">✅</div>
+          <h3 class="step-title">Get Expert Advice</h3>
+          <p class="step-desc">Receive a detailed report with diagnosis, treatment options, prevention tips, and product recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─────────────────────────────────────── -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Farmer Stories</span>
+        <h2 class="section-title">Trusted by Farmers Across India</h2>
+        <p class="section-sub">Join thousands of farmers who have transformed their farming with AgroAssist AI.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card" id="testimonial-1">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"AgroAssist AI saved my entire wheat crop last season. It detected blight early and the treatment worked perfectly. I earned ₹3 lakh more than previous years!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #43A047, #1B5E20)">R</div>
+            <div>
+              <div class="author-name">Ramesh Kumar</div>
+              <div class="author-role">Wheat Farmer · Punjab</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-card--featured" id="testimonial-2">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The market price feature is a game changer. I now know exactly when to sell my tomatoes for maximum profit. The AI assistant answers all my questions in Hindi!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #FB8C00, #E65100)">S</div>
+            <div>
+              <div class="author-name">Sunita Devi</div>
+              <div class="author-role">Vegetable Farmer · Rajasthan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" id="testimonial-3">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The weather alerts helped me save my rice paddy from unexpected floods. I got a warning 2 days in advance and was able to drain my fields in time."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #1565C0, #0D47A1)">A</div>
+            <div>
+              <div class="author-name">Arun Patel</div>
+              <div class="author-role">Rice Farmer · Andhra Pradesh</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA BANNER ────────────────────────────────────────── -->
+  <section class="cta-section" id="cta">
+    <div class="cta-bg">
+      <div class="cta-circles">
+        <div class="cta-circle cta-circle-1"></div>
+        <div class="cta-circle cta-circle-2"></div>
+      </div>
+    </div>
+    <div class="section-container cta-content">
+      <h2 class="cta-title">Start Growing Smarter Today</h2>
+      <p class="cta-sub">Join 50,000+ farmers who are already using AgroAssist AI to protect their crops and increase their income.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn-cta-primary" id="cta-get-started-btn">Get Started for Free</a>
+        <a href="#contact" class="btn-cta-secondary" id="cta-contact-btn">Contact Us</a>
+      </div>
+      <p class="cta-note">✓ No credit card required &nbsp; ✓ Free for basic use &nbsp; ✓ Available in 10+ languages</p>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">We're Here to Help</h2>
+        <p class="section-sub">Have questions? Our team of agriculture experts is ready to assist you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item" id="contact-phone">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Call Us</div>
+              <div class="contact-value">+91 1800-XXX-XXXX</div>
+              <div class="contact-note">Mon–Sat, 8am–8pm</div>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-email">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-label">Email Us</div>
+              <div class="contact-value">support@agroassist.ai</div>
+              <div class="contact-note">Reply within 24 hours</div>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-location">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Office</div>
+              <div class="contact-value">Bangalore, Karnataka</div>
+              <div class="contact-note">India – 560001</div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Ramesh Kumar" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+91 98765 43210" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="ramesh@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us how we can help you…" required></textarea>
+          </div>
+          <button type="submit" class="btn-form-submit" id="form-submit-btn">Send Message</button>
+          <div class="form-success" id="form-success">✅ Message sent! We'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a class="nav-logo footer-logo" href="#">
+          <div class="logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="20" fill="url(#logo-grad2)"/>
+              <path d="M20 8C20 8 10 14 10 22C10 27.52 14.48 32 20 32C25.52 32 30 27.52 30 22C30 14 20 8 20 8Z" fill="white" opacity="0.9"/>
+              <path d="M20 14L20 28M16 18L20 14L24 18" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="logo-grad2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#43A047"/>
+                  <stop offset="1" stop-color="#1B5E20"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span class="logo-text">AgroAssist <span class="logo-ai">AI</span></span>
+        </a>
+        <p class="footer-tagline">Empowering farmers with the power of artificial intelligence for a prosperous and sustainable agriculture future.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" id="social-twitter" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" id="social-facebook" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" id="social-instagram" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" id="social-youtube" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Download App</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#">Community Forum</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Kit</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 AgroAssist AI. All rights reserved. Made with 💚 for Indian Farmers.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scroll-top-btn" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M12 19V5M5 12L12 5L19 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+
+
+  <!-- ─── APP DASHBOARD WORKSPACE ─── -->
+  <div id="app-dashboard">
+    <div class="app-shell-container">
+      
+      <!-- App Sidebar (Desktop) -->
+      <aside class="app-sidebar">
+        <div class="sidebar-logo">
+          <div class="logo-icon" style="transform: scale(0.85)">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="20" fill="url(#sidebar-grad)"/>
+              <path d="M20 8C20 8 10 14 10 22C10 27.52 14.48 32 20 32C25.52 32 30 27.52 30 22C30 14 20 8 20 8Z" fill="white" opacity="0.9"/>
+              <defs>
+                <linearGradient id="sidebar-grad" x1="0" y1="0" x2="40" y2="40">
+                  <stop stop-color="#81C784"/>
+                  <stop offset="1" stop-color="#2E7D32"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span class="logo-text">AgroAssist <span class="logo-ai" style="color:#81C784">AI</span></span>
+        </div>
+        <nav class="sidebar-menu">
+          <button class="sidebar-item active" onclick="switchAppView('dashboard')">🏠 Dashboard</button>
+          <button class="sidebar-item" onclick="switchAppView('disease-detection')">📷 Disease Detection</button>
+          <button class="sidebar-item" onclick="switchAppView('disease-history')">🔬 Scan History</button>
+          <button class="sidebar-item" onclick="switchAppView('ai-assistant')">🤖 AI Assistant</button>
+          <button class="sidebar-item" onclick="switchAppView('weather')">🌦️ Weather forecast</button>
+          <button class="sidebar-item" onclick="switchAppView('market-prices')">💰 Market Rates</button>
+          <button class="sidebar-item" onclick="switchAppView('nearby-mandis')">🌾 Nearest Mandis</button>
+          <button class="sidebar-item" onclick="switchAppView('recommended-products')">🛍️ Recommended Supplies</button>
+          <button class="sidebar-item" onclick="switchAppView('government-schemes')">🏛️ Govt Schemes</button>
+          <button class="sidebar-item" onclick="switchAppView('water-management')">💧 Water Management</button>
+          <button class="sidebar-item" onclick="switchAppView('fertilizer-management')">🌱 Fertilizers</button>
+          <button class="sidebar-item" onclick="switchAppView('reports')">📊 Analytics &amp; Reports</button>
+          <button class="sidebar-item" onclick="switchAppView('profile')">👤 My Profile</button>
+          <button class="sidebar-item" onclick="switchAppView('settings')">⚙️ Settings</button>
+        </nav>
+        <div class="sidebar-footer">
+          <button class="sidebar-item" onclick="logUserOut()" style="color:#e57373;">🚪 Log Out</button>
+        </div>
+      </aside>
+
+      <!-- App Content Shell -->
+      <main class="app-main-content">
+        <!-- Top App Bar -->
+        <header class="app-header">
+          <div class="app-header-title" id="app-title-display">Dashboard</div>
+          <div class="app-header-actions">
+            <!-- Stores Button -->
+            <button class="header-btn" title="Nearby Stores" onclick="switchAppView('nearby-stores')" id="nearby-stores-badge-btn">
+              🏪
+            </button>
+            <!-- Mandis Button -->
+            <button class="header-btn" title="Nearest Mandis" onclick="switchAppView('nearby-mandis')" id="nearby-mandis-badge-btn">
+              🌾
+            </button>
+            <!-- Cart Icon -->
+            <button class="header-btn" title="Cart" onclick="switchAppView('cart')">
+              🛒
+              <span class="badge-count" id="cart-count">0</span>
+            </button>
+            <!-- Notifications Icon -->
+            <button class="header-btn" title="Notifications" onclick="switchAppView('notifications')">
+              🔔
+              <span class="badge-count" id="notif-count">3</span>
+            </button>
+            <!-- User Profile Dropdown -->
+            <div class="user-menu-trigger" onclick="switchAppView('profile')">
+              <div class="user-menu-avatar" id="header-avatar-letter">F</div>
+              <span class="user-menu-name" id="header-user-name">Farmer</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- ─── SCREEN 1: DASHBOARD MAIN ─── -->
+        <section class="app-screen-pane active-screen" id="screen-dashboard">
+          <!-- Welcome Box -->
+          <div class="welcome-banner">
+            <div class="welcome-banner-bg"></div>
+            <div class="welcome-text">
+              <h2 id="welcome-farmer-text">Welcome Back, Ramesh!</h2>
+              <p>Your tomato field looks healthy. 2 local alerts need your attention today.</p>
+            </div>
+            <div class="welcome-actions">
+              <button class="btn-app" onclick="switchAppView('disease-detection')">📷 Scan Leaf</button>
+              <button class="btn-app" onclick="switchAppView('nearby-mandis')" style="background:#E8F5E9; color:#1B5E20; border: 1px solid #c8d8c8;">🌾 Nearest Mandis</button>
+              <button class="btn-app" onclick="switchAppView('nearby-stores')" style="background:#2E7D32; color:#fff;">🏪 Nearby Stores</button>
+            </div>
+          </div>
+
+          <!-- Alert Banner -->
+          <div class="dashboard-alert-banner" id="dash-alert">
+            <span>⚠️ <strong>Weather Alert:</strong> High rain forecast in your area tomorrow. Check your irrigation schedule.</span>
+            <button class="dashboard-alert-close" onclick="closeDashboardAlert()">✕</button>
+          </div>
+
+          <!-- Dashboard Widgets Grid -->
+          <div class="dashboard-grid">
+            <!-- Quick Actions -->
+            <div class="widget-card">
+              <div class="widget-title">Quick Services</div>
+              <div class="quick-cards">
+                <div class="quick-card" onclick="switchAppView('disease-detection')">
+                  <span class="quick-card-icon">📷</span>
+                  <span class="quick-card-title">Detect Disease</span>
+                </div>
+                <div class="quick-card" onclick="switchAppView('ai-assistant')">
+                  <span class="quick-card-icon">💬</span>
+                  <span class="quick-card-title">AI Chatbot</span>
+                </div>
+                <div class="quick-card" onclick="switchAppView('weather')">
+                  <span class="quick-card-icon">🌦️</span>
+                  <span class="quick-card-title">Live Weather</span>
+                </div>
+                <div class="quick-card" onclick="switchAppView('market-prices')">
+                  <span class="quick-card-icon">💰</span>
+                  <span class="quick-card-title">Mandi Prices</span>
+                </div>
+                <div class="quick-card" onclick="switchAppView('nearby-mandis')">
+                  <span class="quick-card-icon">🌾</span>
+                  <span class="quick-card-title">Nearest Mandis</span>
+                </div>
+                <div class="quick-card" onclick="switchAppView('government-schemes')">
+                  <span class="quick-card-icon">🏛️</span>
+                  <span class="quick-card-title">Govt Schemes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weather Quick View -->
+            <div class="widget-card weather-summary-widget">
+              <div class="widget-title" style="color:#fff; margin-bottom:0.50rem;">Today's Weather</div>
+              <div class="weather-summary-content">
+                <div>
+                  <div class="weather-temp">31°C</div>
+                  <div class="weather-desc-text">🌦️ Light Rain Shower</div>
+                </div>
+                <div class="weather-summary-details">
+                  <span>💧 Humidity: 78%</span>
+                  <span>💨 Wind: 12 km/h</span>
+                  <span>☔ Rain: 65%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Crop Health Overview -->
+            <div class="widget-card crop-health-widget">
+              <div class="widget-title">Field Crop Health</div>
+              <div class="health-status-bar">
+                <div class="health-status-progress" id="crop-health-val-bar"></div>
+              </div>
+              <div class="health-details">
+                <span>Overall Condition: <strong>Good</strong></span>
+                <span>Last Scan: <strong>Yesterday</strong></span>
+              </div>
+            </div>
+
+            <!-- Latest Notifications Preview -->
+            <div class="widget-card">
+              <div class="widget-title">Recent Updates <a href="#" onclick="switchAppView('notifications')" style="font-size:0.8rem; color:var(--green-500);">View All</a></div>
+              <div style="display:flex; flex-direction:column; gap:0.75rem;">
+                <div style="font-size:0.85rem; border-left:3px solid #f44336; padding-left:0.5rem;">
+                  <strong>Tomato Late Blight alert</strong> in adjoining villages. Keep monitoring.
+                </div>
+                <div style="font-size:0.85rem; border-left:3px solid #2196f3; padding-left:0.5rem;">
+                  <strong>Subsidy Announced:</strong> 50% solar pump subsidies now open. Apply today.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 2: CROP DISEASE DETECTION ─── -->
+        <section class="app-screen-pane" id="screen-disease-detection">
+          <div class="widget-card">
+            <h3 style="margin-bottom:1rem;">Upload Leaf Image for Diagnosis</h3>
+            <p style="color:var(--gray-600); margin-bottom:1.5rem; font-size:0.9rem;">
+              Take or upload a clear picture of the crop leaf. Our AI will analyze the leaf pattern to detect diseases, output confidence ratings, severity percentage, and recommend treatments.
+            </p>
+
+            <div class="uploader-area" onclick="triggerFileInput()" id="drop-zone-uploader">
+              <div class="uploader-icon">🍃</div>
+              <div class="uploader-text">
+                <h4>Click or Drag Leaf Image Here</h4>
+                <p>Supports JPG, PNG (Max 5MB)</p>
+              </div>
+              <input type="file" id="file-uploader-input" class="hidden-file-input" accept="image/*" onchange="previewLeafUpload(event)" />
+              <div class="scanner-overlay" id="uploader-laser">
+                <div class="scanner-bar-laser"></div>
+                <span>Scanning leaf via AgroAssist AI...</span>
+              </div>
+            </div>
+
+            <div class="file-preview-wrap" id="leaf-preview-wrap">
+              <img src="" id="leaf-preview-image" class="file-preview-img" alt="Leaf preview" />
+              <button class="btn-primary" style="margin-top:1.5rem; padding:0.75rem 2.5rem;" onclick="simulateDiseaseAnalysis()">Start AI Diagnosis</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 3: DISEASE RESULT ─── -->
+        <section class="app-screen-pane" id="screen-disease-result">
+          <!-- Top Action Toolbar for PDF Export & Multi-App Sharing -->
+          <div style="display:flex; justify-content:space-between; align-items:center; background:#fff; padding:1rem 1.5rem; border-radius:16px; border:1px solid rgba(0,0,0,0.06); box-shadow:var(--shadow-sm); margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+            <div>
+              <h3 style="font-size:1.1rem; color:var(--gray-800); margin:0;">Crop Diagnostic Results &amp; Prescription</h3>
+              <p style="font-size:0.8rem; color:var(--gray-600); margin:0.2rem 0 0;">Download PDF report or share prescription to any app on your phone</p>
+            </div>
+            <div style="display:flex; gap:0.75rem;">
+              <button id="btn-download-report" class="btn-primary" onclick="downloadDiagnosticReport()" style="padding:0.6rem 1.4rem; font-size:0.88rem; display:flex; align-items:center; gap:0.4rem;">
+                📥 Download PDF Report
+              </button>
+              <button class="btn-outline" onclick="shareDiagnosticReport()" style="padding:0.6rem 1.4rem; font-size:0.88rem; display:flex; align-items:center; gap:0.4rem; background:#fff;">
+                📤 Share Prescription
+              </button>
+            </div>
+          </div>
+
+          <div class="result-container">
+            <div class="result-details-card">
+              <div class="crop-tag" style="background:#ffebee; color:#c62828;" id="res-severity-status">Tomato - Infection Detected</div>
+              <h2 style="font-size:1.8rem; margin:1rem 0 0.5rem;" id="res-disease-name">Tomato Early Blight</h2>
+              <p style="color:var(--gray-600); font-size:0.88rem; line-height:1.5;" id="res-disease-description">
+                Early blight is caused by the fungus Alternaria solani. It appears as brown spots with concentric rings on leaves, eventually causing leaves to turn yellow and drop off.
+              </p>
+
+              <div class="severity-gauge-container">
+                <div class="severity-circle"><span id="res-severity-pct">45%</span></div>
+                <div>
+                  <div style="font-weight:700; color:var(--gray-800);">Severity Index</div>
+                  <div style="font-size:0.8rem; color:var(--gray-600);">Moderate damage. Quick spraying recommended.</div>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex; justify-content:between; font-size:0.88rem; font-weight:700;">
+                  <span>AI Confidence Score</span>
+                  <span style="margin-left:auto;" id="res-confidence-pct">94%</span>
+                </div>
+                <div class="confidence-bar-wrap">
+                  <div class="confidence-bar" style="width: 94%;" id="res-confidence-bar"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="result-details-card" style="background:var(--green-50); border:1px solid var(--green-100);">
+              <h3 style="margin-bottom:0.75rem;">AI Treatment Prescription</h3>
+              <div style="font-size:0.88rem; line-height:1.5; color:var(--gray-800);">
+                <p><strong>Organic Remedies:</strong> Apply Neem oil spray. Prune lower infected leaves to prevent ground transmission.</p>
+                <p style="margin-top:0.75rem;"><strong>Chemical Option:</strong> Spray Mancozeb or Copper Oxychloride fungicide at 2g per liter dilution.</p>
+                <p style="margin-top:0.75rem;"><strong>Watering recommendation:</strong> Reduce overhead watering. Switch to drip irrigation to keep leaf surfaces dry.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recommended Products Section -->
+          <h3 class="products-section-title">🛡️ Recommended Products & Treatments</h3>
+          <div class="products-grid" id="rec-products-grid">
+            <!-- Dynamic products go here -->
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 4: DISEASE SCAN HISTORY ─── -->
+        <section class="app-screen-pane" id="screen-disease-history">
+          <div class="widget-card">
+            <h3 style="margin-bottom:1rem;">Your AI Scan History</h3>
+            <div style="overflow-x:auto;">
+              <table class="comparison-matrix-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Crop</th>
+                    <th>Diagnosis</th>
+                    <th>Severity</th>
+                    <th>Confidence</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="scan-history-tbody">
+                  <!-- Dynamic History Rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 5: AI chatbot ASSISTANT ─── -->
+        <section class="app-screen-pane" id="screen-ai-assistant">
+          <div class="ai-chatbot-card">
+            <div class="ai-chatbot-header">
+              <div class="ai-bot-identity">
+                <span class="ai-bot-avatar">🤖</span>
+                <div class="ai-bot-status-wrap">
+                  <h4>AgroAssist AI Assistant</h4>
+                  <div class="ai-bot-status">Online</div>
+                </div>
+              </div>
+              <div style="font-size:0.8rem; opacity:0.85;">Languages: English, Hindi, Punjabi</div>
+            </div>
+            
+            <div class="chatbot-messages-container" id="chat-messages-box">
+              <div class="chat-bubble bot-msg">
+                Hello! I am AgroAssist AI, your personal farming guide. Ask me about crop health, prices, disease consultations, or fertilizer dose recommendations. You can also click the microphone to talk to me!
+              </div>
+            </div>
+
+            <!-- Voice visualization simulation -->
+            <div id="voice-visualizer-sim" style="display:none; text-align:center; padding:0.5rem; background:#ffebee; color:#c62828; font-size:0.82rem; font-weight:700;">
+              🎤 Listening... Speak now (simulated voice input)
+            </div>
+
+            <div class="chatbot-input-panel">
+              <button class="chat-voice-btn" id="voice-input-btn" title="Voice Input" onclick="toggleVoiceInput()">
+                🎤
+              </button>
+              <input type="text" class="chat-text-input" id="chat-user-input" placeholder="Type your farming query here..." onkeypress="handleChatEnter(event)" />
+              <button class="chat-send-btn" onclick="sendChatMessage()">Send</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 6: WEATHER forecast ─── -->
+        <section class="app-screen-pane" id="screen-weather">
+          <div class="weather-details-header">
+            <div>
+              <h2 style="font-size:2rem;">Live Weather Updates</h2>
+              <p style="opacity:0.9; margin-top:0.3rem;">Faridkot, Punjab (Field Location)</p>
+              <div style="font-size:3.5rem; font-weight:900; margin:1rem 0;">31°C</div>
+              <p>🌦️ Scatter Shower - Rain ending in 2 hours</p>
+            </div>
+            <div class="weather-stats-grid">
+              <div class="weather-stat-box">
+                <div class="weather-stat-box-title">Humidity</div>
+                <div class="weather-stat-box-val">78%</div>
+              </div>
+              <div class="weather-stat-box">
+                <div class="weather-stat-box-title">Rainfall Predict</div>
+                <div class="weather-stat-box-val">4.5 mm</div>
+              </div>
+              <div class="weather-stat-box">
+                <div class="weather-stat-box-title">Wind Velocity</div>
+                <div class="weather-stat-box-val">12 km/h</div>
+              </div>
+              <div class="weather-stat-box">
+                <div class="weather-stat-box-title">Soil Temp</div>
+                <div class="weather-stat-box-val">24°C</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="forecast-title">7-Day Weather Forecast</h3>
+          <div class="forecast-scroll-container">
+            <div class="forecast-card-widget">
+              <div class="forecast-day">Thu</div>
+              <div class="forecast-icon-svg">⛈️</div>
+              <div class="forecast-temp-range">31° / 24°</div>
+            </div>
+            <div class="forecast-card-widget">
+              <div class="forecast-day">Fri</div>
+              <div class="forecast-icon-svg">🌦️</div>
+              <div class="forecast-temp-range">33° / 25°</div>
+            </div>
+            <div class="forecast-card-widget">
+              <div class="forecast-day">Sat</div>
+              <div class="forecast-icon-svg">☀️</div>
+              <div class="forecast-temp-range">35° / 26°</div>
+            </div>
+            <div class="forecast-card-widget">
+              <div class="forecast-day">Sun</div>
+              <div class="forecast-icon-svg">☀️</div>
+              <div class="forecast-temp-range">36° / 27°</div>
+            </div>
+            <div class="forecast-card-widget">
+              <div class="forecast-day">Mon</div>
+              <div class="forecast-icon-svg">⛅</div>
+              <div class="forecast-temp-range">34° / 26°</div>
+            </div>
+            <div class="forecast-card-widget">
+              <div class="forecast-day">Tue</div>
+              <div class="forecast-icon-svg">🌦️</div>
+              <div class="forecast-temp-range">32° / 25°</div>
+            </div>
+            <div class="forecast-card-widget">
+              <div class="forecast-day">Wed</div>
+              <div class="forecast-icon-svg">⛈️</div>
+              <div class="forecast-temp-range">31° / 23°</div>
+            </div>
+          </div>
+
+          <div class="widget-card" style="margin-top:2rem;">
+            <div class="widget-title">💡 Weather Smart Irrigation Advice</div>
+            <p style="font-size:0.88rem; line-height:1.5; color:var(--gray-600);">
+              Rainfall of 4.5 mm is predicted for tomorrow. We recommend pausing your morning watering session to conserve groundwater and avoid root rot.
+            </p>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 7: MARKET RATES ─── -->
+        <section class="app-screen-pane" id="screen-market-prices">
+          <div style="display:flex; gap:0.5rem; margin-bottom:1.5rem;">
+            <button class="notification-filter-btn active" onclick="switchAppView('market-prices')">💰 Commodity Rates</button>
+            <button class="notification-filter-btn" onclick="switchAppView('nearby-mandis')">🌾 Nearest Mandis Locator</button>
+            <button class="notification-filter-btn" onclick="switchAppView('price-comparison')" style="margin-left:auto;">🏪 Store Price Comparison</button>
+          </div>
+
+          <div class="market-prices-search-row">
+            <input type="text" id="market-search-input" placeholder="Search crops (e.g. wheat, tomato, rice)..." onkeyup="filterMarketRates()" />
+          </div>
+
+          <div class="prices-grid" id="market-prices-cards-grid">
+            <!-- Dynamic prices go here -->
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 8: MARKET RATE DETAILS ─── -->
+        <section class="app-screen-pane" id="screen-market-price-details">
+          <div class="widget-card">
+            <button class="btn-outline" style="margin-bottom:1rem; padding:0.3rem 1rem;" onclick="switchAppView('market-prices')">← Back to Rates</button>
+            <h2 id="price-detail-crop-name" style="margin-bottom:0.5rem;">Tomato Price Trend</h2>
+            <div style="font-size:1.5rem; font-weight:800; color:var(--green-700); margin-bottom:1.5rem;" id="price-detail-current-rate">₹2,800 / Quintal</div>
+            
+            <h4 style="margin-bottom:0.5rem;">Historical Trends (Last 6 Months)</h4>
+            <div class="map-view-box" style="background:#f1f8f1; height:200px; display:flex; align-items:flex-end; padding:1rem;">
+              <!-- simple bar chart mock -->
+              <div style="display:flex; justify-content:space-around; width:100%; height:150px; align-items:flex-end;">
+                <div style="text-align:center;"><div style="background:var(--green-500); width:30px; height:80px; border-radius:4px;"></div><span style="font-size:0.75rem;">Jan</span></div>
+                <div style="text-align:center;"><div style="background:var(--green-500); width:30px; height:95px; border-radius:4px;"></div><span style="font-size:0.75rem;">Feb</span></div>
+                <div style="text-align:center;"><div style="background:var(--green-500); width:30px; height:110px; border-radius:4px;"></div><span style="font-size:0.75rem;">Mar</span></div>
+                <div style="text-align:center;"><div style="background:var(--green-500); width:30px; height:120px; border-radius:4px;"></div><span style="font-size:0.75rem;">Apr</span></div>
+                <div style="text-align:center;"><div style="background:var(--green-700); width:30px; height:140px; border-radius:4px;"></div><span style="font-size:0.75rem;">May</span></div>
+              </div>
+            </div>
+            
+            <div class="widget-card" style="margin-top:1.5rem; background:var(--green-50);">
+              <h4>💡 Best Market Recommendation</h4>
+              <p style="font-size:0.88rem; line-height:1.5; color:var(--gray-600); margin-top:0.5rem;" id="price-detail-recommendation">
+                Khanna Mandi is currently buying at the highest rate (₹2,950/Quintal). Recommended transportation cost is ₹120/Quintal, netting you a surplus of ₹30/Quintal compared to your local market.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 8B: NEARBY MANDIS ─── -->
+        <section class="app-screen-pane" id="screen-nearby-mandis">
+          <div style="display:flex; gap:0.5rem; margin-bottom:1.5rem;">
+            <button class="notification-filter-btn" onclick="switchAppView('market-prices')">💰 Commodity Rates</button>
+            <button class="notification-filter-btn active" onclick="switchAppView('nearby-mandis')">🌾 Nearest Mandis Locator</button>
+            <button class="notification-filter-btn" onclick="switchAppView('price-comparison')" style="margin-left:auto;">🏪 Store Price Comparison</button>
+          </div>
+
+          <!-- Location Search Control Bar -->
+          <div class="widget-card" style="margin-bottom:1.5rem; background:linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%); border:1px solid var(--green-300);">
+            <div style="font-weight:700; font-size:1rem; color:var(--green-900); margin-bottom:0.75rem;">📍 Set Your Location to Find Nearest Mandis</div>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+              <input type="text" id="mandi-location-input" placeholder="Type any city or location (e.g. Amritsar, Bathinda, Ludhiana, Patiala)..." style="flex:1; min-width:260px; padding:0.75rem 1.25rem; border-radius:50px; border:2px solid var(--gray-300); font-size:0.9rem; outline:none;" onkeypress="handleLocationSearchEnter(event)" />
+              <button class="btn-primary" onclick="searchCustomLocation()" style="padding:0.75rem 1.5rem;">🔍 Search Location</button>
+              <button class="btn-outline" onclick="detectUserLocation()" style="padding:0.75rem 1.5rem; background:#fff;">📍 Use My Live GPS</button>
+            </div>
+            <div style="margin-top:0.75rem; font-size:0.85rem; color:var(--green-700); font-weight:600;" id="mandi-location-status-text">
+              📍 Showing Mandis Nearest to: Faridkot, Punjab
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+            <h3>🌾 Nearest Mandis (Grain &amp; Produce Markets)</h3>
+            <button class="btn-primary" onclick="switchAppView('mandi-locator')">🗺️ GPS Map View</button>
+          </div>
+          
+          <div style="display:flex; gap:0.5rem; margin-bottom:1.5rem; flex-wrap:wrap;">
+            <button class="notification-filter-btn active" id="mandi-filter-all" onclick="filterMandis('all')">All Crops</button>
+            <button class="notification-filter-btn" id="mandi-filter-wheat" onclick="filterMandis('Wheat')">Wheat</button>
+            <button class="notification-filter-btn" id="mandi-filter-rice" onclick="filterMandis('Rice')">Rice</button>
+            <button class="notification-filter-btn" id="mandi-filter-tomato" onclick="filterMandis('Tomato')">Tomato</button>
+            <button class="notification-filter-btn" id="mandi-filter-cotton" onclick="filterMandis('Cotton')">Cotton</button>
+          </div>
+
+          <div class="prices-grid" id="mandis-list-grid">
+            <!-- Dynamic mandis list -->
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 8C: MANDI LOCATOR MAP VIEW ─── -->
+        <section class="app-screen-pane" id="screen-mandi-locator">
+          <div class="widget-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+              <button class="btn-outline" style="padding:0.3rem 1rem;" onclick="switchAppView('nearby-mandis')">← Back to Mandis List</button>
+              
+              <!-- Map View Selector Tabs -->
+              <div style="display:flex; gap:0.5rem;">
+                <button class="notification-filter-btn active" id="mandi-map-tab-sim" onclick="toggleMandiMapView('sim')">🗺️ Simulated Route Map</button>
+                <button class="notification-filter-btn" id="mandi-map-tab-gmaps" onclick="toggleMandiMapView('gmaps')">🌐 Interactive Google Maps</button>
+              </div>
+            </div>
+
+            <h3 id="locator-mandi-title">Navigation to Faridkot Grain Mandi</h3>
+            <p style="font-size:0.85rem; color:var(--gray-600);" id="locator-mandi-distance">Distance: 1.5 km · Estimated Travel Time: 5 minutes</p>
+
+            <!-- Simulated Map View -->
+            <div class="map-view-box" id="mandi-simulated-map-view">
+              <div class="map-placeholder-graphics" style="background:#e8f5e9;">
+                <div style="font-weight:700; color:var(--green-900); font-size:1.1rem; margin-bottom:0.5rem;">Simulated GPS Mapping &amp; Navigation</div>
+                <div style="font-size:0.82rem; color:var(--gray-600);" id="locator-mandi-route-desc">Showing direct path from Your Farm (Faridkot) to Grain Market</div>
+                
+                <!-- route mockup -->
+                <div class="map-route-line" style="transform: rotate(-10deg); width: 45%; left: 25%; top: 48%;"></div>
+                <div class="map-pin pin-farmer" title="Your Farm (Faridkot)">🚜</div>
+                <div class="map-pin pin-store" id="mandi-map-pin" title="Grain Mandi" style="left:68%; top:42%;">🌾</div>
+              </div>
+            </div>
+
+            <!-- Google Maps View -->
+            <div id="mandi-gmaps-iframe-wrap" style="display:none; margin-top:1.5rem; border-radius:16px; overflow:hidden; border:2px solid var(--green-400); box-shadow:var(--shadow-md);">
+              <iframe id="mandi-gmaps-iframe" style="width:100%; height:380px; border:0;" src="https://maps.google.com/maps?q=30.6769,74.7461&z=14&output=embed" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- External Google Maps Directions Action Button -->
+            <div style="margin-top:1.25rem; text-align:center;">
+              <a id="btn-open-google-maps-app" href="https://www.google.com/maps" target="_blank" class="btn-primary" style="padding:0.75rem 2rem; display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none; font-size:0.95rem; border-radius:50px;">
+                🧭 Open Turn-by-Turn Navigation in Google Maps App ↗
+              </a>
+            </div>
+
+            <div style="margin-top:1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;" class="mandi-locator-details-row">
+              <div>
+                <h4 style="margin-bottom:0.5rem;">Today's Buying Rates at Mandi:</h4>
+                <ul id="locator-mandi-rates-list" style="font-size:0.9rem; display:flex; flex-direction:column; gap:0.5rem; list-style:none; padding:0;">
+                  <!-- Dynamic rates -->
+                </ul>
+              </div>
+              <div>
+                <h4 style="margin-bottom:0.5rem;">Turn-by-Turn Navigation Directions:</h4>
+                <ol id="locator-mandi-directions" style="font-size:0.85rem; padding-left:1.2rem; color:var(--gray-600); display:flex; flex-direction:column; gap:0.4rem;">
+                  <!-- Dynamic directions -->
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 9: NEARBY AGRICULTURAL STORES ─── -->
+        <section class="app-screen-pane" id="screen-nearby-stores">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+            <h3>🏪 Nearby Agricultural Stores</h3>
+            <button class="btn-primary" onclick="switchAppView('store-locator')">🗺️ Map View</button>
+          </div>
+          
+          <div style="display:flex; gap:0.5rem; margin-bottom:1.5rem;">
+            <button class="notification-filter-btn active" id="store-cat-all" onclick="filterStoreCategory('all')">All</button>
+            <button class="notification-filter-btn" id="store-cat-seeds" onclick="filterStoreCategory('Seeds')">Seeds</button>
+            <button class="notification-filter-btn" id="store-cat-fertilizers" onclick="filterStoreCategory('Fertilizer')">Fertilizers</button>
+            <button class="notification-filter-btn" id="store-cat-equipment" onclick="filterStoreCategory('Equipment')">Equipment</button>
+          </div>
+
+          <div class="prices-grid" id="stores-list-grid">
+            <!-- Dynamic stores list -->
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 10: STORE LOCATOR MAP VIEW ─── -->
+        <section class="app-screen-pane" id="screen-store-locator">
+          <div class="widget-card">
+            <button class="btn-outline" style="margin-bottom:1rem; padding:0.3rem 1rem;" onclick="switchAppView('nearby-stores')">← Back to List</button>
+            <h3 id="locator-store-title">Navigation to Khanna Agri Outlet</h3>
+            <p style="font-size:0.85rem; color:var(--gray-600);" id="locator-store-distance">Distance: 4.2 km · Travel Time: 12 minutes</p>
+
+            <div class="map-view-box">
+              <div class="map-placeholder-graphics" style="background:#e8f5e9;">
+                <div style="font-weight:700; color:var(--green-900); font-size:1.1rem; margin-bottom:0.5rem;">Simulated GPS Mapping &amp; Navigation</div>
+                <div style="font-size:0.82rem; color:var(--gray-600);">Showing direct path from Your Farm (Pin 1) to Store (Pin 2)</div>
+                
+                <!-- route mockup -->
+                <div class="map-route-line"></div>
+                <div class="map-pin pin-farmer" title="Your Farm">🚜</div>
+                <div class="map-pin pin-store" title="Agri Store">🏬</div>
+              </div>
+            </div>
+
+            <div style="margin-top:1.5rem;">
+              <h4>Turn-by-Turn Directions:</h4>
+              <ol style="font-size:0.85rem; padding-left:1.2rem; color:var(--gray-600); display:flex; flex-direction:column; gap:0.4rem; margin-top:0.5rem;">
+                <li>Head North on Farm Lane toward Highway 10 (0.8 km)</li>
+                <li>Turn Right onto NH-15 Bypass road (2.5 km)</li>
+                <li>At the roundabout, take the 2nd exit toward Khanna Market (0.9 km)</li>
+                <li>Destination will be on your left next to SBI bank</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 11: PRICE COMPARISON GRID ─── -->
+        <section class="app-screen-pane" id="screen-price-comparison">
+          <div class="widget-card">
+            <button class="btn-outline" style="margin-bottom:1rem; padding:0.3rem 1rem;" onclick="switchAppView('market-prices')">← Back to Mandi</button>
+            <h3>💰 Store Price Comparison</h3>
+            <p style="font-size:0.85rem; color:var(--gray-600); margin-bottom:1.5rem;">Compare fertilizer, seed, and chemical prices across local stores to get the best deal.</p>
+            
+            <div style="overflow-x:auto;">
+              <table class="comparison-matrix-table">
+                <thead>
+                  <tr>
+                    <th>Product Name</th>
+                    <th>Khanna Stores</th>
+                    <th>Balaji Seeds</th>
+                    <th>Kalyan Fertilizers</th>
+                    <th>Recommended Store</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mancozeb Fungicide (1 Kg)</td>
+                    <td>₹550</td>
+                    <td>₹580</td>
+                    <td>₹540 <span class="cheapest-badge">Cheapest</span></td>
+                    <td>Kalyan Fertilizers</td>
+                    <td><button class="btn-primary" style="padding:0.35rem 0.8rem; font-size:0.8rem;" onclick="openDeliveryPlatformModal('p1')">🚚 Choose Platform</button></td>
+                  </tr>
+                  <tr>
+                    <td>Neem Oil Concentrate (500 ml)</td>
+                    <td>₹280 <span class="cheapest-badge">Cheapest</span></td>
+                    <td>₹310</td>
+                    <td>₹295</td>
+                    <td>Khanna Stores</td>
+                    <td><button class="btn-primary" style="padding:0.35rem 0.8rem; font-size:0.8rem;" onclick="openDeliveryPlatformModal('p2')">🚚 Choose Platform</button></td>
+                  </tr>
+                  <tr>
+                    <td>NPK Fertilizer 19:19:19 (50 Kg)</td>
+                    <td>₹1,150</td>
+                    <td>₹1,120 <span class="cheapest-badge">Cheapest</span></td>
+                    <td>₹1,180</td>
+                    <td>Balaji Seeds</td>
+                    <td><button class="btn-primary" style="padding:0.35rem 0.8rem; font-size:0.8rem;" onclick="openDeliveryPlatformModal('p3')">🚚 Choose Platform</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 12: GOVERNMENT SCHEMES ─── -->
+        <section class="app-screen-pane" id="screen-government-schemes">
+          <h3 style="margin-bottom:1.5rem;">🏛️ Agriculture Schemes &amp; Subsidies</h3>
+          
+          <div class="schemes-grid" id="schemes-cards-container">
+            <!-- Dynamic schemes go here -->
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 13: SCHEME DETAILS & APPLY REDIRECT ─── -->
+        <section class="app-screen-pane" id="screen-scheme-details">
+          <div class="widget-card">
+            <button class="btn-outline" style="margin-bottom:1rem; padding:0.3rem 1rem;" onclick="switchAppView('government-schemes')">← Back to Schemes</button>
+            
+            <h2 id="scheme-detail-title" style="margin-bottom:0.5rem;">PM Krishi Sinchayee Yojana</h2>
+            <div class="scheme-header-badge" id="scheme-detail-type">Subsidy</div>
+            
+            <div style="margin:1.5rem 0; font-size:0.9rem; line-height:1.6; color:var(--gray-700);" id="scheme-detail-body">
+              <!-- Scheme description text -->
+            </div>
+
+            <!-- Application Status Tracking -->
+            <div class="widget-card" style="background:var(--gray-50); margin-bottom:1.5rem;">
+              <h4>Application Status Tracker</h4>
+              <div style="display:flex; justify-content:space-between; margin-top:1rem; position:relative; padding-bottom:1rem;">
+                <div style="text-align:center; flex:1; z-index:1;">
+                  <div style="width:30px; height:30px; border-radius:50%; background:var(--green-500); color:#fff; display:flex; align-items:center; justify-content:center; margin:0 auto 0.25rem; font-weight:700;">1</div>
+                  <span style="font-size:0.75rem;">Submitted</span>
+                </div>
+                <div style="text-align:center; flex:1; z-index:1;">
+                  <div style="width:30px; height:30px; border-radius:50%; background:var(--green-500); color:#fff; display:flex; align-items:center; justify-content:center; margin:0 auto 0.25rem; font-weight:700;">2</div>
+                  <span style="font-size:0.75rem;">Verified</span>
+                </div>
+                <div style="text-align:center; flex:1; z-index:1;">
+                  <div style="width:30px; height:30px; border-radius:50%; background:var(--gray-300); color:#fff; display:flex; align-items:center; justify-content:center; margin:0 auto 0.25rem; font-weight:700;">3</div>
+                  <span style="font-size:0.75rem;">Sanctioned</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://pmksy.gov.in" target="_blank" class="btn-primary" style="padding:0.75rem 2rem; display:inline-block; border-radius:50px;">Apply on Official Portal ↗</a>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 14: WATER MANAGEMENT ─── -->
+        <section class="app-screen-pane" id="screen-water-management">
+          <div class="calc-layout">
+            <div class="calc-form-card">
+              <h3 style="margin-bottom:1rem;">💧 Irrigation Scheduler</h3>
+              <form onsubmit="calculateWaterRequirement(event)">
+                <div class="form-group" style="margin-bottom:1rem;">
+                  <label for="water-crop-select">Select Crop Type</label>
+                  <select id="water-crop-select" style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);">
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice (Paddy)</option>
+                    <option value="tomato">Tomato</option>
+                    <option value="cotton">Cotton</option>
+                  </select>
+                </div>
+                <div class="form-group" style="margin-bottom:1rem;">
+                  <label for="water-land-size">Farm Land Size (Acres)</label>
+                  <input type="number" id="water-land-size" min="1" max="100" value="2" required style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);" />
+                </div>
+                <div class="form-group" style="margin-bottom:1.2rem;">
+                  <label for="water-soil-select">Soil Profile Type</label>
+                  <select id="water-soil-select" style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);">
+                    <option value="clay">Clay Loam</option>
+                    <option value="sandy">Sandy Loam</option>
+                    <option value="black">Black Soil</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%;">Calculate Watering Dose</button>
+              </form>
+            </div>
+
+            <div class="calc-results-card">
+              <h3>Watering Guidelines</h3>
+              <div class="calc-result-number" id="water-result-vol">12,500 Liters</div>
+              <div style="font-size:0.9rem; line-height:1.5; color:var(--green-900);">
+                <p><strong>Frequency:</strong> Every 4 days</p>
+                <p style="margin-top:0.75rem;"><strong>Method recommendation:</strong> Drip Irrigation at 1.5 bar pressure for 3 hours early morning.</p>
+                <p style="margin-top:0.75rem;" id="water-weather-tip"><strong>Weather Tip:</strong> Clear sky predicted. Proceed with scheduled watering.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 15: FERTILIZER MANAGEMENT ─── -->
+        <section class="app-screen-pane" id="screen-fertilizer-management">
+          <div class="calc-layout">
+            <div class="calc-form-card">
+              <h3 style="margin-bottom:1rem;">🌱 NPK Dosage Calculator</h3>
+              <form onsubmit="calculateFertilizerDose(event)">
+                <div class="form-group" style="margin-bottom:1rem;">
+                  <label for="fert-crop-select">Select Crop</label>
+                  <select id="fert-crop-select" style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);">
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice (Paddy)</option>
+                    <option value="tomato">Tomato</option>
+                    <option value="sugarcane">Sugarcane</option>
+                  </select>
+                </div>
+                <div class="form-group" style="margin-bottom:1rem;">
+                  <label for="fert-land-size">Farm Land Size (Acres)</label>
+                  <input type="number" id="fert-land-size" min="1" value="2" required style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);" />
+                </div>
+                <div class="form-row" style="margin-bottom:1.2rem;">
+                  <div class="form-group">
+                    <label for="fert-n-val">Current Soil N (kg/ha)</label>
+                    <input type="number" id="fert-n-val" value="120" style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);" />
+                  </div>
+                  <div class="form-group">
+                    <label for="fert-p-val">Soil P (kg/ha)</label>
+                    <input type="number" id="fert-p-val" value="22" style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);" />
+                  </div>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%;">Calculate Fertilizer Schedule</button>
+              </form>
+            </div>
+
+            <div class="calc-results-card" style="background:#e8f5e9;">
+              <h3>NPK Recommendations</h3>
+              <div class="calc-result-number" id="fert-result-output">3 Bags Urea</div>
+              <div style="font-size:0.9rem; line-height:1.5; color:var(--green-900);">
+                <p><strong>Urea (Nitrogen):</strong> 3 Bags (150 kg)</p>
+                <p><strong>Super Phosphate (P):</strong> 2 Bags (100 kg)</p>
+                <p><strong>Potash (K):</strong> 1 Bag (50 kg)</p>
+                <p style="margin-top:0.75rem;"><strong>Application Schedule:</strong> 50% Urea during sowing, 50% top-dressed during tillering stage.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 16: NOTIFICATION CENTER ─── -->
+        <section class="app-screen-pane" id="screen-notifications">
+          <div class="notification-filters">
+            <button class="notification-filter-btn active" onclick="filterNotifications('all')" id="notif-filter-all">All</button>
+            <button class="notification-filter-btn" onclick="filterNotifications('weather')" id="notif-filter-weather">Weather</button>
+            <button class="notification-filter-btn" onclick="filterNotifications('disease')" id="notif-filter-disease">Disease</button>
+            <button class="notification-filter-btn" onclick="filterNotifications('market')" id="notif-filter-market">Market Rates</button>
+          </div>
+
+          <div class="notifications-list" id="notif-cards-list">
+            <!-- Dynamic notifications -->
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 17: REPORTS & ANALYTICS ─── -->
+        <section class="app-screen-pane" id="screen-reports">
+          <div class="reports-layout">
+            <div class="chart-widget">
+              <h3>Severity &amp; Disease Diagnostic Trend</h3>
+              <div class="map-view-box" style="background:#fff; height:260px; display:flex; align-items:flex-end; padding:1.5rem; justify-content:space-around;">
+                <!-- mock line chart using bars -->
+                <div style="display:flex; justify-content:space-between; width:100%; height:200px; align-items:flex-end; border-bottom:2px solid #ccc;">
+                  <div style="text-align:center;"><div style="background:#f44336; width:12px; height:60px; border-radius:2px 2px 0 0;"></div><span style="font-size:0.75rem;">Week 1</span></div>
+                  <div style="text-align:center;"><div style="background:#ff9800; width:12px; height:90px; border-radius:2px 2px 0 0;"></div><span style="font-size:0.75rem;">Week 2</span></div>
+                  <div style="text-align:center;"><div style="background:#4caf50; width:12px; height:40px; border-radius:2px 2px 0 0;"></div><span style="font-size:0.75rem;">Week 3</span></div>
+                  <div style="text-align:center;"><div style="background:#4caf50; width:12px; height:20px; border-radius:2px 2px 0 0;"></div><span style="font-size:0.75rem;">Week 4</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reports-controls">
+              <h3>Download Farm Analytics</h3>
+              <p style="font-size:0.85rem; color:var(--gray-600);">Generate a compiled report including crop scans, market price trends, and watering history.</p>
+              
+              <button class="btn-export-pdf" onclick="simulateReportDownload()">Export Report as PDF</button>
+              <div id="report-download-success" style="display:none; text-align:center; color:var(--green-700); font-weight:700; font-size:0.88rem; margin-top:0.5rem;">
+                ✔ PDF Report downloaded successfully (simulated)
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 18: FARMER PROFILE ─── -->
+        <section class="app-screen-pane" id="screen-profile">
+          <div class="widget-card" style="max-width:600px; margin:0 auto;">
+            <h3 style="margin-bottom:1.5rem;">Farmer Profile Details</h3>
+            <form onsubmit="handleProfileUpdate(event)">
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label for="prof-name">Full Name</label>
+                <input type="text" id="prof-name" value="Ramesh Kumar" required style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);" />
+              </div>
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label for="prof-phone">Phone Number</label>
+                <input type="tel" id="prof-phone" value="+91 98765 43210" disabled style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300); background:#f1f4f0;" />
+              </div>
+              <div class="form-row" style="margin-bottom:1rem;">
+                <div class="form-group">
+                  <label for="prof-size">Farm Size (Acres)</label>
+                  <input type="number" id="prof-size" value="2.5" step="0.1" required style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);" />
+                </div>
+                <div class="form-group">
+                  <label for="prof-crop">Primary Crop</label>
+                  <input type="text" id="prof-crop" value="Tomato" required style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);" />
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom:1.5rem;">
+                <label for="prof-location">Farm Location / Region</label>
+                <input type="text" id="prof-location" value="Faridkot, Punjab" required style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300);" />
+              </div>
+              <button type="submit" class="btn-primary" style="width:100%;">Update Profile Info</button>
+              <div id="profile-success" style="display:none; text-align:center; color:var(--green-700); font-weight:700; margin-top:0.75rem;">
+                ✔ Profile updated successfully
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 19: SETTINGS ─── -->
+        <section class="app-screen-pane" id="screen-settings">
+          <div class="widget-card" style="max-width:600px; margin:0 auto;">
+            <div class="settings-group">
+              <div class="settings-group-title">Language Preferences</div>
+              <select style="padding:0.75rem; border-radius:8px; border:1px solid var(--gray-300); width:100%;" onchange="alert('Language updated!')">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="pb">ਪੰਜਾਬੀ (Punjabi)</option>
+                <option value="te">తెలుగు (Telugu)</option>
+              </select>
+            </div>
+
+            <div class="settings-group">
+              <div class="settings-group-title">Push Notifications</div>
+              <div class="toggle-setting-row">
+                <span class="toggle-setting-label">Weather Alerts</span>
+                <input type="checkbox" class="toggle-switch-input" checked />
+              </div>
+              <div class="toggle-setting-row">
+                <span class="toggle-setting-label">Mandi Price Drops</span>
+                <input type="checkbox" class="toggle-switch-input" checked />
+              </div>
+              <div class="toggle-setting-row">
+                <span class="toggle-setting-label">Irrigation Reminders</span>
+                <input type="checkbox" class="toggle-switch-input" checked />
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <div class="settings-group-title">App Theme</div>
+              <div class="toggle-setting-row">
+                <span class="toggle-setting-label">Enable Dark Mode</span>
+                <input type="checkbox" class="toggle-switch-input" onchange="toggleDarkMode(this)" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 20: SHOPPING CART ─── -->
+        <section class="app-screen-pane" id="screen-cart">
+          <div class="cart-split-layout">
+            <!-- Items Grid -->
+            <div>
+              <h3>Your Shopping Cart</h3>
+              <p style="font-size:0.85rem; color:var(--gray-600); margin-bottom:1.5rem;">Select products to buy or adjust quantities before placing order.</p>
+              
+              <div class="cart-items-list" id="cart-items-container">
+                <!-- Dynamic cart list -->
+              </div>
+            </div>
+
+            <!-- Summary Panel -->
+            <div class="cart-summary-card">
+              <h3>Order Summary</h3>
+              <div style="margin-top:1rem;">
+                <div class="summary-line">
+                  <span>Subtotal</span>
+                  <span id="cart-summary-subtotal">₹0</span>
+                </div>
+                <div class="summary-line">
+                  <span>Delivery Charge</span>
+                  <span>Free</span>
+                </div>
+                <div class="summary-line summary-total">
+                  <span>Grand Total</span>
+                  <span id="cart-summary-total">₹0</span>
+                </div>
+              </div>
+              <button class="btn-checkout" onclick="checkoutCart()">🚚 Choose Delivery Platform / Website</button>
+              <button class="btn-outline" style="width:100%; margin-top:0.5rem; padding:0.75rem;" onclick="switchAppView('order-history')">View Order History</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 21: ORDER HISTORY ─── -->
+        <section class="app-screen-pane" id="screen-order-history">
+          <div class="widget-card">
+            <h3>Your Order History</h3>
+            <p style="font-size:0.85rem; color:var(--gray-600); margin-bottom:1.5rem;">Tracking your agricultural supply purchases.</p>
+            
+            <div style="overflow-x:auto;">
+              <table class="comparison-matrix-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Items Purchased</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="order-history-tbody">
+                  <!-- Dynamic Orders -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── SCREEN 22: DEDICATED RECOMMENDED PRODUCTS ─── -->
+        <section class="app-screen-pane" id="screen-recommended-products">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+            <div>
+              <h3 style="font-size:1.4rem; color:var(--green-900); margin:0;">🛍️ Recommended Agricultural Supplies</h3>
+              <p style="font-size:0.85rem; color:var(--gray-600); margin:0.2rem 0 0;">High-yield seeds, fungicides, organic fertilizers &amp; farming equipment</p>
+            </div>
+            
+            <div style="display:flex; gap:0.5rem; flex:1; max-width:360px; min-width:260px;">
+              <input type="text" id="dedicated-product-search" placeholder="Search supplies, fertilizers, seeds..." style="flex:1; padding:0.65rem 1.25rem; border-radius:50px; border:2px solid var(--gray-300); font-size:0.88rem; outline:none;" onkeyup="handleDedicatedProductSearch()" />
+            </div>
+          </div>
+
+          <!-- Category Filter Bar -->
+          <div style="display:flex; gap:0.5rem; margin-bottom:1.5rem; flex-wrap:wrap;">
+            <button class="notification-filter-btn active dedicated-cat-btn" id="ded-cat-all" onclick="filterDedicatedProductsCategory('all')">All Supplies</button>
+            <button class="notification-filter-btn dedicated-cat-btn" id="ded-cat-fungicide" onclick="filterDedicatedProductsCategory('Fungicide')">Fungicides &amp; Pesticides</button>
+            <button class="notification-filter-btn dedicated-cat-btn" id="ded-cat-organic" onclick="filterDedicatedProductsCategory('Organic')">Organic Pest Control</button>
+            <button class="notification-filter-btn dedicated-cat-btn" id="ded-cat-seeds" onclick="filterDedicatedProductsCategory('Seeds')">High-Yield Seeds</button>
+            <button class="notification-filter-btn dedicated-cat-btn" id="ded-cat-fertilizer" onclick="filterDedicatedProductsCategory('Fertilizer')">NPK Fertilizers</button>
+            <button class="notification-filter-btn dedicated-cat-btn" id="ded-cat-equipment" onclick="filterDedicatedProductsCategory('Equipment')">Equipment</button>
+          </div>
+
+          <div class="products-grid" id="dedicated-products-grid">
+            <!-- Dynamic dedicated products grid -->
+          </div>
+        </section>
+      </main>
+
+      <!-- Bottom Navigation (Mobile Only) -->
+      <nav class="app-bottom-nav">
+        <button class="bottom-nav-item active" onclick="switchAppView('dashboard')">
+          <span class="icon">🏠</span>
+          <span>Home</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchAppView('disease-detection')">
+          <span class="icon">📷</span>
+          <span>Scan</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchAppView('ai-assistant')">
+          <span class="icon">💬</span>
+          <span>AI Chat</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchAppView('market-prices')">
+          <span class="icon">💰</span>
+          <span>Mandi</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchAppView('cart')">
+          <span class="icon">🛒</span>
+          <span>Cart</span>
+        </button>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- ─── MULTI-APP SHARE MODAL ─── -->
+  <div id="share-report-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:2000; align-items:center; justify-content:center; padding:1rem;">
+    <div style="background:#fff; border-radius:20px; max-width:440px; width:100%; padding:1.5rem; box-shadow:var(--shadow-lg); position:relative; animation:slideUp 0.3s cubic-bezier(.4,0,.2,1);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+        <h3 style="font-size:1.2rem; color:var(--gray-800); margin:0;">📤 Share Prescription Report</h3>
+        <button onclick="closeShareModal()" style="background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--gray-600);">&times;</button>
+      </div>
+      <p style="font-size:0.85rem; color:var(--gray-600); margin-bottom:1.5rem;">Select an app to share your crop diagnosis and treatment prescription:</p>
+      
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:1.5rem;">
+        <button onclick="shareToWhatsApp()" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:12px; border:1px solid #25D366; background:#e8f8ef; color:#075E54; font-weight:700; font-size:0.88rem; cursor:pointer;">
+          <span style="font-size:1.4rem;">💬</span> WhatsApp
+        </button>
+        <button onclick="shareToTelegram()" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:12px; border:1px solid #0088cc; background:#e1f5fe; color:#0088cc; font-weight:700; font-size:0.88rem; cursor:pointer;">
+          <span style="font-size:1.4rem;">📱</span> Telegram
+        </button>
+        <button onclick="shareViaEmail()" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:12px; border:1px solid #ea4335; background:#fce8e6; color:#c5221f; font-weight:700; font-size:0.88rem; cursor:pointer;">
+          <span style="font-size:1.4rem;">✉️</span> Email
+        </button>
+        <button onclick="copyShareLink()" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:12px; border:1px solid var(--green-500); background:var(--green-50); color:var(--green-900); font-weight:700; font-size:0.88rem; cursor:pointer;">
+          <span style="font-size:1.4rem;">📋</span> Copy Link
+        </button>
+      </div>
+
+      <button onclick="shareDiagnosticReport()" class="btn-primary" style="width:100%; padding:0.75rem; text-align:center; display:block;">
+        📲 Open Device App Chooser (Native Share)
+      </button>
+    </div>
+  </div>
+
+  <!-- ─── E-COMMERCE & DELIVERY PLATFORM SELECTOR MODAL ─── -->
+  <div id="delivery-platform-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.65); z-index:2100; align-items:center; justify-content:center; padding:1rem;">
+    <div style="background:#fff; border-radius:24px; max-width:540px; width:100%; padding:1.75rem; box-shadow:var(--shadow-lg); position:relative; animation:slideUp 0.3s cubic-bezier(.4,0,.2,1);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <h3 style="font-size:1.25rem; color:var(--gray-800); margin:0;">🚚 Choose Delivery Platform / Website</h3>
+        <button onclick="closeDeliveryPlatformModal()" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color:var(--gray-600);">&times;</button>
+      </div>
+      
+      <div id="platform-modal-summary-text" style="font-size:0.88rem; color:var(--gray-600); background:var(--gray-50); padding:0.85rem 1rem; border-radius:12px; border:1px solid var(--gray-300); margin-bottom:1.25rem; line-height:1.5;">
+        <!-- Dynamic Order Summary -->
+      </div>
+
+      <p style="font-size:0.85rem; font-weight:700; color:var(--gray-800); margin-bottom:0.75rem;">Select your preferred online platform or delivery app to order:</p>
+      
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; max-height:360px; overflow-y:auto; padding-right:4px;">
+        
+        <!-- Amazon India -->
+        <button onclick="openPlatformDelivery('amazon')" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:14px; border:1.5px solid #FF9900; background:#FFF8E7; color:#111; font-weight:700; font-size:0.88rem; cursor:pointer; text-align:left; transition:var(--transition);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <span style="font-size:1.6rem;">🛒</span>
+          <div>
+            <div>Amazon India</div>
+            <div style="font-size:0.7rem; color:#666; font-weight:normal;">Fast Delivery &amp; Returns</div>
+          </div>
+        </button>
+
+        <!-- Flipkart -->
+        <button onclick="openPlatformDelivery('flipkart')" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:14px; border:1.5px solid #2874F0; background:#EBF3FF; color:#111; font-weight:700; font-size:0.88rem; cursor:pointer; text-align:left; transition:var(--transition);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <span style="font-size:1.6rem;">🛍️</span>
+          <div>
+            <div>Flipkart</div>
+            <div style="font-size:0.7rem; color:#666; font-weight:normal;">SuperCoins &amp; Deals</div>
+          </div>
+        </button>
+
+        <!-- Blinkit -->
+        <button onclick="openPlatformDelivery('blinkit')" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:14px; border:1.5px solid #F7C325; background:#FFFDF0; color:#111; font-weight:700; font-size:0.88rem; cursor:pointer; text-align:left; transition:var(--transition);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <span style="font-size:1.6rem;">⚡</span>
+          <div>
+            <div>Blinkit</div>
+            <div style="font-size:0.7rem; color:#2e7d32; font-weight:bold;">10-Min Instant Delivery</div>
+          </div>
+        </button>
+
+        <!-- BigBasket -->
+        <button onclick="openPlatformDelivery('bigbasket')" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:14px; border:1.5px solid #84C225; background:#F4FBEB; color:#111; font-weight:700; font-size:0.88rem; cursor:pointer; text-align:left; transition:var(--transition);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <span style="font-size:1.6rem;">🥦</span>
+          <div>
+            <div>BigBasket</div>
+            <div style="font-size:0.7rem; color:#666; font-weight:normal;">Grocery &amp; Farm Needs</div>
+          </div>
+        </button>
+
+        <!-- JioMart -->
+        <button onclick="openPlatformDelivery('jiomart')" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:14px; border:1.5px solid #008ECC; background:#E6F7FF; color:#111; font-weight:700; font-size:0.88rem; cursor:pointer; text-align:left; transition:var(--transition);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <span style="font-size:1.6rem;">🏪</span>
+          <div>
+            <div>JioMart</div>
+            <div style="font-size:0.7rem; color:#666; font-weight:normal;">Lowest Prices</div>
+          </div>
+        </button>
+
+        <!-- AgroStar -->
+        <button onclick="openPlatformDelivery('agrostar')" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:14px; border:1.5px solid #2E7D32; background:#E8F5E9; color:#1B5E20; font-weight:700; font-size:0.88rem; cursor:pointer; text-align:left; transition:var(--transition);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <span style="font-size:1.6rem;">🌾</span>
+          <div>
+            <div>AgroStar App</div>
+            <div style="font-size:0.7rem; color:#2E7D32; font-weight:bold;">Agri Expert Outlet</div>
+          </div>
+        </button>
+
+        <!-- DeHaat -->
+        <button onclick="openPlatformDelivery('dehaat')" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:14px; border:1.5px solid #FF5722; background:#FBE9E7; color:#BF360C; font-weight:700; font-size:0.88rem; cursor:pointer; text-align:left; transition:var(--transition);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <span style="font-size:1.6rem;">🚜</span>
+          <div>
+            <div>DeHaat Farmers</div>
+            <div style="font-size:0.7rem; color:#666; font-weight:normal;">Direct Inputs</div>
+          </div>
+        </button>
+
+        <!-- AgroAssist Local Express -->
+        <button onclick="placeAgroAssistLocalOrder()" style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem; border-radius:14px; border:2px solid #2E7D32; background:linear-gradient(135deg, #43A047, #1B5E20); color:#fff; font-weight:700; font-size:0.88rem; cursor:pointer; text-align:left; transition:var(--transition); grid-column:span 2;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <span style="font-size:1.8rem;">🚚</span>
+          <div>
+            <div>AgroAssist Local Express (Cash on Delivery)</div>
+            <div style="font-size:0.72rem; color:#C8E6C9;">Direct fast local delivery from nearest agricultural store</div>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── NEARBY LOCAL STORE STOCK MODAL ─── -->
+  <div id="nearby-store-stock-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.65); z-index:2150; align-items:center; justify-content:center; padding:1rem;">
+    <div style="background:#fff; border-radius:24px; max-width:580px; width:100%; padding:1.75rem; box-shadow:var(--shadow-lg); position:relative; animation:slideUp 0.3s cubic-bezier(.4,0,.2,1); max-height:90vh; display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <h3 id="store-modal-product-title" style="font-size:1.2rem; color:var(--green-900); margin:0;">Local Stores Stocking Product</h3>
+        <button onclick="closeNearbyStoreModal()" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color:var(--gray-600);">&times;</button>
+      </div>
+      
+      <p style="font-size:0.85rem; color:var(--gray-600); margin-bottom:1rem;">Find nearby physical agri-outlets stocking this item, compare prices, and get direct turn-by-turn navigation in Google Maps:</p>
+
+      <div id="store-stock-list-container" style="display:flex; flex-direction:column; gap:0.85rem; overflow-y:auto; padding-right:4px; flex:1;">
+        <!-- Dynamic store stock cards -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── AGROASSIST FULL-SCREEN PRODUCTION AUTHENTICATION VIEW ─── -->
+  <div id="auth-modal" class="auth-full-screen-overlay" style="display:none;">
+    <div class="auth-full-screen-container">
+      
+      <!-- Left Branding Hero Panel -->
+      <div class="auth-hero-panel">
+        <button class="auth-back-home-btn" onclick="closeAuthModal()">← Back to Home</button>
+
+        <div class="auth-hero-branding">
+          <div class="auth-hero-logo">
+            <span>🌱</span>
+          </div>
+          <h1>AgroAssist <span class="logo-ai">AI</span></h1>
+          <p class="auth-hero-tagline">Smart Farming Assistant &amp; Agriculture Platform</p>
+
+          <div class="auth-hero-features">
+            <div class="auth-feature-item">
+              <span class="feat-icon">🔬</span>
+              <div>
+                <strong>98% AI Disease Detection</strong>
+                <p>Instant diagnosis &amp; treatment plans for 14+ crops</p>
+              </div>
+            </div>
+            <div class="auth-feature-item">
+              <span class="feat-icon">📊</span>
+              <div>
+                <strong>Live Mandi Market Rates</strong>
+                <p>Real-time commodity prices &amp; direct selling windows</p>
+              </div>
+            </div>
+            <div class="auth-feature-item">
+              <span class="feat-icon">🇮🇳</span>
+              <div>
+                <strong>Government Schemes &amp; Subsidies</strong>
+                <p>80% drip subsidies &amp; PM-Kisan financial support</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="auth-hero-footer">
+            <span>Trusted by 50,000+ Indian Farmers Across All States</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form Panel -->
+      <div class="auth-form-panel">
+        <div class="auth-form-card">
+          
+          <div class="auth-header">
+            <h2>Welcome to AgroAssist</h2>
+            <p class="auth-subtitle">Sign in or create an account to access smart farming tools</p>
+          </div>
+
+          <!-- Navigation Tabs: Email Login & Register only -->
+          <div class="auth-tabs">
+            <button class="auth-tab-btn active" id="tab-btn-login" onclick="switchAuthTab('login')">🔑 Email Login</button>
+            <button class="auth-tab-btn" id="tab-btn-register" onclick="switchAuthTab('register')">📝 Create Account</button>
+          </div>
+
+          <div id="auth-alert-banner" class="auth-alert" style="display:none;"></div>
+
+          <!-- TAB 1: EMAIL + PASSWORD LOGIN -->
+          <div id="auth-tab-login" class="auth-tab-pane">
+            <button type="button" class="btn-google-auth" onclick="handleGoogleSignIn()">
+              <svg width="22" height="22" viewBox="0 0 48 48">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.66 0 6.6 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.13-.44-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.28-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24s.92 7.54 2.55 10.78l7.98-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.6 42.62 14.66 48 24 48z"/>
+              </svg>
+              <span>Continue with Google</span>
+            </button>
+
+            <div class="auth-divider"><span>OR EMAIL LOGIN</span></div>
+
+            <form onsubmit="submitEmailLogin(event)">
+              <div class="form-group">
+                <label for="login-email">Email Address</label>
+                <input type="email" id="login-email" placeholder="name@farm.com" required />
+              </div>
+
+              <div class="form-group" style="position:relative;">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" placeholder="••••••••" required />
+                <button type="button" class="btn-toggle-pwd" onclick="togglePasswordVisibility('login-password', this)">👁️</button>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; font-size:0.85rem;">
+                <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+                  <input type="checkbox" checked /> Remember me
+                </label>
+                <a href="#" onclick="switchAuthTab('forgot')" style="color:var(--green-700); font-weight:700; text-decoration:none;">Forgot Password?</a>
+              </div>
+
+              <button type="submit" class="btn-auth-submit" id="btn-login-submit">
+                🔑 Login to AgroAssist Dashboard
+              </button>
+            </form>
+
+            <div class="auth-footer-links">
+              <p>Don't have an account? <a href="#" onclick="switchAuthTab('register')">Create Account</a></p>
+            </div>
+          </div>
+
+          <!-- TAB 2: REGISTER / CREATE ACCOUNT -->
+          <div id="auth-tab-register" class="auth-tab-pane" style="display:none;">
+            <form onsubmit="submitRegistration(event)">
+              <div class="form-group">
+                <label for="reg-name">Full Name</label>
+                <input type="text" id="reg-name" placeholder="Farmer Ramesh Kumar" required />
+              </div>
+
+              <div class="form-group">
+                <label for="reg-email">Email Address</label>
+                <input type="email" id="reg-email" placeholder="ramesh@gmail.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="reg-phone">Phone Number (10 Digits)</label>
+                <input type="tel" id="reg-phone" placeholder="9876543210" required maxlength="10" pattern="[0-9]{10}" />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group" style="position:relative;">
+                  <label for="reg-password">Password</label>
+                  <input type="password" id="reg-password" placeholder="Min 6 chars" required minlength="6" />
+                  <button type="button" class="btn-toggle-pwd" onclick="togglePasswordVisibility('reg-password', this)">👁️</button>
+                </div>
+                <div class="form-group" style="position:relative;">
+                  <label for="reg-confirm-password">Confirm Password</label>
+                  <input type="password" id="reg-confirm-password" placeholder="Confirm" required minlength="6" />
+                </div>
+              </div>
+
+              <button type="submit" class="btn-auth-submit" id="btn-register-submit">
+                📝 Create Account &amp; Enter Dashboard
+              </button>
+            </form>
+
+            <div class="auth-footer-links">
+              <p>Already have an account? <a href="#" onclick="switchAuthTab('login')">Login Here</a></p>
+            </div>
+          </div>
+
+          <!-- TAB 3: FORGOT PASSWORD -->
+          <div id="auth-tab-forgot" class="auth-tab-pane" style="display:none;">
+            <p style="font-size:0.88rem; color:var(--gray-600); margin-bottom:1.25rem;">Enter your registered email address to receive password reset instructions.</p>
+            <form onsubmit="submitForgotPassword(event)">
+              <div class="form-group">
+                <label for="forgot-email">Registered Email</label>
+                <input type="email" id="forgot-email" placeholder="ramesh@gmail.com" required />
+              </div>
+              <button type="submit" class="btn-auth-submit">Send Password Reset Code</button>
+              <button type="button" class="btn-outline" onclick="switchAuthTab('login')" style="width:100%; margin-top:0.75rem; padding:0.6rem;">← Back to Login</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -84,15 +84,6 @@ class AgroDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         db.execSQL(createScheduleTable)
         db.execSQL(createHistoryTable)
 
-        // Seed some sample history items
-        val seedHistory = """
-            INSERT INTO $TABLE_HISTORY ($COLUMN_HIST_CROP, $COLUMN_HIST_DISEASE, $COLUMN_HIST_CONFIDENCE, $COLUMN_HIST_TIMESTAMP)
-            VALUES 
-            ('Rice', 'Leaf Blast', '94% Confidence', 'June 09, 2026 10:30 AM'),
-            ('Wheat', 'Rust', '88% Confidence', 'June 08, 2026 02:15 PM')
-        """.trimIndent()
-        db.execSQL(seedHistory)
-
         // Create community tables
         createCommunityTables(db)
 
@@ -181,6 +172,15 @@ class AgroDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
             values.put(COLUMN_PROFILE_ID, 1)
             db.insert(TABLE_PROFILE, null, values)
         }
+
+        // Sync with SQL Prisma ORM backend
+        val profile = getProfile()
+        BackendApiClient.updateProfile(
+            name = profile["name"] ?: name,
+            age = profile["age"] ?: age,
+            crops = profile["crops"] ?: crops,
+            location = profile["location"] ?: ""
+        ) {}
     }
 
     fun saveLocation(location: String, isGps: Boolean) {
@@ -198,11 +198,20 @@ class AgroDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
             db.update(TABLE_PROFILE, values, "$COLUMN_PROFILE_ID = 1", null)
         } else {
             values.put(COLUMN_PROFILE_ID, 1)
-            values.put(COLUMN_PROFILE_NAME, "Rajesh Kumar")
-            values.put(COLUMN_PROFILE_AGE, "35")
-            values.put(COLUMN_PROFILE_CROPS, "Tomato, Rice, Wheat")
+            values.put(COLUMN_PROFILE_NAME, "")
+            values.put(COLUMN_PROFILE_AGE, "")
+            values.put(COLUMN_PROFILE_CROPS, "")
             db.insert(TABLE_PROFILE, null, values)
         }
+
+        // Sync with SQL Prisma ORM backend
+        val profile = getProfile()
+        BackendApiClient.updateProfile(
+            name = profile["name"] ?: "",
+            age = profile["age"] ?: "",
+            crops = profile["crops"] ?: "",
+            location = location
+        ) {}
     }
 
     fun getProfile(): Map<String, String> {
@@ -231,6 +240,9 @@ class AgroDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
             put(COLUMN_SCHED_TIME, time)
         }
         db.insert(TABLE_SCHEDULE, null, values)
+
+        // Sync to SQL Prisma ORM backend
+        BackendApiClient.addSchedule(cropName = crop, scheduleType = type, detail = detail, date = date, time = time) {}
     }
 
     fun getSchedules(): List<Map<String, String>> {

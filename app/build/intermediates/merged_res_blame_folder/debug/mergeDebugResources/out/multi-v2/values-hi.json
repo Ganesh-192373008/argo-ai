@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.agroassist.app-mergeDebugResources-40:/values-hi/values-hi.xml",
+            "outputFile": "com.example.agroassist.app-mergeDebugResources-41:/values-hi/values-hi.xml",
             "map": [
                 {
                     "source": "C:\\Users\\dell\\.gradle\\caches\\8.9\\transforms\\d4affb67982f4823d462de04ae391536\\transformed\\browser-1.4.0\\res\\values-hi\\values-hi.xml",

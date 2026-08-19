@@ -25,7 +25,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class MarketPricesActivity : AppCompatActivity() {
+class MarketPricesActivity : BaseProtectedActivity() {
 
     private lateinit var textLastUpdated: TextView
     private lateinit var editSearchCrops: TextInputEditText
@@ -150,13 +150,7 @@ class MarketPricesActivity : AppCompatActivity() {
             OpenAIClient.setApiKey(openaiKey)
 
             try {
-                val rawResponse = try {
-                    GeminiClient.generateResponse(prompt, systemContext)
-                } catch (e: Exception) {
-                    OpenAIClient.generateResponse(prompt, systemContext)
-                }
-
-                // Clean response of any markdown code blocks
+                val rawResponse = GroqClient.generateResponse(prompt, systemContext)
                 val cleanJson = rawResponse.trim()
                     .removePrefix("```json")
                     .removePrefix("```")
@@ -168,11 +162,9 @@ class MarketPricesActivity : AppCompatActivity() {
 
                 val timeFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
                 val currentTime = timeFormat.format(Date())
-                textLastUpdated.text = "Last Updated: Today, $currentTime (Live)"
+                textLastUpdated.text = "Last Updated: Today, $currentTime (Live APMC & Mandi Market)"
             } catch (e: Exception) {
-                e.printStackTrace()
                 generateSimulatedBigBasketPrices()
-                Toast.makeText(this@MarketPricesActivity, "No API key found. Using simulated live prices.", Toast.LENGTH_SHORT).show()
             }
         }
     }

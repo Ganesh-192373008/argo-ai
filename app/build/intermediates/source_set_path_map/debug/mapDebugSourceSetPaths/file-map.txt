@@ -16,30 +16,31 @@ com.example.agroassist.app-play-services-basement-18.2.0-14 C:\Users\dell\.gradl
 com.example.agroassist.app-camera-video-1.3.1-15 C:\Users\dell\.gradle\caches\8.9\transforms\67ba649edaa5730f8dc162e7c3693b96\transformed\camera-video-1.3.1\res
 com.example.agroassist.app-firebase-common-20.4.2-16 C:\Users\dell\.gradle\caches\8.9\transforms\6e3be2c13282028f923902852e71db63\transformed\firebase-common-20.4.2\res
 com.example.agroassist.app-core-ktx-1.12.0-17 C:\Users\dell\.gradle\caches\8.9\transforms\78e1b996e8313e8663d7b6e91b704836\transformed\core-ktx-1.12.0\res
-com.example.agroassist.app-drawerlayout-1.1.1-18 C:\Users\dell\.gradle\caches\8.9\transforms\8836bd7093d544f9e404fad8c0055200\transformed\drawerlayout-1.1.1\res
-com.example.agroassist.app-lifecycle-viewmodel-savedstate-2.6.1-19 C:\Users\dell\.gradle\caches\8.9\transforms\946f784a7615f9b1ba665ac029ee325e\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
-com.example.agroassist.app-play-services-auth-20.7.0-20 C:\Users\dell\.gradle\caches\8.9\transforms\98470c809579583ec5be004b681eaae0\transformed\play-services-auth-20.7.0\res
-com.example.agroassist.app-lifecycle-livedata-core-2.6.1-21 C:\Users\dell\.gradle\caches\8.9\transforms\9d663f67ca38a240066a9ce0cec3c687\transformed\lifecycle-livedata-core-2.6.1\res
-com.example.agroassist.app-profileinstaller-1.3.0-22 C:\Users\dell\.gradle\caches\8.9\transforms\a94faada20b78509e420d10377f8eebf\transformed\profileinstaller-1.3.0\res
-com.example.agroassist.app-constraintlayout-2.1.4-23 C:\Users\dell\.gradle\caches\8.9\transforms\abeb98566aa91ebb238b736a7160f346\transformed\constraintlayout-2.1.4\res
-com.example.agroassist.app-lifecycle-viewmodel-2.6.1-24 C:\Users\dell\.gradle\caches\8.9\transforms\ad84ca038ec383359713950ba55db6be\transformed\lifecycle-viewmodel-2.6.1\res
-com.example.agroassist.app-emoji2-views-helper-1.2.0-25 C:\Users\dell\.gradle\caches\8.9\transforms\b40858293cdb004585d27b355225e025\transformed\emoji2-views-helper-1.2.0\res
-com.example.agroassist.app-lifecycle-process-2.6.1-26 C:\Users\dell\.gradle\caches\8.9\transforms\b637920390c84504da5fe4f9d85bafa8\transformed\lifecycle-process-2.6.1\res
-com.example.agroassist.app-transition-1.2.0-27 C:\Users\dell\.gradle\caches\8.9\transforms\bc53e9bbcea006e743059d86959bb77a\transformed\transition-1.2.0\res
-com.example.agroassist.app-osmdroid-android-6.1.18-28 C:\Users\dell\.gradle\caches\8.9\transforms\c0d8afca6b0312a8d9cb6580bf6c6d8b\transformed\osmdroid-android-6.1.18\res
-com.example.agroassist.app-viewpager2-1.0.0-29 C:\Users\dell\.gradle\caches\8.9\transforms\c4edd08205a136c42fc5bb1853f241e1\transformed\viewpager2-1.0.0\res
-com.example.agroassist.app-fragment-1.3.6-30 C:\Users\dell\.gradle\caches\8.9\transforms\ce86a676b3a9bc72e63d2a331bee3b85\transformed\fragment-1.3.6\res
-com.example.agroassist.app-browser-1.4.0-31 C:\Users\dell\.gradle\caches\8.9\transforms\d4affb67982f4823d462de04ae391536\transformed\browser-1.4.0\res
-com.example.agroassist.app-savedstate-1.2.1-32 C:\Users\dell\.gradle\caches\8.9\transforms\e58352e5e3075d5abe5bfc7a141cf250\transformed\savedstate-1.2.1\res
-com.example.agroassist.app-camera-core-1.3.1-33 C:\Users\dell\.gradle\caches\8.9\transforms\f5d7ee341a10ba7f345ae33ef0ee7bcd\transformed\camera-core-1.3.1\res
-com.example.agroassist.app-camera-camera2-1.3.1-34 C:\Users\dell\.gradle\caches\8.9\transforms\f62177b0bc8f339b58c2ca9360e38380\transformed\camera-camera2-1.3.1\res
-com.example.agroassist.app-camera-lifecycle-1.3.1-35 C:\Users\dell\.gradle\caches\8.9\transforms\f8cb35457b124172e39f2e121191883f\transformed\camera-lifecycle-1.3.1\res
-com.example.agroassist.app-emoji2-1.2.0-36 C:\Users\dell\.gradle\caches\8.9\transforms\fbbfd16d3075e5e395f798e1bd594ec4\transformed\emoji2-1.2.0\res
-com.example.agroassist.app-cardview-1.0.0-37 C:\Users\dell\.gradle\caches\8.9\transforms\fe28228055bf508dbd22b1fb4b275fc1\transformed\cardview-1.0.0\res
-com.example.agroassist.app-pngs-38 D:\python assignments\agri app\app\build\generated\res\pngs\debug
-com.example.agroassist.app-resValues-39 D:\python assignments\agri app\app\build\generated\res\resValues\debug
-com.example.agroassist.app-packageDebugResources-40 D:\python assignments\agri app\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.agroassist.app-packageDebugResources-41 D:\python assignments\agri app\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.agroassist.app-debug-42 D:\python assignments\agri app\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.example.agroassist.app-debug-43 D:\python assignments\agri app\app\src\debug\res
-com.example.agroassist.app-main-44 D:\python assignments\agri app\app\src\main\res
+com.example.agroassist.app-security-crypto-1.1.0-alpha06-18 C:\Users\dell\.gradle\caches\8.9\transforms\79abf8b56ec52cb5da4748b1366046ff\transformed\security-crypto-1.1.0-alpha06\res
+com.example.agroassist.app-drawerlayout-1.1.1-19 C:\Users\dell\.gradle\caches\8.9\transforms\8836bd7093d544f9e404fad8c0055200\transformed\drawerlayout-1.1.1\res
+com.example.agroassist.app-lifecycle-viewmodel-savedstate-2.6.1-20 C:\Users\dell\.gradle\caches\8.9\transforms\946f784a7615f9b1ba665ac029ee325e\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
+com.example.agroassist.app-play-services-auth-20.7.0-21 C:\Users\dell\.gradle\caches\8.9\transforms\98470c809579583ec5be004b681eaae0\transformed\play-services-auth-20.7.0\res
+com.example.agroassist.app-lifecycle-livedata-core-2.6.1-22 C:\Users\dell\.gradle\caches\8.9\transforms\9d663f67ca38a240066a9ce0cec3c687\transformed\lifecycle-livedata-core-2.6.1\res
+com.example.agroassist.app-profileinstaller-1.3.0-23 C:\Users\dell\.gradle\caches\8.9\transforms\a94faada20b78509e420d10377f8eebf\transformed\profileinstaller-1.3.0\res
+com.example.agroassist.app-constraintlayout-2.1.4-24 C:\Users\dell\.gradle\caches\8.9\transforms\abeb98566aa91ebb238b736a7160f346\transformed\constraintlayout-2.1.4\res
+com.example.agroassist.app-lifecycle-viewmodel-2.6.1-25 C:\Users\dell\.gradle\caches\8.9\transforms\ad84ca038ec383359713950ba55db6be\transformed\lifecycle-viewmodel-2.6.1\res
+com.example.agroassist.app-emoji2-views-helper-1.2.0-26 C:\Users\dell\.gradle\caches\8.9\transforms\b40858293cdb004585d27b355225e025\transformed\emoji2-views-helper-1.2.0\res
+com.example.agroassist.app-lifecycle-process-2.6.1-27 C:\Users\dell\.gradle\caches\8.9\transforms\b637920390c84504da5fe4f9d85bafa8\transformed\lifecycle-process-2.6.1\res
+com.example.agroassist.app-transition-1.2.0-28 C:\Users\dell\.gradle\caches\8.9\transforms\bc53e9bbcea006e743059d86959bb77a\transformed\transition-1.2.0\res
+com.example.agroassist.app-osmdroid-android-6.1.18-29 C:\Users\dell\.gradle\caches\8.9\transforms\c0d8afca6b0312a8d9cb6580bf6c6d8b\transformed\osmdroid-android-6.1.18\res
+com.example.agroassist.app-viewpager2-1.0.0-30 C:\Users\dell\.gradle\caches\8.9\transforms\c4edd08205a136c42fc5bb1853f241e1\transformed\viewpager2-1.0.0\res
+com.example.agroassist.app-fragment-1.3.6-31 C:\Users\dell\.gradle\caches\8.9\transforms\ce86a676b3a9bc72e63d2a331bee3b85\transformed\fragment-1.3.6\res
+com.example.agroassist.app-browser-1.4.0-32 C:\Users\dell\.gradle\caches\8.9\transforms\d4affb67982f4823d462de04ae391536\transformed\browser-1.4.0\res
+com.example.agroassist.app-savedstate-1.2.1-33 C:\Users\dell\.gradle\caches\8.9\transforms\e58352e5e3075d5abe5bfc7a141cf250\transformed\savedstate-1.2.1\res
+com.example.agroassist.app-camera-core-1.3.1-34 C:\Users\dell\.gradle\caches\8.9\transforms\f5d7ee341a10ba7f345ae33ef0ee7bcd\transformed\camera-core-1.3.1\res
+com.example.agroassist.app-camera-camera2-1.3.1-35 C:\Users\dell\.gradle\caches\8.9\transforms\f62177b0bc8f339b58c2ca9360e38380\transformed\camera-camera2-1.3.1\res
+com.example.agroassist.app-camera-lifecycle-1.3.1-36 C:\Users\dell\.gradle\caches\8.9\transforms\f8cb35457b124172e39f2e121191883f\transformed\camera-lifecycle-1.3.1\res
+com.example.agroassist.app-emoji2-1.2.0-37 C:\Users\dell\.gradle\caches\8.9\transforms\fbbfd16d3075e5e395f798e1bd594ec4\transformed\emoji2-1.2.0\res
+com.example.agroassist.app-cardview-1.0.0-38 C:\Users\dell\.gradle\caches\8.9\transforms\fe28228055bf508dbd22b1fb4b275fc1\transformed\cardview-1.0.0\res
+com.example.agroassist.app-pngs-39 D:\python assignments\agri app\app\build\generated\res\pngs\debug
+com.example.agroassist.app-resValues-40 D:\python assignments\agri app\app\build\generated\res\resValues\debug
+com.example.agroassist.app-packageDebugResources-41 D:\python assignments\agri app\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.agroassist.app-packageDebugResources-42 D:\python assignments\agri app\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.agroassist.app-debug-43 D:\python assignments\agri app\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.agroassist.app-debug-44 D:\python assignments\agri app\app\src\debug\res
+com.example.agroassist.app-main-45 D:\python assignments\agri app\app\src\main\res

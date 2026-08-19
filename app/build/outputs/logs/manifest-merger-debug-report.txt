@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:2:1-106:12
-INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:2:1-106:12
-INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:2:1-106:12
-INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:2:1-106:12
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:2:1-118:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\dell\.gradle\caches\8.9\transforms\071c108dfce8e32b0647ba17490274da\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dell\.gradle\caches\8.9\transforms\abeb98566aa91ebb238b736a7160f346\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.camera:camera-video:1.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\67ba649edaa5730f8dc162e7c3693b96\transformed\camera-video-1.3.1\AndroidManifest.xml:2:1-7:12
@@ -55,11 +55,12 @@ MERGED from [androidx.browser:browser:1.4.0] C:\Users\dell\.gradle\caches\8.9\tr
 MERGED from [androidx.core:core:1.12.0] C:\Users\dell\.gradle\caches\8.9\transforms\03f5419184e2c93dbcc3de1989eccc3e\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\dell\.gradle\caches\8.9\transforms\78e1b996e8313e8663d7b6e91b704836\transformed\core-ktx-1.12.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\29eed93d25899fe3cbb5d4115970123e\transformed\annotation-experimental-1.3.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] C:\Users\dell\.gradle\caches\8.9\transforms\79abf8b56ec52cb5da4748b1366046ff\transformed\security-crypto-1.1.0-alpha06\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\54ffabfedaf13100ff1bde0cb718a0a9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\fe28228055bf508dbd22b1fb4b275fc1\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\dell\.gradle\caches\8.9\transforms\e5df09b86a8b7310f5ad4b2329799ddc\transformed\firebase-components-17.1.5\AndroidManifest.xml:15:1-20:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\111ec80dfc06db7d3ea8b104d0fe38b4\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\dell\.gradle\caches\8.9\transforms\7d8076e4590a481e34b38ccfa7a03715\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\111ec80dfc06db7d3ea8b104d0fe38b4\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dell\.gradle\caches\8.9\transforms\a94faada20b78509e420d10377f8eebf\transformed\profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\dell\.gradle\caches\8.9\transforms\177ced09790b9e5ba837ac721c69ea96\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\2a8d6fc9f01183bda1db36e5f1e1fe20\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -127,13 +128,27 @@ uses-permission#android.permission.USE_BIOMETRIC
 ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:12:5-72
 	android:name
 		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:12:22-69
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:13:5-71
+queries
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:13:5-23:15
+package#com.google.android.apps.maps
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:14:9-64
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:13:22-68
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:14:18-61
+intent#action:name:android.intent.action.VIEW+data:scheme:https
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:15:9-18:18
+action#android.intent.action.VIEW
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:16:13-65
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:16:21-62
+data
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:17:13-44
+	android:scheme
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:17:19-41
+intent#action:name:android.intent.action.VIEW+data:scheme:geo
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:19:9-22:18
 application
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:15:5-104:19
-INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:15:5-104:19
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:25:5-116:19
+INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:25:5-116:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\dell\.gradle\caches\8.9\transforms\071c108dfce8e32b0647ba17490274da\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\dell\.gradle\caches\8.9\transforms\071c108dfce8e32b0647ba17490274da\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dell\.gradle\caches\8.9\transforms\abeb98566aa91ebb238b736a7160f346\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -183,319 +198,325 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\dell\.gradle\cache
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\dell\.gradle\caches\8.9\transforms\03f5419184e2c93dbcc3de1989eccc3e\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:30:9-35
 	android:label
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:18:9-38
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:28:9-38
 	android:roundIcon
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:19:9-50
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:29:9-50
 	android:icon
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:17:9-45
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:27:9-45
 	android:allowBackup
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:26:9-35
 	android:theme
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:21:9-48
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:32:9-48
+	android:usesCleartextTraffic
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:31:9-44
 activity#com.example.agroassist.MainActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:23:9-30:20
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:34:9-41:20
 	android:exported
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:25:13-36
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:36:13-36
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:24:13-41
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:35:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:26:13-29:29
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:37:13-40:29
 action#android.intent.action.MAIN
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:27:17-69
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:38:17-69
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:27:25-66
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:38:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:39:17-77
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:39:27-74
 activity#com.example.agroassist.LoginActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:32:9-51
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:43:9-51
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:32:19-48
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:43:19-48
 activity#com.example.agroassist.OtpVerificationActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:33:9-61
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:44:9-61
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:33:19-58
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:44:19-58
 activity#com.example.agroassist.EmailLoginActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:34:9-56
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:34:19-53
-activity#com.example.agroassist.ForgotPasswordActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:35:9-60
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:35:19-57
-activity#com.example.agroassist.CheckEmailActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:36:9-56
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:36:19-53
-activity#com.example.agroassist.CreateNewPasswordActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:37:9-63
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:37:19-60
-activity#com.example.agroassist.PasswordSuccessActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:38:9-61
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:38:19-58
-activity#com.example.agroassist.ProfileSetupActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:39:9-58
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:39:19-55
-activity#com.example.agroassist.LocationSetupActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:40:9-59
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:40:19-56
-activity#com.example.agroassist.DashboardActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:41:9-55
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:41:19-52
-activity#com.example.agroassist.NotificationsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:42:9-59
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:42:19-56
-activity#com.example.agroassist.DetectionActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:43:9-55
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:43:19-52
-activity#com.example.agroassist.CommunityActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:44:9-55
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:44:19-52
-activity#com.example.agroassist.CreatePostActivity
 ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:45:9-56
 	android:name
 		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:45:19-53
-activity#com.example.agroassist.CameraActivity
+activity#com.example.agroassist.SignUpActivity
 ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:46:9-52
 	android:name
 		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:46:19-49
-activity#com.example.agroassist.ImageReviewActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:47:9-57
+activity#com.example.agroassist.ForgotPasswordActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:47:9-60
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:47:19-54
-activity#com.example.agroassist.AnalysisActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:48:9-54
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:47:19-57
+activity#com.example.agroassist.CheckEmailActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:48:9-56
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:48:19-51
-activity#com.example.agroassist.ResultsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:49:9-53
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:48:19-53
+activity#com.example.agroassist.CreateNewPasswordActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:49:9-63
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:49:19-50
-activity#com.example.agroassist.ReportActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:50:9-52
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:49:19-60
+activity#com.example.agroassist.PasswordSuccessActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:50:9-61
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:50:19-49
-activity#com.example.agroassist.WhatsAppShareActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:51:9-59
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:50:19-58
+activity#com.example.agroassist.ProfileSetupActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:51:9-58
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:51:19-56
-activity#com.example.agroassist.FacebookShareActivity
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:51:19-55
+activity#com.example.agroassist.LocationSetupActivity
 ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:52:9-59
 	android:name
 		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:52:19-56
-activity#com.example.agroassist.TwitterShareActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:53:9-58
+activity#com.example.agroassist.DashboardActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:53:9-55
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:53:19-55
-activity#com.example.agroassist.TelegramShareActivity
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:53:19-52
+activity#com.example.agroassist.NotificationsActivity
 ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:54:9-59
 	android:name
 		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:54:19-56
-activity#com.example.agroassist.InstagramShareActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:55:9-60
+activity#com.example.agroassist.DetectionActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:55:9-55
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:55:19-57
-activity#com.example.agroassist.EmailShareActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:56:9-56
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:55:19-52
+activity#com.example.agroassist.CommunityActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:56:9-55
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:56:19-53
-activity#com.example.agroassist.RecommendedProductsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:57:9-65
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:56:19-52
+activity#com.example.agroassist.CreatePostActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:57:9-56
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:57:19-62
-activity#com.example.agroassist.ProductDetailsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:58:9-60
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:57:19-53
+activity#com.example.agroassist.CameraActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:58:9-52
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:58:19-57
-activity#com.example.agroassist.CartActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:59:9-50
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:58:19-49
+activity#com.example.agroassist.ImageReviewActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:59:9-57
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:59:19-47
-activity#com.example.agroassist.NearbyShopsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:60:9-57
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:59:19-54
+activity#com.example.agroassist.AnalysisActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:60:9-54
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:60:19-54
-activity#com.example.agroassist.ShopMapActivity
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:60:19-51
+activity#com.example.agroassist.ResultsActivity
 ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:61:9-53
 	android:name
 		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:61:19-50
+activity#com.example.agroassist.ReportActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:62:9-52
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:62:19-49
+activity#com.example.agroassist.WhatsAppShareActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:63:9-59
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:63:19-56
+activity#com.example.agroassist.FacebookShareActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:64:9-59
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:64:19-56
+activity#com.example.agroassist.TwitterShareActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:65:9-58
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:65:19-55
+activity#com.example.agroassist.TelegramShareActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:66:9-59
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:66:19-56
+activity#com.example.agroassist.InstagramShareActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:67:9-60
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:67:19-57
+activity#com.example.agroassist.EmailShareActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:68:9-56
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:68:19-53
+activity#com.example.agroassist.RecommendedProductsActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:69:9-65
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:69:19-62
+activity#com.example.agroassist.ProductDetailsActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:70:9-60
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:70:19-57
+activity#com.example.agroassist.CartActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:71:9-50
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:71:19-47
+activity#com.example.agroassist.NearbyShopsActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:72:9-57
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:72:19-54
+activity#com.example.agroassist.ShopMapActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:73:9-53
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:73:19-50
 activity#com.example.agroassist.WeatherDashboardActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:62:9-62
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:74:9-62
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:62:19-59
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:74:19-59
 activity#com.example.agroassist.SeasonPlanningActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:63:9-60
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:75:9-60
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:63:19-57
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:75:19-57
 activity#com.example.agroassist.CropCalendarActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:64:9-58
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:64:19-55
-activity#com.example.agroassist.AddCropActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:65:9-53
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:65:19-50
-activity#com.example.agroassist.CropAddedSuccessActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:66:9-62
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:66:19-59
-activity#com.example.agroassist.CustomPlanGeneratorActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:67:9-65
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:67:19-62
-activity#com.example.agroassist.FarmingPlanResultActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:68:9-63
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:68:19-60
-activity#com.example.agroassist.CropRotationActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:69:9-58
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:69:19-55
-activity#com.example.agroassist.PlantingTimesActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:70:9-59
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:70:19-56
-activity#com.example.agroassist.WaterManagementActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:71:9-61
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:71:19-58
-activity#com.example.agroassist.CreateScheduleActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:72:9-60
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:72:19-57
-activity#com.example.agroassist.FertilizerScheduleActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:73:9-64
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:73:19-61
-activity#com.example.agroassist.AddFertilizerScheduleActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:74:9-67
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:74:19-64
-activity#com.example.agroassist.DiseasePreventionActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:75:9-63
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:75:19-60
-activity#com.example.agroassist.MarketPricesActivity
 ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:76:9-58
 	android:name
 		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:76:19-55
+activity#com.example.agroassist.AddCropActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:77:9-53
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:77:19-50
+activity#com.example.agroassist.CropAddedSuccessActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:78:9-62
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:78:19-59
+activity#com.example.agroassist.CustomPlanGeneratorActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:79:9-65
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:79:19-62
+activity#com.example.agroassist.FarmingPlanResultActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:80:9-63
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:80:19-60
+activity#com.example.agroassist.CropRotationActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:81:9-58
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:81:19-55
+activity#com.example.agroassist.PlantingTimesActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:82:9-59
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:82:19-56
+activity#com.example.agroassist.WaterManagementActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:83:9-61
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:83:19-58
+activity#com.example.agroassist.CreateScheduleActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:84:9-60
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:84:19-57
+activity#com.example.agroassist.FertilizerScheduleActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:85:9-64
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:85:19-61
+activity#com.example.agroassist.AddFertilizerScheduleActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:86:9-67
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:86:19-64
+activity#com.example.agroassist.DiseasePreventionActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:87:9-63
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:87:19-60
+activity#com.example.agroassist.MarketPricesActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:88:9-58
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:88:19-55
 activity#com.example.agroassist.CropPriceDetailsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:77:9-62
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:89:9-62
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:77:19-59
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:89:19-59
 activity#com.example.agroassist.VoiceListeningActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:78:9-60
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:90:9-60
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:78:19-57
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:90:19-57
 activity#com.example.agroassist.VoiceAssistantActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:79:9-60
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:91:9-60
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:79:19-57
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:91:19-57
 activity#com.example.agroassist.ChatAssistantActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:80:9-59
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:92:9-59
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:80:19-56
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:92:19-56
 activity#com.example.agroassist.MonthlyReportActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:81:9-59
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:93:9-59
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:81:19-56
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:93:19-56
 activity#com.example.agroassist.DetectionHistoryActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:82:9-62
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:94:9-62
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:82:19-59
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:94:19-59
 activity#com.example.agroassist.AnalyticsReportsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:83:9-62
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:95:9-62
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:83:19-59
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:95:19-59
 activity#com.example.agroassist.WeeklyReportActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:84:9-58
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:96:9-58
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:84:19-55
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:96:19-55
 activity#com.example.agroassist.DailyReportActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:85:9-57
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:97:9-57
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:85:19-54
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:97:19-54
 activity#com.example.agroassist.ProfileActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:86:9-53
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:98:9-53
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:86:19-50
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:98:19-50
 activity#com.example.agroassist.HelpSupportActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:87:9-57
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:99:9-57
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:87:19-54
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:99:19-54
 activity#com.example.agroassist.PrivacyPolicyActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:88:9-59
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:88:19-56
-activity#com.example.agroassist.EditProfileActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:89:9-57
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:89:19-54
-activity#com.example.agroassist.AchievementsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:90:9-58
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:90:19-55
-activity#com.example.agroassist.SettingsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:91:9-54
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:91:19-51
-activity#com.example.agroassist.DataUsageActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:92:9-55
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:92:19-52
-activity#com.example.agroassist.GovSchemesActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:93:9-56
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:93:19-53
-activity#com.example.agroassist.SchemeDetailsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:94:9-59
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:94:19-56
-activity#com.example.agroassist.MarketLocationActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:95:9-60
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:95:19-57
-activity#com.example.agroassist.CommentsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:96:9-54
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:96:19-51
-activity#com.example.agroassist.MyPostsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:97:9-53
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:97:19-50
-activity#com.example.agroassist.MyCommentsActivity
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:98:9-56
-	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:98:19-53
-receiver#com.example.agroassist.WateringAlarmReceiver
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:100:9-84
-	android:exported
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:100:57-81
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:100:9-59
 	android:name
 		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:100:19-56
+activity#com.example.agroassist.EditProfileActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:101:9-57
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:101:19-54
+activity#com.example.agroassist.AchievementsActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:102:9-58
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:102:19-55
+activity#com.example.agroassist.SettingsActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:103:9-54
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:103:19-51
+activity#com.example.agroassist.DataUsageActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:104:9-55
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:104:19-52
+activity#com.example.agroassist.GovSchemesActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:105:9-56
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:105:19-53
+activity#com.example.agroassist.SchemeDetailsActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:106:9-59
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:106:19-56
+activity#com.example.agroassist.MarketLocationActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:107:9-60
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:107:19-57
+activity#com.example.agroassist.CommentsActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:108:9-54
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:108:19-51
+activity#com.example.agroassist.MyPostsActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:109:9-53
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:109:19-50
+activity#com.example.agroassist.MyCommentsActivity
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:110:9-56
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:110:19-53
+receiver#com.example.agroassist.WateringAlarmReceiver
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:112:9-84
+	android:exported
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:112:57-81
+	android:name
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:112:19-56
 receiver#com.example.agroassist.FertilizerAlarmReceiver
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:101:9-86
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:113:9-86
 	android:exported
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:101:59-83
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:113:59-83
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:101:19-58
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:113:19-58
 receiver#com.example.agroassist.GovSchemesAlarmReceiver
-ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:102:9-86
+ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:114:9-86
 	android:exported
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:102:59-83
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:114:59-83
 	android:name
-		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:102:19-58
+		ADDED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml:114:19-58
 uses-sdk
 INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\python assignments\agri app\app\src\main\AndroidManifest.xml
@@ -602,16 +623,18 @@ MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\dell\.gradle\caches\8.9\tra
 MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\dell\.gradle\caches\8.9\transforms\78e1b996e8313e8663d7b6e91b704836\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\29eed93d25899fe3cbb5d4115970123e\transformed\annotation-experimental-1.3.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\29eed93d25899fe3cbb5d4115970123e\transformed\annotation-experimental-1.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] C:\Users\dell\.gradle\caches\8.9\transforms\79abf8b56ec52cb5da4748b1366046ff\transformed\security-crypto-1.1.0-alpha06\AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] C:\Users\dell\.gradle\caches\8.9\transforms\79abf8b56ec52cb5da4748b1366046ff\transformed\security-crypto-1.1.0-alpha06\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\54ffabfedaf13100ff1bde0cb718a0a9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\54ffabfedaf13100ff1bde0cb718a0a9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\fe28228055bf508dbd22b1fb4b275fc1\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\fe28228055bf508dbd22b1fb4b275fc1\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\dell\.gradle\caches\8.9\transforms\e5df09b86a8b7310f5ad4b2329799ddc\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
 MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\dell\.gradle\caches\8.9\transforms\e5df09b86a8b7310f5ad4b2329799ddc\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\111ec80dfc06db7d3ea8b104d0fe38b4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\111ec80dfc06db7d3ea8b104d0fe38b4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\dell\.gradle\caches\8.9\transforms\7d8076e4590a481e34b38ccfa7a03715\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\dell\.gradle\caches\8.9\transforms\7d8076e4590a481e34b38ccfa7a03715\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\111ec80dfc06db7d3ea8b104d0fe38b4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dell\.gradle\caches\8.9\transforms\111ec80dfc06db7d3ea8b104d0fe38b4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dell\.gradle\caches\8.9\transforms\a94faada20b78509e420d10377f8eebf\transformed\profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\dell\.gradle\caches\8.9\transforms\a94faada20b78509e420d10377f8eebf\transformed\profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\dell\.gradle\caches\8.9\transforms\177ced09790b9e5ba837ac721c69ea96\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
@@ -732,10 +755,6 @@ ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\cach
 		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
 ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
-action#android.intent.action.VIEW
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
 category#android.intent.category.DEFAULT
 ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
 	android:name
@@ -744,14 +763,6 @@ category#android.intent.category.BROWSABLE
 ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
-data
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
-	android:path
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
-	android:host
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
-	android:scheme
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
 activity#com.google.firebase.auth.internal.RecaptchaActivity
 ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\dell\.gradle\caches\8.9\transforms\1c2cc89fac583b874ada1c889ee467c4\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
 	android:excludeFromRecents

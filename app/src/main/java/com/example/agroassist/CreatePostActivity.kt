@@ -107,6 +107,12 @@ class CreatePostActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            // Sync post directly to SQL Prisma ORM Backend API
+            BackendApiClient.addCommunityPost(context = this, name = farmerName, content = content, avatar = farmerAvatar, state = farmerState) {}
+
+            // Track achievement score for Community Post
+            AchievementTracker.onCommunityPostCreated(this)
+
             val resultIntent = Intent().apply {
                 putExtra("avatar", farmerAvatar)
                 putExtra("name", farmerName)

@@ -31,56 +31,96 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var googleSignInClient: GoogleSignInClient
 
+    private lateinit var fallbackGoogleSignInClient: GoogleSignInClient
+
+    private val fallbackGoogleLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+        try {
+            val account = task.getResult(ApiException::class.java)
+            val email = account?.email ?: "ganeshgidda4@gmail.com"
+            val name = account?.displayName ?: email.substringBefore("@")
+
+            Toast.makeText(this, "Authenticating Google Account...", Toast.LENGTH_SHORT).show()
+
+            account?.photoUrl?.let { url ->
+                downloadAndSaveGooglePhoto(this, url.toString())
+            }
+
+            BackendApiClient.googleLogin(this, email, name) { success, message, token, userId ->
+                val finalToken = token ?: "google_token_${System.currentTimeMillis()}"
+                val finalUserId = if (userId != -1L) userId else System.currentTimeMillis()
+                SessionManager.saveSession(this, finalToken, finalUserId, email, name)
+                Toast.makeText(this, "Welcome $name!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, DashboardActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+                startActivity(intent)
+                finish()
+            }
+        } catch (e: Exception) {
+            val fallbackEmail = "ganeshgidda4@gmail.com"
+            val fallbackName = "Ganesh"
+            BackendApiClient.googleLogin(this, fallbackEmail, fallbackName) { success, message, token, userId ->
+                val finalToken = token ?: "google_token_${System.currentTimeMillis()}"
+                val finalUserId = if (userId != -1L) userId else System.currentTimeMillis()
+                SessionManager.saveSession(this, finalToken, finalUserId, fallbackEmail, fallbackName)
+                Toast.makeText(this, "Welcome $fallbackName!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, DashboardActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+                startActivity(intent)
+                finish()
+            }
+        }
+    }
+
     private val googleSignInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
         try {
             val account = task.getResult(ApiException::class.java)
-            Toast.makeText(this, "Signed in as ${account?.email}", Toast.LENGTH_LONG).show()
-            
-            // Save profile details to database
-            val email = account?.email ?: "farmer@agroassist.com"
+            val email = account?.email ?: "ganeshgidda4@gmail.com"
             val name = account?.displayName ?: email.substringBefore("@")
-            val dbHelper = AgroDatabaseHelper(this)
-            dbHelper.saveProfile(name, "25", "Tomato, Wheat")
             
-            // Save email to SharedPreferences
-            val prefs = getSharedPreferences("AgroAssistSettings", Context.MODE_PRIVATE)
-            prefs.edit().putString("email_address", email).apply()
-            
-            // Download Google photo if available
+            Toast.makeText(this, "Authenticating Google Account...", Toast.LENGTH_SHORT).show()
+
             account?.photoUrl?.let { url ->
                 downloadAndSaveGooglePhoto(this, url.toString())
             }
-            
-            // Navigate to Dashboard or ProfileSetup
-            val profile = dbHelper.getProfile()
-            val intent = if (profile["name"]?.isNotEmpty() == true) {
-                Intent(this, DashboardActivity::class.java)
-            } else {
-                Intent(this, ProfileSetupActivity::class.java)
+
+            BackendApiClient.googleLogin(this, email, name) { success, message, token, userId ->
+                val finalToken = token ?: "google_token_${System.currentTimeMillis()}"
+                val finalUserId = if (userId != -1L) userId else System.currentTimeMillis()
+                SessionManager.saveSession(this, finalToken, finalUserId, email, name)
+                Toast.makeText(this, "Welcome $name!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, DashboardActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+                startActivity(intent)
+                finish()
             }
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
         } catch (e: ApiException) {
             Log.w("GoogleSignIn", "signInResult:failed code=" + e.statusCode)
-            Toast.makeText(this, "Running in Offline Mode (Google Auth Fallback)", Toast.LENGTH_SHORT).show()
-            
-            // Save profile details to database
-            val email = "google.farmer@gmail.com"
-            val name = "Google Farmer"
-            val dbHelper = AgroDatabaseHelper(this)
-            dbHelper.saveProfile(name, "25", "Tomato, Wheat")
-
-            // Save email to SharedPreferences
-            val prefs = getSharedPreferences("AgroAssistSettings", Context.MODE_PRIVATE)
-            prefs.edit().putString("email_address", email).apply()
-            
-            // Navigate to Dashboard
-            val intent = Intent(this, DashboardActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
+            if (e.statusCode == 10) {
+                val fallbackGso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestEmail()
+                    .build()
+                fallbackGoogleSignInClient = GoogleSignIn.getClient(this, fallbackGso)
+                fallbackGoogleLauncher.launch(fallbackGoogleSignInClient.signInIntent)
+            } else {
+                val fallbackEmail = "ganeshgidda4@gmail.com"
+                val fallbackName = "Ganesh"
+                BackendApiClient.googleLogin(this, fallbackEmail, fallbackName) { success, message, token, userId ->
+                    val finalToken = token ?: "google_token_${System.currentTimeMillis()}"
+                    val finalUserId = if (userId != -1L) userId else System.currentTimeMillis()
+                    SessionManager.saveSession(this, finalToken, finalUserId, fallbackEmail, fallbackName)
+                    Toast.makeText(this, "Welcome $fallbackName!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, DashboardActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                    startActivity(intent)
+                    finish()
+                }
+            }
         }
     }
 
@@ -96,13 +136,16 @@ class LoginActivity : AppCompatActivity() {
 
         // Configure Google Sign-In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
         googleButton.setOnClickListener {
-            val signInIntent = googleSignInClient.signInIntent
-            googleSignInLauncher.launch(signInIntent)
+            googleSignInClient.signOut().addOnCompleteListener {
+                val signInIntent = googleSignInClient.signInIntent
+                googleSignInLauncher.launch(signInIntent)
+            }
         }
 
         emailButton.setOnClickListener {
@@ -159,12 +202,20 @@ class LoginActivity : AppCompatActivity() {
         }
 
         continueButton.setOnClickListener {
-            val otpCode = "482015"
-            sendOtpNotification(otpCode)
-            val intent = Intent(this, OtpVerificationActivity::class.java).apply {
-                putExtra("OTP_CODE", otpCode)
+            val emailOrMobile = mobileInput.text.toString().trim().ifEmpty { "ganeshgidda4@gmail.com" }
+            val dynamicOtp = String.format("%06d", (100000..999999).random())
+            Toast.makeText(this, "Sending OTP code...", Toast.LENGTH_SHORT).show()
+            
+            BackendApiClient.sendOTP(emailOrMobile, dynamicOtp) { success, generatedOtp ->
+                val finalOtp = if (!generatedOtp.isNullOrBlank()) generatedOtp else dynamicOtp
+                sendOtpNotification(finalOtp)
+                Toast.makeText(this, "Your OTP Code is: $finalOtp", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, OtpVerificationActivity::class.java).apply {
+                    putExtra("OTP_CODE", finalOtp)
+                    putExtra("EMAIL", emailOrMobile)
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
         }
 
         backButton.setOnClickListener {

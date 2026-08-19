@@ -24,4 +24,7 @@
     <string name="my_posts">My Posts 📝</string>
     <string name="replies_box">Replies Box 💬</string>
     <string name="post_action">+ Post</string>
+
+    <!-- Google OAuth Web Client ID -->
+    <string name="default_web_client_id">428810197977-jilresujuset8bs9qm081ntjdvlv97kd.apps.googleusercontent.com</string>
 </resources>

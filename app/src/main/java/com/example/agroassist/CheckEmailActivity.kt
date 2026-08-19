@@ -1,5 +1,6 @@
 package com.example.agroassist
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -16,7 +17,6 @@ class CheckEmailActivity : AppCompatActivity() {
         val tryAgainText = findViewById<TextView>(R.id.tryAgainText)
         val emailAddressText = findViewById<TextView>(R.id.emailAddressText)
 
-        // Ideally, the email address is passed via Intent from the previous screen
         val email = intent.getStringExtra("EXTRA_EMAIL") ?: "ganeshgidda4@gmail.com"
         emailAddressText.text = email
 
@@ -25,7 +25,18 @@ class CheckEmailActivity : AppCompatActivity() {
         }
 
         tryAgainText.setOnClickListener {
-            Toast.makeText(this, "Resending email...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Resending reset email to $email...", Toast.LENGTH_SHORT).show()
+            BackendApiClient.sendPasswordResetLink(email) { success ->
+                Toast.makeText(this, "Password reset instructions resent to $email!", Toast.LENGTH_LONG).show()
+            }
+        }
+
+        // Tapping email container or text opens password reset link completion screen
+        emailAddressText.setOnClickListener {
+            val intent = Intent(this, CreateNewPasswordActivity::class.java).apply {
+                putExtra("email", email)
+            }
+            startActivity(intent)
         }
     }
 }
