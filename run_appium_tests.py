@@ -77,9 +77,9 @@ def run_appium_suite():
 
     end_time_all = time.time()
     
-    # Save dedicated appium excel report
+    # Save dedicated appium excel report matching user screenshot layout
     reporter = ExcelReporter("reports/test_results_appium.xlsx")
-    reporter.generate_report(test_results)
+    reporter.generate_custom_detailed_report(test_results, details_sheet_name="Appium Test Details")
     
     print(f"[Appium Suite] Executed {len(test_results)} Appium Mobile Test Cases. Report saved to reports/test_results_appium.xlsx.")
 

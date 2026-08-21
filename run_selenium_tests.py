@@ -117,9 +117,9 @@ def run_selenium_suite():
 
     end_time_all = time.time()
 
-    # Save dedicated selenium excel report
+    # Save dedicated selenium excel report matching user screenshot layout
     reporter = ExcelReporter("reports/test_results_selenium.xlsx")
-    reporter.generate_report(test_results)
+    reporter.generate_custom_detailed_report(test_results, details_sheet_name="Selenium Test Details")
 
     print(f"[Selenium Suite] Executed {len(test_results)} detailed Selenium POM Test Cases. Report saved to reports/test_results_selenium.xlsx.")
 
